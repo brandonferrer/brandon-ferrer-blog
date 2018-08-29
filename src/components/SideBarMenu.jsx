@@ -17,23 +17,28 @@ const SideBarMenu = ({ children, showSideBar, toggleSideBar }) => (
         top: '10em',
       }}
     >
-      <Menu.Item name="all" as={Link} to="/" onClick={toggleSideBar}>
-        <span className={styles.menuItem}>All</span>
+      <Menu.Item name="home" as={Link} to="/" onClick={toggleSideBar}>
+        <span className={styles.menuItem}>Home.</span>
+      </Menu.Item>
+      <Menu.Item name="about" as={Link} to="/about" onClick={toggleSideBar}>
+        <span className={styles.menuItem}>About-B.</span>
+      </Menu.Item>
+      <Menu.Item name="blog" as={Link} to="/blog" onClick={toggleSideBar}>
+        <span className={styles.menuItem}>"BLOG"</span>
       </Menu.Item>
       <Menu.Item name="travel" as={Link} to="/travel" onClick={toggleSideBar}>
-        <span className={styles.menuItem}>Travel</span>
+        <span className={styles.menuItem}>Travel.</span>
       </Menu.Item>
-      <Menu.Item
-        name="development"
-        as={Link}
-        to="/development"
-        onClick={toggleSideBar}
-      >
-        <span className={styles.menuItem}>Development</span>
+      <Menu.Item name="projects" as={Link} to="/projects" onClick={toggleSideBar}>
+        <span className={styles.menuItem}>Dev Projects.</span>
       </Menu.Item>
-      <Menu.Item name="food" as={Link} to="/food" onClick={toggleSideBar}>
-        <span className={styles.menuItem}>Food</span>
+      <Menu.Item name="dj-life" as={Link} to="/dj" onClick={toggleSideBar}>
+        <span className={styles.menuItem}>DJ Life.</span>
       </Menu.Item>
+      <Menu.Item name="say-hey" as={Link} to="/contact" onClick={toggleSideBar}>
+        <span className={styles.menuItem}>Say Hey.</span>
+      </Menu.Item>
+      
     </Sidebar>
     <Sidebar.Pusher>{children}</Sidebar.Pusher>
   </Sidebar.Pushable>
