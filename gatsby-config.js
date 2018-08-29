@@ -30,5 +30,11 @@ module.exports = {
         useACF: true,
       },
     },
+    {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: ['Nunito Sans:400,700,700i,800'],
+      },
+    },
   ],
 }
