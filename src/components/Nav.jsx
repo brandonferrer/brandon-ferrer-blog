@@ -9,7 +9,7 @@ const Nav = ({ toggleSideBar }) => (
         <h1
           style={{
             color: 'white',
-            fontWeight: 700,
+            fontWeight: 800,
             fontSize: '18px',
             fontFamily: 'Nunito Sans',
             letterSpacing: '1.2px',
@@ -26,7 +26,7 @@ const Nav = ({ toggleSideBar }) => (
           <span
             style={{
               color: 'white',
-              fontWeight: 700,
+              fontWeight: 800,
               fontSize: '16px',
               fontFamily: 'Nunito Sans',
               letterSpacing: '1.2px',

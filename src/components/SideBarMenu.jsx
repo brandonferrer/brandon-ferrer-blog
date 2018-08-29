@@ -43,7 +43,7 @@ const styles = {
   menuItem: css`
     color: white;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 700;
     font-family: Nunito Sans;
     letter-spacing: 1px;
   `,

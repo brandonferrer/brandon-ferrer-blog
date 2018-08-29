@@ -4,8 +4,8 @@ import { css } from 'react-emotion'
 import { Container } from 'semantic-ui-react'
 import SideBarMenu from '../components/SideBarMenu'
 import Nav from '../components/Nav'
-import './index.css'
 import 'semantic-ui-css/semantic.min.css'
+import './index.css'
 
 class App extends Component {
   state = {
@@ -47,7 +47,7 @@ class App extends Component {
 const styles = {
   header: css`
     font-family: Nunito Sans !important;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: 1.2px;
     color: black;
     padding-top: 3rem;
