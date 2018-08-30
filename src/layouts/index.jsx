@@ -17,14 +17,23 @@ class App extends Component {
     })
   render() {
     const { showSideBar } = this.state
-    const { children, data } = this.props
+    const { children } = this.props
+
     return (
       <div>
         <Helmet
           title="brandonferrer.com"
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            {
+              name: 'description',
+              content:
+                "My name is Brandon, and I'm a web developer, dj, foodie, and tourist. This is my blog.",
+            },
+            {
+              name: 'keywords',
+              content:
+                'Web Development, Software Engineering, Food, Foodie, Dj, Travel, Tourism, Lifestyle, Blog',
+            },
           ]}
         />
         <Nav toggleSideBar={this.toggleSideBar} />
@@ -59,14 +68,16 @@ const styles = {
   `,
 }
 
-export const query = graphql`
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
+// Query here, and data prop available in App component
+
+// export const query = graphql`
+//   query SiteTitleQuery {
+//     site {
+//       siteMetadata {
+//         title
+//       }
+//     }
+//   }
+// `
 
 export default App

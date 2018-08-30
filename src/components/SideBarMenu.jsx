@@ -21,7 +21,7 @@ const SideBarMenu = ({ children, showSideBar, toggleSideBar }) => (
         <span className={styles.menuItem}>Home.</span>
       </Menu.Item>
       <Menu.Item name="about" as={Link} to="/about" onClick={toggleSideBar}>
-        <span className={styles.menuItem}>About-B.</span>
+        <span className={styles.menuItem}>About B.</span>
       </Menu.Item>
       <Menu.Item name="blog" as={Link} to="/blog" onClick={toggleSideBar}>
         <span className={styles.menuItem}>"BLOG"</span>
@@ -29,7 +29,15 @@ const SideBarMenu = ({ children, showSideBar, toggleSideBar }) => (
       <Menu.Item name="travel" as={Link} to="/travel" onClick={toggleSideBar}>
         <span className={styles.menuItem}>Travel.</span>
       </Menu.Item>
-      <Menu.Item name="projects" as={Link} to="/projects" onClick={toggleSideBar}>
+      <Menu.Item name="social" as={Link} to="/social" onClick={toggleSideBar}>
+        <span className={styles.menuItem}>Social Media.</span>
+      </Menu.Item>
+      <Menu.Item
+        name="projects"
+        as={Link}
+        to="/projects"
+        onClick={toggleSideBar}
+      >
         <span className={styles.menuItem}>Dev Projects.</span>
       </Menu.Item>
       <Menu.Item name="dj-life" as={Link} to="/dj" onClick={toggleSideBar}>
@@ -38,7 +46,6 @@ const SideBarMenu = ({ children, showSideBar, toggleSideBar }) => (
       <Menu.Item name="say-hey" as={Link} to="/contact" onClick={toggleSideBar}>
         <span className={styles.menuItem}>Say Hey.</span>
       </Menu.Item>
-      
     </Sidebar>
     <Sidebar.Pusher>{children}</Sidebar.Pusher>
   </Sidebar.Pushable>

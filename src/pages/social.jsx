@@ -1,9 +1,9 @@
 import React from 'react'
 import { css } from 'react-emotion'
 
-const About = () => (
+const Social = () => (
   <div className={styles.wrapper}>
-    <h1 className={styles.header}>About B.</h1>
+    <h1 className={styles.header}>Social Media.</h1>
   </div>
 )
 
@@ -24,4 +24,4 @@ const styles = {
   `,
 }
 
-export default About
+export default Social
