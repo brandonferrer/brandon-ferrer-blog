@@ -46,7 +46,14 @@ class Social extends Component {
             {instagramUrls.map(url => {
               return (
                 <Grid.Column>
-                  <Image src={url} />
+                  <Image
+                    src={url}
+                    style={{
+                      objectFit: 'cover',
+                      maxHeight: '320px',
+                      width: '320px',
+                    }}
+                  />
                 </Grid.Column>
               )
             })}
