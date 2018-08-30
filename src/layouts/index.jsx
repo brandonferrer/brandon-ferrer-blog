@@ -29,7 +29,7 @@ class App extends Component {
             {
               name: 'description',
               content:
-                "My name is Brandon, and I'm a web developer, dj, foodie, and tourist. This is my blog.",
+                "Hey, my name is Brandon. I'm a developer, tourist, foodie, disc jockey, and blogger.",
             },
             {
               name: 'keywords',

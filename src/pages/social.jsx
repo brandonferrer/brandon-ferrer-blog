@@ -40,7 +40,7 @@ class Social extends Component {
     return (
       <div className={styles.wrapper}>
         <h1 className={styles.header}>Social Media.</h1>
-        <h1 className={styles.subHeader}>"PICTURES"</h1>
+        <h1 className={styles.subHeader}>"PHOTOS"</h1>
         <div className={styles.postWrapper}>
           <Grid container verticalAlign="middle" columns={3} centered>
             {instagramUrls.map(url => {
