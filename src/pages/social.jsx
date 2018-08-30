@@ -1,11 +1,62 @@
-import React from 'react'
+import React, { Component } from 'react'
+import axios from 'axios'
+import { Grid, Image } from 'semantic-ui-react'
 import { css } from 'react-emotion'
 
-const Social = () => (
-  <div className={styles.wrapper}>
-    <h1 className={styles.header}>Social Media.</h1>
-  </div>
-)
+class Social extends Component {
+  state = {
+    instagramUrls: [],
+  }
+
+  handleInstagramUrls = postsArray =>
+    this.setState({
+      instagramUrls: postsArray,
+    })
+
+  componentDidMount() {
+    const token = process.env.GATSBY_INSTAGRAM_TOKEN
+    const userId = process.env.GATSBY_INSTAGRAM_USER_ID
+    const photoCount = 18
+
+    axios
+      .get(`https://api.instagram.com/v1/users/${userId}/media/recent`, {
+        params: { access_token: token, count: photoCount },
+      })
+      .then(response => {
+        const posts = response.data.data
+        let array = []
+        posts.map(post => {
+          array.push(post.images.standard_resolution.url)
+          this.handleInstagramUrls(array)
+        })
+      })
+      .catch(error => {
+        console.log(error)
+      })
+  }
+  render() {
+    const { instagramUrls } = this.state
+    console.log('from state', instagramUrls)
+
+    return (
+      <div className={styles.wrapper}>
+        <h1 className={styles.header}>Social Media.</h1>
+
+        <div className={styles.postWrapper}>
+          <Grid container verticalAlign="middle" columns={3} centered>
+            {instagramUrls.map(url => {
+              return (
+                <Grid.Column>
+                  <Image src={url} style={{ width: '100%' }} />
+                </Grid.Column>
+              )
+            })}
+          </Grid>
+        </div>
+      </div>
+    )
+  }
+}
 
 const styles = {
   header: css`
@@ -20,8 +71,13 @@ const styles = {
     align-items: center;
     flex-direction: column;
     padding: 2rem 0;
-    height: 98vh;
   `,
+  postWrapper: css`
+ overflow: auto;
+ max-height: 500px;
+ width: 100%;
+  `,
+
 }
 
 export default Social

@@ -15,6 +15,7 @@ class App extends Component {
     this.setState({
       showSideBar: !this.state.showSideBar,
     })
+
   render() {
     const { showSideBar } = this.state
     const { children, data } = this.props
@@ -70,23 +71,23 @@ const styles = {
 }
 
 export const getAllPost = graphql`
-query getAllPost {
-  allWordpressPost {
-    edges {
-      node {
-        id
-        slug
-        title
-        date
-        content
-        categories {
+  query getAllPost {
+    allWordpressPost {
+      edges {
+        node {
           id
-          name
+          slug
+          title
+          date
+          content
+          categories {
+            id
+            name
+          }
         }
       }
     }
   }
-}
 `
 
 export default App

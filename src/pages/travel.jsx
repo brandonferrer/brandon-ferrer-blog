@@ -30,6 +30,9 @@ const styles = {
   subHeader: css`
     color: black;
     letter-spacing: 1.2px;
+    @media (max-width: 500px) {
+      display: none;
+    }
   `,
   wrapper: css`
     padding: 2rem 0;
