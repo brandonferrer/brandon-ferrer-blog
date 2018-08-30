@@ -3,21 +3,6 @@ import { css } from 'react-emotion'
 import { Grid, Image } from 'semantic-ui-react'
 
 const Home = () => (
-  // <div className={styles.wrapper}>
-  //   {/* <h1 className={styles.header}>Home.</h1> */}
-  //   <div className={styles.left}>
-  //     <img
-  //       src="https://brandonferrer.blog/assets/brandon-pink.jpg"
-  //       alt="Brandon at Arcade"
-  //       className={styles.image}
-  //     />
-  //   </div>
-
-  //   <div className={styles.right}>
-  //     <h1>Brandon</h1>
-  //   </div>
-  // </div>
-
   <Grid
     stackable
     verticalAlign="middle"

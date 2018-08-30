@@ -1,11 +1,13 @@
 import React from 'react'
 import { css } from 'react-emotion'
 
-const Blog = () => (
+const Blog = ({data}) => {
+  console.log('data from blog query', data)
+  return (
   <div className={styles.wrapper}>
     <h1 className={styles.header}>"BLOG"</h1>
   </div>
-)
+)}
 
 const styles = {
   header: css`
@@ -23,5 +25,25 @@ const styles = {
     height: 98vh;
   `,
 }
+
+export const getAllPost = graphql`
+query getAllPost {
+  allWordpressPost {
+    edges {
+      node {
+        id
+        slug
+        title
+        date
+        content
+        categories {
+          id
+          name
+        }
+      }
+    }
+  }
+}
+`
 
 export default Blog

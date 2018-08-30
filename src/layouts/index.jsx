@@ -17,7 +17,8 @@ class App extends Component {
     })
   render() {
     const { showSideBar } = this.state
-    const { children } = this.props
+    const { children, data } = this.props
+    console.log('data from wp', data)
 
     return (
       <div>
@@ -68,16 +69,24 @@ const styles = {
   `,
 }
 
-// Query here, and data prop available in App component
-
-// export const query = graphql`
-//   query SiteTitleQuery {
-//     site {
-//       siteMetadata {
-//         title
-//       }
-//     }
-//   }
-// `
+export const getAllPost = graphql`
+query getAllPost {
+  allWordpressPost {
+    edges {
+      node {
+        id
+        slug
+        title
+        date
+        content
+        categories {
+          id
+          name
+        }
+      }
+    }
+  }
+}
+`
 
 export default App
