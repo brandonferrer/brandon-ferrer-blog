@@ -41,7 +41,7 @@ class Social extends Component {
     return (
       <div className={styles.wrapper}>
         <h1 className={styles.header}>Social Media.</h1>
-
+        <h1 className={styles.subHeader}>"PICTURES"</h1>
         <div className={styles.postWrapper}>
           <Grid container verticalAlign="middle" columns={3} centered>
             {instagramUrls.map(url => {
@@ -65,9 +65,17 @@ const styles = {
     letter-spacing: 1.2px;
     color: black;
     padding-top: 2rem;
+    text-align: center;
   `,
+  subHeader: css`
+  color: black;
+  letter-spacing: 1.2px;
+  @media (max-width: 500px) {
+    display: none;
+  }
+`,
   wrapper: css`
-    display: flex;
+   
     align-items: center;
     flex-direction: column;
     padding: 2rem 0;
@@ -76,6 +84,7 @@ const styles = {
  overflow: auto;
  max-height: 500px;
  width: 100%;
+ background-color: black;
   `,
 
 }
