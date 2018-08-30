@@ -2,7 +2,8 @@ import React from 'react'
 import { css } from 'react-emotion'
 import MapMain from '../components/google-maps/MapMain'
 
-const googleMapApiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY
+// const googleMapApiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY
+const googleMapApiKey = process.env.GATSBY_GOOGLE_MAPS_API_KEY
 
 const Travel = () => (
   <div className={styles.wrapper}>
