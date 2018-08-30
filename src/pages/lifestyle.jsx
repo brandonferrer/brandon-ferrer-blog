@@ -39,7 +39,7 @@ class Social extends Component {
 
     return (
       <div className={styles.wrapper}>
-        <h1 className={styles.header}>Social.</h1>
+        <h1 className={styles.header}>Lifestyle.</h1>
         <h1 className={styles.subHeader}>"PHOTOS"</h1>
         <div className={styles.postWrapper}>
           <Grid container verticalAlign="middle" columns={3} centered>

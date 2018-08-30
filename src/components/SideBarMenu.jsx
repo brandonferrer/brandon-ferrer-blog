@@ -35,8 +35,13 @@ const SideBarMenu = ({ children, showSideBar, toggleSideBar }) => (
       <Menu.Item name="travel" as={Link} to="/travel" onClick={toggleSideBar}>
         <span className={styles.menuItem}>Travel.</span>
       </Menu.Item>
-      <Menu.Item name="social" as={Link} to="/social" onClick={toggleSideBar}>
-        <span className={styles.menuItem}>Social.</span>
+      <Menu.Item
+        name="lifestyle"
+        as={Link}
+        to="/lifestyle"
+        onClick={toggleSideBar}
+      >
+        <span className={styles.menuItem}>Lifestyle.</span>
       </Menu.Item>
       <Menu.Item
         disabled
@@ -57,6 +62,15 @@ const SideBarMenu = ({ children, showSideBar, toggleSideBar }) => (
         // onClick={toggleSideBar}
       >
         <span className={cx(styles.menuItem, styles.disabled)}>DJ Life.</span>
+      </Menu.Item>
+      <Menu.Item
+        disabled
+        // name="resume"
+        // as={Link}
+        // // to="/resume"
+        // onClick={toggleSideBar}
+      >
+        <span className={cx(styles.menuItem, styles.disabled)}>Resume.</span>
       </Menu.Item>
       <Menu.Item
         disabled
