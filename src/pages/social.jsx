@@ -36,7 +36,6 @@ class Social extends Component {
   }
   render() {
     const { instagramUrls } = this.state
-    console.log('from state', instagramUrls)
 
     return (
       <div className={styles.wrapper}>
@@ -47,7 +46,7 @@ class Social extends Component {
             {instagramUrls.map(url => {
               return (
                 <Grid.Column>
-                  <Image src={url} style={{ width: '100%' }} />
+                  <Image src={url} />
                 </Grid.Column>
               )
             })}
@@ -68,25 +67,22 @@ const styles = {
     text-align: center;
   `,
   subHeader: css`
-  color: black;
-  letter-spacing: 1.2px;
-  @media (max-width: 500px) {
-    display: none;
-  }
-`,
+    color: black;
+    letter-spacing: 1.2px;
+    @media (max-width: 500px) {
+      display: none;
+    }
+  `,
   wrapper: css`
-   
     align-items: center;
     flex-direction: column;
     padding: 2rem 0;
   `,
   postWrapper: css`
- overflow: auto;
- max-height: 500px;
- width: 100%;
- background-color: black;
+    overflow: auto;
+    max-height: 500px;
+    width: 100%;
   `,
-
 }
 
 export default Social
