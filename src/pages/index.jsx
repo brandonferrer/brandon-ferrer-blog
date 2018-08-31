@@ -1,6 +1,7 @@
 import React from 'react'
 import { css } from 'react-emotion'
 import { Grid, Image } from 'semantic-ui-react'
+import Typist from 'react-typist'
 
 const Home = () => (
   <Grid
@@ -20,18 +21,24 @@ const Home = () => (
     </Grid.Column>
     <Grid.Column>
       <div style={{ width: '100%' }}>
-        <h1 className={styles.jumbo}>Developer.</h1>
-        <h1 className={styles.jumbo}>Tourist.</h1>
-        <h1 className={styles.jumbo}>Foodie.</h1>
-        <h1 className={styles.jumbo}>Disc Jockey.</h1>
-        <h1 className={styles.jumbo}>Blogger.</h1>
-        <h1 className={styles.jumboMobile}>
-          Developer. Tourist. Foodie. Disc Jockey. Blogger.
-        </h1>
+        <Typist cursor={{ show: false }}>
+          <h1 className={styles.jumbo}>Developer.</h1>
+          <h1 className={styles.jumbo}>Tourist.</h1>
+          <h1 className={styles.jumbo}>Foodie.</h1>
+          <h1 className={styles.jumbo}>Disc Jockey.</h1>
+          <h1 className={styles.jumbo}>Blogger.</h1>
+        </Typist>
+        <Typist cursor={{ show: false }}>
+          <h1 className={styles.jumboMobile}>
+            Developer. Tourist. Foodie. Disc Jockey. Blogger.
+          </h1>
+        </Typist>
       </div>
     </Grid.Column>
   </Grid>
 )
+
+export default Home
 
 const styles = {
   jumbo: css`
@@ -72,5 +79,3 @@ const styles = {
     height: 98vh;
   `,
 }
-
-export default Home
