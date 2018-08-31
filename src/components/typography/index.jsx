@@ -1,4 +1,4 @@
-import React from 'React'
+import React from 'react'
 import { css, cx } from 'react-emotion'
 
 export const PageHeader = ({ text, inQuotes }) => {
