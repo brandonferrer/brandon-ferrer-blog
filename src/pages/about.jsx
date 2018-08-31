@@ -1,20 +1,14 @@
 import React from 'react'
 import { css } from 'react-emotion'
+import { PageHeader } from '../components'
 
 const About = () => (
   <div className={styles.wrapper}>
-    <h1 className={styles.header}>About B.</h1>
+    <PageHeader text="About B" />
   </div>
 )
 
 const styles = {
-  header: css`
-    font-family: Nunito Sans !important;
-    font-weight: 800;
-    letter-spacing: 1.2px;
-    color: black;
-    padding-top: 2rem;
-  `,
   wrapper: css`
     display: flex;
     align-items: center;

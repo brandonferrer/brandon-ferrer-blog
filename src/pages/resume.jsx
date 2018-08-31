@@ -1,20 +1,16 @@
 import React from 'react'
 import { css } from 'react-emotion'
+import { PageHeader } from '../components'
 
 const Resume = () => (
   <div className={styles.wrapper}>
-    <h1 className={styles.header}>Resume.</h1>
+    <PageHeader text="Resume" />
   </div>
 )
 
+export default Resume
+
 const styles = {
-  header: css`
-    font-family: Nunito Sans !important;
-    font-weight: 800;
-    letter-spacing: 1.2px;
-    color: black;
-    padding-top: 2rem;
-  `,
   wrapper: css`
     display: flex;
     align-items: center;
@@ -23,5 +19,3 @@ const styles = {
     height: 98vh;
   `,
 }
-
-export default Resume

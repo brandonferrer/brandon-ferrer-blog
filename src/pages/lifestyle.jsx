@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Grid, Image } from 'semantic-ui-react'
 import { css } from 'react-emotion'
+import { OverflowWrapper, PageHeader, SubHeader } from '../components'
 
 class Social extends Component {
   state = {
@@ -39,9 +40,9 @@ class Social extends Component {
 
     return (
       <div className={styles.wrapper}>
-        <h1 className={styles.header}>Lifestyle.</h1>
-        <h1 className={styles.subHeader}>"PHOTOS"</h1>
-        <div className={styles.postWrapper}>
+        <PageHeader text="Lifestyle" />
+        <SubHeader text="Photos" />
+        <OverflowWrapper>
           <Grid container verticalAlign="middle" columns={3} centered>
             {instagramUrls.map(url => {
               return (
@@ -58,38 +59,18 @@ class Social extends Component {
               )
             })}
           </Grid>
-        </div>
+        </OverflowWrapper>
       </div>
     )
   }
 }
 
+export default Social
+
 const styles = {
-  header: css`
-    font-family: Nunito Sans !important;
-    font-weight: 800;
-    letter-spacing: 1.2px;
-    color: black;
-    padding-top: 2rem;
-    text-align: center;
-  `,
-  subHeader: css`
-    color: black;
-    letter-spacing: 1.2px;
-    @media (max-width: 500px) {
-      display: none;
-    }
-  `,
   wrapper: css`
     align-items: center;
     flex-direction: column;
     padding: 2rem 0;
   `,
-  postWrapper: css`
-    overflow: auto;
-    max-height: 500px;
-    width: 100%;
-  `,
 }
-
-export default Social

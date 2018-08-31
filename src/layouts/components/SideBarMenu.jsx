@@ -86,6 +86,8 @@ const SideBarMenu = ({ children, showSideBar, toggleSideBar }) => (
   </Sidebar.Pushable>
 )
 
+export default SideBarMenu
+
 const styles = {
   menuItem: css`
     color: white;
@@ -98,5 +100,3 @@ const styles = {
     color: #666666;
   `,
 }
-
-export default SideBarMenu

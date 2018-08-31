@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 import { css } from 'react-emotion'
 import { Container } from 'semantic-ui-react'
-import SideBarMenu from '../components/SideBarMenu'
-import Nav from '../components/Nav'
+import SideBarMenu from './components/SideBarMenu'
+import Nav from './components/Nav'
 import 'semantic-ui-css/semantic.min.css'
 import './index.css'
 
@@ -44,8 +44,13 @@ class App extends Component {
           toggleSideBar={this.toggleSideBar}
         >
           <Container>
-            <div className={styles.wrapper}>
-              <div className={styles.postWrapper}>{children()}</div>
+            <div
+              className={css`
+                padding: 4rem 0;
+                height: 98vh;
+              `}
+            >
+              {children()}
             </div>
           </Container>
         </SideBarMenu>
@@ -54,21 +59,7 @@ class App extends Component {
   }
 }
 
-const styles = {
-  wrapper: css`
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 4rem 0;
-    height: 98vh;
-  `,
-  postWrapper: css`
-    justify-content: flex-start;
-    align-self: flex-start;
-    width: 100%;
-    height: 100%;
-  `,
-}
+export default App
 
 export const getAllPost = graphql`
   query getAllPost {
@@ -89,5 +80,3 @@ export const getAllPost = graphql`
     }
   }
 `
-
-export default App
