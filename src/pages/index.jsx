@@ -21,14 +21,14 @@ const Home = () => (
     </Grid.Column>
     <Grid.Column>
       <div style={{ width: '100%' }}>
-        <Typist cursor={{ show: false }}>
+        <Typist cursor={{ show: false }} startDelay={600}>
           <h1 className={styles.jumbo}>Developer.</h1>
           <h1 className={styles.jumbo}>Tourist.</h1>
           <h1 className={styles.jumbo}>Foodie.</h1>
           <h1 className={styles.jumbo}>Disc Jockey.</h1>
           <h1 className={styles.jumbo}>Blogger.</h1>
         </Typist>
-        <Typist cursor={{ show: false }}>
+        <Typist cursor={{ show: false }} startDelay={600}>
           <h1 className={styles.jumboMobile}>
             Developer. Tourist. Foodie. Disc Jockey. Blogger.
           </h1>
