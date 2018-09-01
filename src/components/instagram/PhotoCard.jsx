@@ -1,5 +1,7 @@
 import React from 'react'
+import _ from 'lodash'
 import { Card, Icon, Image } from 'semantic-ui-react'
+// TODO:
 
 const PhotoCard = ({
   caption,
@@ -13,7 +15,12 @@ const PhotoCard = ({
   <Card>
     <Image src={imageUrlLow} />
     <Card.Content>
-      <Card.Description>{caption}</Card.Description>
+      <Card.Description>
+        {_.truncate(caption, {
+          length: 24,
+          separator: ' ',
+        })}
+      </Card.Description>
     </Card.Content>
     <Card.Content extra>
       <a>
