@@ -22,6 +22,9 @@ const styles = {
     color: black;
     padding-top: 2rem;
     text-align: center;
+    @media (max-width: 500px) {
+      padding-top: 0.5rem;
+    }
   `,
   subHeader: css`
     color: black;
