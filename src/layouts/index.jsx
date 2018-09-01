@@ -66,7 +66,7 @@ export const getAllPost = graphql`
       edges {
         node {
           id
-          date
+          date(formatString: "MMMM DD, YYYY")
           slug
           title
           excerpt
