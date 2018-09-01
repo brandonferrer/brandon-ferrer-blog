@@ -2,13 +2,11 @@ import React from 'react'
 import { css } from 'react-emotion'
 import { PageHeader } from '../components'
 
-const Blog = () => {
-  return (
-    <div className={styles.wrapper}>
-      <PageHeader text="Blog" inQuotes />
-    </div>
-  )
-}
+const Blog = ({ data }) => (
+  <div className={styles.wrapper}>
+    <PageHeader text="Blog" inQuotes />
+  </div>
+)
 
 export default Blog
 

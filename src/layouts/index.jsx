@@ -18,8 +18,7 @@ class App extends Component {
 
   render() {
     const { showSideBar } = this.state
-    const { children, data } = this.props
-    console.log('data from wp', data)
+    const { children } = this.props
 
     return (
       <div>
@@ -50,7 +49,7 @@ class App extends Component {
                 height: 98vh;
               `}
             >
-              {children()}
+              {children({ ...this.props })}
             </div>
           </Container>
         </SideBarMenu>
@@ -67,9 +66,10 @@ export const getAllPost = graphql`
       edges {
         node {
           id
+          date
           slug
           title
-          date
+          excerpt
           content
           categories {
             id
