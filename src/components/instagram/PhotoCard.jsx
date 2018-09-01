@@ -17,17 +17,17 @@ const PhotoCard = ({
       style={{
         objectFit: 'cover',
         maxHeight: '320px',
-        width: '320px',
+        maxWidth: '320px',
       }}
     />
-    <Card.Content>
+    <Card.Content style={{ minHeight: '200px' }}>
       <Card.Meta>
         <span>{date}</span>
       </Card.Meta>
       <Card.Description>
         <p style={{ fontSize: '12px' }}>
           {_.truncate(caption, {
-            length: 38,
+            length: 55,
             separator: ' ',
           })}
         </p>

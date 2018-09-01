@@ -34,7 +34,11 @@ class Social extends Component {
         let postArray = []
         posts.map(post => {
           const { images, caption, likes, link, created_time } = post
-          const convertedDate = <Moment unix>{created_time}</Moment>
+          const convertedDate = (
+            <Moment unix format="MM/DD/YYYY">
+              {created_time}
+            </Moment>
+          )
           const postObj = {
             caption: caption.text,
             likes: likes.count,
