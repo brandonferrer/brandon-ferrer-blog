@@ -20,7 +20,7 @@ const PhotoCard = ({
         maxWidth: '320px',
       }}
     />
-    <Card.Content style={{ minHeight: '100px' }}>
+    <Card.Content style={{ minHeight: '110px' }}>
       <Card.Meta>
         <span>{date}</span>
       </Card.Meta>
