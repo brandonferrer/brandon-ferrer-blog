@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
-import { css } from 'react-emotion'
 import { Container } from 'semantic-ui-react'
 import SideBarMenu from './components/SideBarMenu'
 import Nav from './components/Nav'
@@ -43,12 +42,7 @@ class App extends Component {
           toggleSideBar={this.toggleSideBar}
         >
           <Container>
-            <div
-              className={css`
-                padding: 4rem 0;
-                height: 98vh;
-              `}
-            >
+            <div style={{ padding: '4rem 0', height: '98vh' }}>
               {children({ ...this.props })}
             </div>
           </Container>
