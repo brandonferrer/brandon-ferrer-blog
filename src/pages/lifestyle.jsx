@@ -1,17 +1,23 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import Moment from 'react-moment'
 import { Grid, Image } from 'semantic-ui-react'
 import { css } from 'react-emotion'
-import { OverflowWrapper, PageHeader, SubHeader } from '../components'
+import {
+  OverflowWrapper,
+  PageHeader,
+  SubHeader,
+  PhotoCard,
+} from '../components'
 
 class Social extends Component {
   state = {
-    instagramUrls: [],
+    instagramPostArray: [],
   }
 
-  handleInstagramUrls = postsArray =>
+  handleInstagramData = postArray =>
     this.setState({
-      instagramUrls: postsArray,
+      instagramPostArray: postArray,
     })
 
   componentDidMount() {
@@ -25,10 +31,21 @@ class Social extends Component {
       })
       .then(response => {
         const posts = response.data.data
-        let array = []
+        let postArray = []
         posts.map(post => {
-          array.push(post.images.standard_resolution.url)
-          this.handleInstagramUrls(array)
+          const { images, caption, likes, link, created_time } = post
+          const convertedDate = <Moment unix>{created_time}</Moment>
+          const postObj = {
+            caption: caption.text,
+            likes: likes.count,
+            date: convertedDate,
+            imageUrlLow: images.low_resolution.url,
+            imageUrlStandard: images.standard_resolution.url,
+            imageUrlThumb: images.thumbnail.url,
+            igLink: link,
+          }
+          postArray.push(postObj)
+          this.handleInstagramData(postArray)
         })
       })
       .catch(error => {
@@ -36,7 +53,7 @@ class Social extends Component {
       })
   }
   render() {
-    const { instagramUrls } = this.state
+    const { instagramPostArray } = this.state
 
     return (
       <div className={styles.wrapper}>
@@ -44,16 +61,34 @@ class Social extends Component {
         <SubHeader text="Photos" />
         <OverflowWrapper>
           <Grid container verticalAlign="middle" columns={3} centered>
-            {instagramUrls.map(url => {
+            {instagramPostArray.map(post => {
+              const {
+                caption,
+                likes,
+                date,
+                imageUrlLow,
+                imageUrlStandard,
+                imageUrlThumb,
+                igLink,
+              } = post
               return (
                 <Grid.Column>
-                  <Image
+                  {/* <Image
                     src={url}
                     style={{
                       objectFit: 'cover',
                       maxHeight: '320px',
                       width: '320px',
                     }}
+                  /> */}
+                  <PhotoCard
+                    caption={caption}
+                    likes={likes}
+                    date={date}
+                    imageUrlLow={imageUrlLow}
+                    imageUrlStandard={imageUrlStandard}
+                    imageUrlThumb={imageUrlThumb}
+                    igLink={igLink}
                   />
                 </Grid.Column>
               )
