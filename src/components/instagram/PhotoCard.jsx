@@ -6,14 +6,14 @@ const PhotoCard = ({
   caption,
   likes,
   date,
-  imageUrlLow,
-  // imageUrlStandard,
+  // imageUrlLow,
+  imageUrlStandard,
   // imageUrlThumb,
   igLink,
 }) => (
-  <Card>
+  <Card style={{ height: '320px' }}>
     <Image
-      src={imageUrlLow}
+      src={imageUrlStandard}
       style={{
         objectFit: 'cover',
         maxHeight: '320px',
