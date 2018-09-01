@@ -10,6 +10,7 @@ export default OverflowWrapper
 const styles = {
   overflowWrapper: css`
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
     max-height: 510px;
     width: 100%;
   `,
