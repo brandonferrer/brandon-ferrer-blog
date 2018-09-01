@@ -11,7 +11,7 @@ const PhotoCard = ({
   // imageUrlThumb,
   igLink,
 }) => (
-  <Card style={{ height: '320px' }}>
+  <Card>
     <Image
       src={imageUrlStandard}
       style={{
