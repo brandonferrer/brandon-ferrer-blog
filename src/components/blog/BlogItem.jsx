@@ -17,7 +17,7 @@ const BlogItem = ({ node }) => (
         <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
       </Item.Description>
       <Item.Extra>
-        <Button primary floated="right">
+        <Button primary size="medium" floated="right">
           Read Post
           <Icon name="right chevron" />
         </Button>

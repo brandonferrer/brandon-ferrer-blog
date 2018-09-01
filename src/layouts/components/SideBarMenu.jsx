@@ -14,7 +14,8 @@ const SideBarMenu = ({ children, showSideBar, toggleSideBar }) => (
       direction="right"
       style={{
         position: 'fixed',
-        top: '10em',
+        bottom: 0,
+        top: '7rem',
       }}
     >
       <Menu.Item name="home" as={Link} to="/" onClick={toggleSideBar}>
