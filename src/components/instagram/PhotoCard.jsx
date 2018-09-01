@@ -20,14 +20,14 @@ const PhotoCard = ({
         maxWidth: '320px',
       }}
     />
-    <Card.Content style={{ minHeight: '200px' }}>
+    <Card.Content style={{ minHeight: '100px' }}>
       <Card.Meta>
         <span>{date}</span>
       </Card.Meta>
       <Card.Description>
         <p style={{ fontSize: '12px' }}>
           {_.truncate(caption, {
-            length: 55,
+            length: 100,
             separator: ' ',
           })}
         </p>

@@ -64,7 +64,14 @@ class Social extends Component {
         <PageHeader text="Lifestyle" />
         <SubHeader text="Photos" />
         <OverflowWrapper>
-          <Grid container stackable verticalAlign="middle" columns={3} centered>
+          <Grid
+            container
+            stackable
+            verticalAlign="middle"
+            columns={3}
+            centered
+            style={{ marginTop: 0 }}
+          >
             {instagramPostArray.map(post => {
               const {
                 caption,
