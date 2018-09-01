@@ -10,7 +10,7 @@ export default OverflowWrapper
 const styles = {
   overflowWrapper: css`
     overflow: auto;
-    max-height: 70%;
+    max-height: 510px;
     width: 100%;
   `,
 }
