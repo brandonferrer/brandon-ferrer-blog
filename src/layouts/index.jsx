@@ -54,23 +54,23 @@ class App extends Component {
 
 export default App
 
-export const getAllPost = graphql`
-  query getAllPost {
-    allWordpressPost {
-      edges {
-        node {
-          id
-          date(formatString: "MMMM DD, YYYY")
-          slug
-          title
-          excerpt
-          content
-          categories {
-            id
-            name
-          }
-        }
-      }
-    }
-  }
-`
+// export const getAllPost = graphql`
+//   query getAllPost {
+//     allWordpressPost {
+//       edges {
+//         node {
+//           id
+//           date(formatString: "MMMM DD, YYYY")
+//           slug
+//           title
+//           excerpt
+//           content
+//           categories {
+//             id
+//             name
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
