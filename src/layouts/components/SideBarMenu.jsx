@@ -50,9 +50,7 @@ const SideBarMenu = ({ children, showSideBar, toggleSideBar }) => (
         to="/projects"
         onClick={toggleSideBar}
       >
-        <span className={cx(styles.menuItem, styles.disabled)}>
-          Dev Projects.
-        </span>
+        <span className={styles.menuItem}>Dev Projects.</span>
       </Menu.Item>
       <Menu.Item
         disabled
