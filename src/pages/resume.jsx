@@ -1,11 +1,14 @@
 import React from 'react'
 import { css } from 'react-emotion'
 import { PageHeader } from '../components'
+import Layout from '../components/layout'
 
 const Resume = () => (
-  <div className={styles.wrapper}>
-    <PageHeader text="Resume" />
-  </div>
+  <Layout>
+    <div className={styles.wrapper}>
+      <PageHeader text="Resume" />
+    </div>
+  </Layout>
 )
 
 export default Resume

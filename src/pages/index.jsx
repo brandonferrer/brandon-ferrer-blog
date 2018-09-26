@@ -1,41 +1,44 @@
 import React from 'react'
 import { css } from 'react-emotion'
-import { Grid, Image } from 'semantic-ui-react'
+import { Grid } from 'semantic-ui-react'
 import Typist from 'react-typist'
+import Layout from '../components/layout'
 
 const Home = () => (
-  <Grid
-    stackable
-    verticalAlign="middle"
-    columns={2}
-    style={{ paddingTop: '3rem' }}
-  >
-    <Grid.Column>
-      <div style={{ width: '100%' }}>
-        <img
-          src="http://brandonferrer.blog/assets/brandon-pink.jpg"
-          alt="Brandon at Arcade"
-          className={styles.image}
-        />
-      </div>
-    </Grid.Column>
-    <Grid.Column>
-      <div style={{ width: '100%' }}>
-        <Typist cursor={{ show: false }} startDelay={600}>
-          <h1 className={styles.jumbo}>Developer.</h1>
-          <h1 className={styles.jumbo}>Tourist.</h1>
-          <h1 className={styles.jumbo}>Foodie.</h1>
-          <h1 className={styles.jumbo}>Disc Jockey.</h1>
-          <h1 className={styles.jumbo}>Blogger.</h1>
-        </Typist>
-        <Typist cursor={{ show: false }} startDelay={600}>
-          <h1 className={styles.jumboMobile}>
-            Developer. Tourist. Foodie. Disc Jockey. Blogger.
-          </h1>
-        </Typist>
-      </div>
-    </Grid.Column>
-  </Grid>
+  <Layout>
+    <Grid
+      stackable
+      verticalAlign="middle"
+      columns={2}
+      style={{ paddingTop: '3rem' }}
+    >
+      <Grid.Column>
+        <div style={{ width: '100%' }}>
+          <img
+            src="http://brandonferrer.blog/assets/brandon-pink.jpg"
+            alt="Brandon at Arcade"
+            className={styles.image}
+          />
+        </div>
+      </Grid.Column>
+      <Grid.Column>
+        <div style={{ width: '100%' }}>
+          <Typist cursor={{ show: false }} startDelay={600}>
+            <h1 className={styles.jumbo}>Developer.</h1>
+            <h1 className={styles.jumbo}>Tourist.</h1>
+            <h1 className={styles.jumbo}>Foodie.</h1>
+            <h1 className={styles.jumbo}>Disc Jockey.</h1>
+            <h1 className={styles.jumbo}>Blogger.</h1>
+          </Typist>
+          <Typist cursor={{ show: false }} startDelay={600}>
+            <h1 className={styles.jumboMobile}>
+              Developer. Tourist. Foodie. Disc Jockey. Blogger.
+            </h1>
+          </Typist>
+        </div>
+      </Grid.Column>
+    </Grid>
+  </Layout>
 )
 
 export default Home

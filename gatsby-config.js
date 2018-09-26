@@ -33,11 +33,11 @@ module.exports = {
     //     useACF: true,
     //   },
     // },
-    // {
-    //   resolve: 'gatsby-plugin-google-fonts',
-    //   options: {
-    //     fonts: ['nunito sans:400,700,700i,800'],
-    //   },
-    // },
+    {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: ['nunito sans:400,700,700i,800'],
+      },
+    },
   ],
 }
