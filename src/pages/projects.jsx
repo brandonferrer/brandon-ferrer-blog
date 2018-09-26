@@ -1,10 +1,97 @@
 import React from 'react'
+import { Grid } from 'semantic-ui-react'
 import { css } from 'react-emotion'
-import { PageHeader } from '../components'
+import { OverflowWrapper, PageHeader, SubHeader } from '../components'
 
 const Projects = () => (
   <div className={styles.wrapper}>
     <PageHeader text="Dev Projects" />
+    <OverflowWrapper>
+      <Grid
+        columns={2}
+        container
+        stackable
+        verticalAlign="middle"
+        textAlign="center"
+      >
+        <Grid.Column>
+          <h3>Work Pong</h3>
+          <p style={{ fontSize: '14px', fontStyle: 'italic' }}>
+            React, Redux, Web Pack, Firebase, Google Auth, Netlify
+          </p>
+          <p>
+            At work, we're super serious about the pong life. We used to use a
+            SlackBot to keep track of our office ping pong standings. It kept
+            asking us to purchase it for $29.99... super annoying. I made our
+            own. Slack integration coming soon?
+          </p>
+        </Grid.Column>
+        <Grid.Column style={{ paddingTop: '4rem' }}>
+          <img
+            src="http://www.brandonferrer.blog/assets/projects/work-pong.png"
+            alt="Work Pong"
+            style={{
+              border: '1px #000 solid',
+              height: '400px',
+              margin: '0 auto',
+            }}
+          />
+        </Grid.Column>
+        <Grid.Column style={{ paddingTop: '4rem' }}>
+          <img
+            src="http://www.brandonferrer.blog/assets/projects/brandon-ferrer-blog.png"
+            alt="Brandon Ferrer Blog"
+            style={{
+              border: '1px #000 solid',
+              width: '500px',
+              margin: '0 auto',
+            }}
+          />
+        </Grid.Column>
+        <Grid.Column style={{ paddingTop: '4rem' }}>
+          <h3>BrandonFerrer.com</h3>
+          <p style={{ fontSize: '14px', fontStyle: 'italic' }}>
+            Gatsby, React, GraphQL, WordPress, Instagram API, Google Maps API,
+            Netlify, JAMstack
+          </p>
+          <p>
+            I wanted to build React SPA that was crawlable for SEO. Gatsby was a
+            dope solution. My intention for this website was to be a blog, along
+            with showing my upcoming travel plans and Instagram feed. I chose to
+            use WordPress as a CMS/API.
+          </p>
+        </Grid.Column>
+
+        <Grid.Column style={{ paddingTop: '4rem' }}>
+          <h3>ICMonster Cafe</h3>
+          <p style={{ fontSize: '14px', fontStyle: 'italic' }}>
+            HTML, CSS, JS, Gulp, PSD to Web, SendGrid
+          </p>
+          <p>
+            My friend opened an ice cream shop, and her sister from China is a
+            graphic designer. She mocked up PSDs, and I wrote some code... and
+            ate a lot of ice cream.
+          </p>
+          <p>
+            Check out my freelance stuff at{' '}
+            <a href="http://www.webwavy.com" target="_blank">
+              Web Wavy 🌊
+            </a>
+          </p>
+        </Grid.Column>
+        <Grid.Column style={{ paddingTop: '4rem' }}>
+          <img
+            src="http://www.brandonferrer.blog/assets/projects/icmonster.jpg"
+            alt="Work Pong"
+            style={{
+              border: '1px #000 solid',
+              height: '400px',
+              margin: '0 auto',
+            }}
+          />
+        </Grid.Column>
+      </Grid>
+    </OverflowWrapper>
   </div>
 )
 
