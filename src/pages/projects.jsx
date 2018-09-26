@@ -21,6 +21,7 @@ const Projects = () => (
           </p>
           <p>
             At work, we're super serious about the pong life. We used to use a
+            <em>free</em>
             SlackBot to keep track of our office ping pong standings. It kept
             asking us to purchase it for $29.99... super annoying. I made our
             own. Slack integration coming soon?
@@ -55,10 +56,10 @@ const Projects = () => (
             Netlify, JAMstack, Semantic UI
           </p>
           <p>
-            I wanted to build React SPA that was crawlable for SEO. Gatsby was a
-            dope solution. My intention for this website was to be a blog, along
-            with showing my upcoming travel plans and Instagram feed. I chose to
-            use WordPress as a CMS/API.
+            I wanted to build a React SPA that was crawlable for SEO. Gatsby was
+            a dope solution. My intention for this website was to be a blog,
+            along with showing my upcoming travel plans and Instagram feed. I
+            chose to use WordPress as a CMS and API.
           </p>
         </Grid.Column>
 
@@ -66,7 +67,7 @@ const Projects = () => (
           <h3>ICMonster Cafe</h3>
           <p style={{ fontSize: '14px', fontStyle: 'italic' }}>
             HTML, CSS, Javascript, Bootstrap, Gulp, PSD to Web, SendGrid PHP
-            Library
+            Lib, LAMP
           </p>
           <p>
             My friend opened an ice cream shop, and her sister from China is a
