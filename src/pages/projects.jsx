@@ -17,7 +17,7 @@ const Projects = () => (
         <Grid.Column>
           <h3>Work Pong</h3>
           <p style={{ fontSize: '14px', fontStyle: 'italic' }}>
-            React, Redux, Web Pack, Firebase, Google Auth, Netlify
+            React, Redux, Webpack, Semantic UI, Firebase, Google Auth, Netlify
           </p>
           <p>
             At work, we're super serious about the pong life. We used to use a
@@ -52,7 +52,7 @@ const Projects = () => (
           <h3>BrandonFerrer.com</h3>
           <p style={{ fontSize: '14px', fontStyle: 'italic' }}>
             Gatsby, React, GraphQL, WordPress, Instagram API, Google Maps API,
-            Netlify, JAMstack
+            Netlify, JAMstack, Semantic UI
           </p>
           <p>
             I wanted to build React SPA that was crawlable for SEO. Gatsby was a
@@ -65,7 +65,8 @@ const Projects = () => (
         <Grid.Column style={{ paddingTop: '4rem' }}>
           <h3>ICMonster Cafe</h3>
           <p style={{ fontSize: '14px', fontStyle: 'italic' }}>
-            HTML, CSS, JS, Gulp, PSD to Web, SendGrid
+            HTML, CSS, Javascript, Bootstrap, Gulp, PSD to Web, SendGrid PHP
+            Library
           </p>
           <p>
             My friend opened an ice cream shop, and her sister from China is a
