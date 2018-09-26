@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Icon, Image, Item, Label } from 'semantic-ui-react'
+import { Button, Icon, Item, Label } from 'semantic-ui-react' // Image,
 
 //   <Item.Group divided>
 // BlogItem is wrapped in Item.Group where used

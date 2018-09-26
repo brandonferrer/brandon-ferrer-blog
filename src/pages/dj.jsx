@@ -1,11 +1,14 @@
 import React from 'react'
 import { css } from 'react-emotion'
 import { PageHeader } from '../components'
+import Layout from '../components/layout'
 
 const Dj = () => (
-  <div className={styles.wrapper}>
-    <PageHeader text="Dj Life" />
-  </div>
+  <Layout>
+    <div className={styles.wrapper}>
+      <PageHeader text="Dj Life" />
+    </div>
+  </Layout>
 )
 
 export default Dj

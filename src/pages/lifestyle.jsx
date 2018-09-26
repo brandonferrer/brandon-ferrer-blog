@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import Moment from 'react-moment'
-import { Grid, Image } from 'semantic-ui-react'
+import { Grid } from 'semantic-ui-react'
 import { css } from 'react-emotion'
 import {
   OverflowWrapper,
@@ -9,6 +9,7 @@ import {
   SubHeader,
   PhotoCard,
 } from '../components'
+import Layout from '../components/layout'
 
 class Social extends Component {
   state = {
@@ -60,31 +61,32 @@ class Social extends Component {
     const { instagramPostArray } = this.state
 
     return (
-      <div className={styles.wrapper}>
-        <PageHeader text="Lifestyle" />
-        <SubHeader text="Photos" />
-        <OverflowWrapper>
-          <Grid
-            container
-            stackable
-            verticalAlign="middle"
-            columns={3}
-            centered
-            style={{ marginTop: 0 }}
-          >
-            {instagramPostArray.map(post => {
-              const {
-                caption,
-                likes,
-                date,
-                imageUrlLow,
-                imageUrlStandard,
-                imageUrlThumb,
-                igLink,
-              } = post
-              return (
-                <Grid.Column>
-                  {/* <Image
+      <Layout>
+        <div className={styles.wrapper}>
+          <PageHeader text="Lifestyle" />
+          <SubHeader text="Photos" />
+          <OverflowWrapper>
+            <Grid
+              container
+              stackable
+              verticalAlign="middle"
+              columns={3}
+              centered
+              style={{ marginTop: 0 }}
+            >
+              {instagramPostArray.map(post => {
+                const {
+                  caption,
+                  likes,
+                  date,
+                  imageUrlLow,
+                  imageUrlStandard,
+                  imageUrlThumb,
+                  igLink,
+                } = post
+                return (
+                  <Grid.Column>
+                    {/* <Image
                     src={url}
                     style={{
                       objectFit: 'cover',
@@ -92,21 +94,22 @@ class Social extends Component {
                       width: '320px',
                     }}
                   /> */}
-                  <PhotoCard
-                    caption={caption}
-                    likes={likes}
-                    date={date}
-                    imageUrlLow={imageUrlLow}
-                    imageUrlStandard={imageUrlStandard}
-                    imageUrlThumb={imageUrlThumb}
-                    igLink={igLink}
-                  />
-                </Grid.Column>
-              )
-            })}
-          </Grid>
-        </OverflowWrapper>
-      </div>
+                    <PhotoCard
+                      caption={caption}
+                      likes={likes}
+                      date={date}
+                      imageUrlLow={imageUrlLow}
+                      imageUrlStandard={imageUrlStandard}
+                      imageUrlThumb={imageUrlThumb}
+                      igLink={igLink}
+                    />
+                  </Grid.Column>
+                )
+              })}
+            </Grid>
+          </OverflowWrapper>
+        </div>
+      </Layout>
     )
   }
 }

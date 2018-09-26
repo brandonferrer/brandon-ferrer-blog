@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import { Menu, Container } from 'semantic-ui-react'
 
 const Nav = ({ toggleSideBar }) => (
