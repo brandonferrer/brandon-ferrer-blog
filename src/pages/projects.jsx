@@ -1,6 +1,7 @@
 import React from 'react'
 import { Grid } from 'semantic-ui-react'
 import { css } from 'react-emotion'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import { OverflowWrapper, PageHeader } from '../components'
 import Layout from '../components/layout'
 
@@ -78,7 +79,7 @@ const Projects = () => (
             </p>
             <p>
               Check out my freelance stuff at{' '}
-              <a
+              <OutboundLink
                 href="http://www.webwavy.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -87,7 +88,7 @@ const Projects = () => (
                 <span role="img" aria-label="Wave">
                   🌊
                 </span>
-              </a>
+              </OutboundLink>
             </p>
           </Grid.Column>
           <Grid.Column style={{ paddingTop: '4rem' }}>
