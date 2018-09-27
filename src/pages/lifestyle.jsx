@@ -33,6 +33,7 @@ class Social extends Component {
       .then(response => {
         const posts = response.data.data
         let postArray = []
+        // eslint-disable-next-line
         posts.map(post => {
           const { images, caption, likes, link, created_time } = post
           const convertedDate = (
