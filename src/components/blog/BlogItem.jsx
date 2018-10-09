@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import { Button, Icon, Item, Label } from 'semantic-ui-react' // Image,
 
 //   <Item.Group divided>
@@ -17,10 +18,12 @@ const BlogItem = ({ node }) => (
         <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
       </Item.Description>
       <Item.Extra>
-        <Button primary size="medium" floated="right">
-          Read Post
-          <Icon name="right chevron" />
-        </Button>
+        <Link to={`blog/${node.slug}`}>
+          <Button primary size="medium" floated="right">
+            Read Post
+            <Icon name="right chevron" />
+          </Button>
+        </Link>
         <Label>{node.categories[0].name}</Label>
       </Item.Extra>
     </Item.Content>
