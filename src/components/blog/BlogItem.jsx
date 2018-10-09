@@ -8,7 +8,7 @@ import { Button, Icon, Item, Label } from 'semantic-ui-react' // Image,
 
 const BlogItem = ({ node }) => (
   <Item>
-    <Item.Image />
+    {/* <Item.Image /> */}
     <Item.Content>
       <Item.Header>{node.title}</Item.Header>
       <Item.Meta>
@@ -19,12 +19,12 @@ const BlogItem = ({ node }) => (
       </Item.Description>
       <Item.Extra>
         <Link to={`blog/${node.slug}`}>
-          <Button primary size="medium" floated="right">
+          <Button primary size="small" floated="right">
             Read Post
             <Icon name="right chevron" />
           </Button>
         </Link>
-        <Label>{node.categories[0].name}</Label>
+        <Label size="tiny">{node.categories[0].name}</Label>
       </Item.Extra>
     </Item.Content>
   </Item>
