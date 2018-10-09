@@ -15,7 +15,7 @@ const Home = () => (
       <Grid.Column>
         <div style={{ width: '100%' }}>
           <img
-            src="https://brandonferrer.blog/assets/brandon-pink.jpg"
+            src="https://brandonferrer.blog/assets/brandon-vlogging.jpg"
             alt="Brandon at Arcade"
             className={styles.image}
           />
