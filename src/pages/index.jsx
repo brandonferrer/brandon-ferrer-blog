@@ -70,6 +70,7 @@ const styles = {
   `,
   image: css`
     max-width: 400px;
+    margin: 0;
     @media (max-width: 992px) {
       width: 100%;
     }
