@@ -32,7 +32,6 @@ const BlogPage = ({ pageContext }) => {
       <Label className={styles.categoryLabel} size="tiny">
         {categories[0].name}
       </Label>
-
       <OverflowWrapper>
         <div
           dangerouslySetInnerHTML={{ __html: content }}
@@ -55,6 +54,10 @@ const styles = {
   contentWrapper: css`
     margin-top: 1rem;
     padding: 1.5rem;
+    @media (max-width: 500px) {
+      margin-top: 0.5rem;
+      padding: 0.75rem 0.75rem 1.5rem 0.75rem;
+    }
   `,
   categoryLabel: css`
     margin-bottom: 0.5rem;
