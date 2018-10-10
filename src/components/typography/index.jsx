@@ -8,7 +8,7 @@ export const PageHeader = ({ text, inQuotes }) => {
 }
 
 export const BlogPageHeader = ({ text }) => (
-  <h1 className={styles.header}>{text}</h1>
+  <h1 className={styles.blogHeader}>{text}</h1>
 )
 
 export const SubHeader = ({ text }) => (
@@ -28,6 +28,17 @@ const styles = {
     text-align: center;
     @media (max-width: 500px) {
       padding-top: 0.5rem;
+    }
+  `,
+  blogHeader: css`
+    font-family: Nunito Sans !important;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    color: black;
+    padding-top: 2rem;
+    text-align: center;
+    @media (max-width: 500px) {
+      font-size: 1rem;
     }
   `,
   subHeader: css`

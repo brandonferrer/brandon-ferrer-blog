@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { css } from 'react-emotion'
 import Helmet from 'react-helmet'
 import { Icon, Label } from 'semantic-ui-react'
 import Layout from '../layout'
@@ -7,7 +8,7 @@ import OverflowWrapper from '../wrappers/OverflowWrapper'
 import { BlogPageHeader } from '../typography'
 
 const BlogPage = ({ pageContext }) => {
-  const { id, date, slug, title, excerpt, content, categories } = pageContext
+  const { date, title, excerpt, content, categories } = pageContext // id, slug available
   return (
     <Layout>
       <Helmet>
@@ -26,16 +27,16 @@ const BlogPage = ({ pageContext }) => {
       </Link>
       <BlogPageHeader text={title} />
 
-      <p style={{ textAlign: 'center' }}>{date}</p>
+      <p className={styles.date}>{date}</p>
 
-      <Label size="tiny" style={{ marginBottom: '0.5rem' }}>
+      <Label className={styles.categoryLabel} size="tiny">
         {categories[0].name}
       </Label>
 
       <OverflowWrapper>
         <div
           dangerouslySetInnerHTML={{ __html: content }}
-          style={{ marginTop: '1rem', padding: '1.5rem' }}
+          className={styles.contentWrapper}
         />
       </OverflowWrapper>
     </Layout>
@@ -43,3 +44,19 @@ const BlogPage = ({ pageContext }) => {
 }
 
 export default BlogPage
+
+const styles = {
+  date: css`
+    text-align: center;
+    @media (max-width: 500px) {
+      font-size: 0.75rem;
+    }
+  `,
+  contentWrapper: css`
+    margin-top: 1rem;
+    padding: 1.5rem;
+  `,
+  categoryLabel: css`
+    margin-bottom: 0.5rem;
+  `,
+}
