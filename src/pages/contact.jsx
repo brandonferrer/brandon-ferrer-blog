@@ -1,7 +1,7 @@
 import React from 'react'
 import { css } from 'react-emotion'
 import { PageHeader } from '../components'
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 
 const Contact = () => (
   <Layout>

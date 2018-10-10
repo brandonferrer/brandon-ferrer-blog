@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import { css } from 'react-emotion'
 import { Item } from 'semantic-ui-react'
 import { PageHeader, OverflowWrapper, BlogItem } from '../components'
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 
 const Blog = () => (
   <StaticQuery

@@ -3,7 +3,7 @@ import { Grid } from 'semantic-ui-react'
 import { css } from 'react-emotion'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import { OverflowWrapper, PageHeader } from '../components'
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 
 const Projects = () => (
   <Layout>

@@ -9,7 +9,7 @@ import {
   SubHeader,
   PhotoCard,
 } from '../components'
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 
 class Social extends Component {
   state = {

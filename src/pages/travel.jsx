@@ -1,7 +1,7 @@
 import React from 'react'
 import { css } from 'react-emotion'
 import { TravelMap, PageHeader, SubHeader } from '../components'
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 
 const googleMapApiKey = process.env.GATSBY_GOOGLE_MAPS_API_KEY
 

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Helmet from 'react-helmet'
 import { Icon, Label } from 'semantic-ui-react'
-import Layout from '../Layout'
+import Layout from '../layout'
 import OverflowWrapper from '../wrappers/OverflowWrapper'
 import { BlogPageHeader } from '../typography'
 
