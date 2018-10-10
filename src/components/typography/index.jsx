@@ -7,6 +7,10 @@ export const PageHeader = ({ text, inQuotes }) => {
   return <h1 className={cx(styles.header, inQuoteStyles)}>{headline}</h1>
 }
 
+export const BlogPageHeader = ({ text }) => (
+  <h1 className={styles.header}>{text}</h1>
+)
+
 export const SubHeader = ({ text }) => (
   <h1 className={cx(styles.subHeader, styles.inQuotes)}>"{text}"</h1>
 )

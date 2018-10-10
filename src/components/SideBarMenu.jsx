@@ -63,15 +63,6 @@ const SideBarMenu = ({ children, showSideBar, toggleSideBar }) => (
       </Menu.Item>
       <Menu.Item
         disabled
-        // name="resume"
-        // as={Link}
-        // // to="/resume"
-        // onClick={toggleSideBar}
-      >
-        <span className={cx(styles.menuItem, styles.disabled)}>Resume.</span>
-      </Menu.Item>
-      <Menu.Item
-        disabled
         // name="say-hey"
         // as={Link}
         // // to="/contact"

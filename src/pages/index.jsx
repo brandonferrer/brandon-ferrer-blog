@@ -2,7 +2,7 @@ import React from 'react'
 import { css } from 'react-emotion'
 import { Grid } from 'semantic-ui-react'
 import Typist from 'react-typist'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 
 const Home = () => (
   <Layout>

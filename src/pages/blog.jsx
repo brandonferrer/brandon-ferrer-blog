@@ -3,13 +3,13 @@ import { StaticQuery, graphql } from 'gatsby'
 import { css } from 'react-emotion'
 import { Item } from 'semantic-ui-react'
 import { PageHeader, OverflowWrapper, BlogItem } from '../components'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 
 const Blog = () => (
   <StaticQuery
     query={graphql`
       {
-        allWordpressPost {
+        allWordpressPost(sort: { fields: [date], order: DESC }) {
           edges {
             node {
               id
