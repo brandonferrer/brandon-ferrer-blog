@@ -26,12 +26,8 @@ const BlogPage = ({ pageContext }) => {
         Back
       </Link>
       <BlogPageHeader text={title} />
-
       <p className={styles.date}>{date}</p>
-
-      <Label className={styles.categoryLabel} size="tiny">
-        {categories[0].name}
-      </Label>
+      <Label size="tiny">{categories[0].name}</Label>
       <OverflowWrapper>
         <div
           dangerouslySetInnerHTML={{ __html: content }}
@@ -55,11 +51,11 @@ const styles = {
     margin-top: 1rem;
     padding: 1.5rem;
     @media (max-width: 500px) {
-      margin-top: 0.5rem;
-      padding: 0.75rem 0.75rem 1.5rem 0.75rem;
+      margin-top: 0.25rem;
+      padding: 0.75rem 0.75rem 2rem 0.75rem;
     }
   `,
   categoryLabel: css`
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem !important;
   `,
 }

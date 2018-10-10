@@ -38,7 +38,7 @@ const styles = {
     padding-top: 2rem;
     text-align: center;
     @media (max-width: 500px) {
-      font-size: 1rem;
+      font-size: 1.25rem;
     }
   `,
   subHeader: css`
