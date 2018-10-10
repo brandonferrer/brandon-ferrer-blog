@@ -7,7 +7,7 @@ import OverflowWrapper from '../wrappers/OverflowWrapper'
 import { BlogPageHeader } from '../typography'
 
 const BlogPage = ({ pageContext }) => {
-  const { date, title, excerpt, content, categories } = pageContext // id, slug
+  const { id, date, slug, title, excerpt, content, categories } = pageContext
   return (
     <Layout>
       <Helmet>
