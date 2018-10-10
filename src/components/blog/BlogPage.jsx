@@ -21,13 +21,15 @@ const BlogPage = ({ pageContext }) => {
         />
         <title>{title} | brandonferrer.com | "BLOG"</title>
       </Helmet>
-      <Link to="/blog">
-        <Icon name="chevron circle left" />
-        Back
-      </Link>
-      <BlogPageHeader text={title} />
-      <p className={styles.date}>{date}</p>
-      <Label size="tiny">{categories[0].name}</Label>
+      <div className={styles.headerWrapper}>
+        <Link to="/blog">
+          <Icon name="chevron circle left" />
+          Back
+        </Link>
+        <BlogPageHeader text={title} />
+        <p className={styles.date}>{date}</p>
+        <Label size="tiny">{categories[0].name}</Label>
+      </div>
       <OverflowWrapper>
         <div
           dangerouslySetInnerHTML={{ __html: content }}
@@ -52,8 +54,11 @@ const styles = {
     padding: 1.5rem;
     @media (max-width: 500px) {
       margin-top: 0.25rem;
-      padding: 0.75rem 0.75rem 2rem 0.75rem;
+      padding: 1rem 0.75rem 10rem 0.75rem;
     }
+  `,
+  headerWrapper: css`
+    padding: 1rem;
   `,
   categoryLabel: css`
     margin-bottom: 0.5rem !important;

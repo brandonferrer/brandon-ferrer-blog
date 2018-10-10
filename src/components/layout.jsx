@@ -32,7 +32,7 @@ class App extends Component {
             {
               name: 'keywords',
               content:
-                'Web Development, Software Engineering, Food, Foodie, Dj, Travel, Tourism, Lifestyle, Blog',
+                'Brandon, Brandon Ferrer, brandonferrer, Web Development, Software Engineering, Food, Foodie, Dj, Travel, Tourism, Lifestyle, Blog',
             },
           ]}
         />
