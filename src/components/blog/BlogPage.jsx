@@ -30,7 +30,7 @@ const BlogPage = ({ pageContext }) => {
         <p className={styles.date}>{date}</p>
         <Label size="tiny">{categories[0].name}</Label>
       </div>
-      <OverflowWrapper>
+      <OverflowWrapper blog>
         <div
           dangerouslySetInnerHTML={{ __html: content }}
           className={styles.contentWrapper}
@@ -54,7 +54,7 @@ const styles = {
     padding: 1.5rem;
     @media (max-width: 500px) {
       margin-top: 0.25rem;
-      padding: 1rem 0.75rem 10rem 0.75rem;
+      padding: 1rem 0.75rem 3rem 0.75rem;
     }
   `,
   headerWrapper: css`
