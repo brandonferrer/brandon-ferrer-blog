@@ -11,6 +11,8 @@ const About = () => (
   </Layout>
 )
 
+export default About
+
 const styles = {
   wrapper: css`
     display: flex;
@@ -20,5 +22,3 @@ const styles = {
     height: 98vh;
   `,
 }
-
-export default About

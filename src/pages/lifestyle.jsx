@@ -3,13 +3,13 @@ import axios from 'axios'
 import Moment from 'react-moment'
 import { Grid } from 'semantic-ui-react'
 import { css } from 'react-emotion'
+import Layout from '../components/layout'
 import {
   OverflowWrapper,
   PageHeader,
   SubHeader,
   PhotoCard,
 } from '../components'
-import Layout from '../components/layout'
 
 class Social extends Component {
   state = {
@@ -87,14 +87,6 @@ class Social extends Component {
                 } = post
                 return (
                   <Grid.Column>
-                    {/* <Image
-                    src={url}
-                    style={{
-                      objectFit: 'cover',
-                      maxHeight: '320px',
-                      width: '320px',
-                    }}
-                  /> */}
                     <PhotoCard
                       caption={caption}
                       likes={likes}
