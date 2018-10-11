@@ -64,7 +64,7 @@ module.exports = {
         theme_color: '#fff',
         display: 'standalone',
         orientation: 'portrait',
-        start_url: '/?homescreen=1',
+        start_url: 'https://brandonferrer.com',
         version: '1.0',
 
         icons: {
