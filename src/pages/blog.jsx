@@ -50,7 +50,7 @@ class Blog extends Component {
               onChange={this.handleDropdownChange}
             />
           </div>
-          <OverflowWrapper blog>
+          <OverflowWrapper>
             <div className={styles.contentWrapper}>
               <Item.Group divided>
                 {data &&
