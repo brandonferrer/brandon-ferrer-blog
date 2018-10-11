@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 import { Container } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css'
-import SideBarMenu from './SideBarMenu'
-import Nav from './Nav'
+import SideBarMenu from './navigation/SideBarMenu'
+import Nav from './navigation/Nav'
 import './index.css'
 
 class App extends Component {
