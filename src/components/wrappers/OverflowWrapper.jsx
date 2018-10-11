@@ -11,7 +11,7 @@ const styles = {
   overflowWrapper: css`
     overflow: auto;
     -webkit-overflow-scrolling: touch;
-    height: 60%;
+    max-height: 510px;
     width: 100%;
   `,
 }
