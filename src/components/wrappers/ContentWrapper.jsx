@@ -24,6 +24,7 @@ const styles = {
     display: flex;
     align-items: center;
     padding: 1rem;
+    -webkit-overflow-scrolling: touch;
   `,
   contentWrapperIndex: css`
     width: 100%;
@@ -38,5 +39,6 @@ const styles = {
     height: 60%;
     overflow-y: auto;
     padding: 1rem;
+    -webkit-overflow-scrolling: touch;
   `,
 }
