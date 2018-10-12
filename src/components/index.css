@@ -4,15 +4,15 @@ html {
   font-family: Nunito Sans, sans-serif !important;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  overflow: hidden;
 }
 body {
   margin: 0;
 }
-/* body,
+body,
 html {
-  height: 100vh;
-} */
+  height: 100%;
+  overflow: hidden;
+}
 article,
 aside,
 details,
