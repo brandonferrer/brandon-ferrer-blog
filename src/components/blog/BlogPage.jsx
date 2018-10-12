@@ -29,7 +29,7 @@ const BlogPage = ({ pageContext }) => {
         <p className={styles.date}>{date}</p>
         <Label size="tiny">{categories[0].name}</Label>
       </HeaderWrapper>
-      <ContentWrapper blog>
+      <ContentWrapper blogPage>
         <div dangerouslySetInnerHTML={{ __html: content }} />
       </ContentWrapper>
     </Layout>

@@ -1,10 +1,19 @@
 import React from 'react'
 import { css } from 'react-emotion'
 
-const ContentWrapper = ({ children, blog, projects, index, lifestyle }) => {
+const ContentWrapper = ({
+  children,
+  blog,
+  projects,
+  index,
+  lifestyle,
+  blogPage,
+}) => {
   let contentWrapperStyles
   if (index) {
     contentWrapperStyles = styles.contentWrapperIndex
+  } else if (blogPage) {
+    contentWrapperStyles = styles.contentWrapperBlogPage
   } else {
     contentWrapperStyles =
       blog || projects || lifestyle
@@ -37,6 +46,13 @@ const styles = {
   contentWrapperBlog: css`
     width: 100%;
     height: 60%;
+    overflow-y: auto;
+    padding: 1rem;
+    -webkit-overflow-scrolling: touch;
+  `,
+  contentWrapperBlogPage: css`
+    width: 100%;
+    height: 55%;
     overflow-y: auto;
     padding: 1rem;
     -webkit-overflow-scrolling: touch;
