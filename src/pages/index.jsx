@@ -24,7 +24,7 @@ const Home = () => (
           </div>
         </Grid.Column>
         <Grid.Column>
-          <div style={{ width: '100%', minHeight: '105px' }}>
+          <div style={{ width: '100%', minHeight: '40px' }}>
             <Typist cursor={{ show: false }} startDelay={600}>
               <h1 className={styles.jumbo}>Developer.</h1>
               <h1 className={styles.jumbo}>Tourist.</h1>
@@ -35,20 +35,10 @@ const Home = () => (
             <Typist cursor={{ show: false }} startDelay={600}>
               <h1 className={styles.jumboMobile}>
                 <p>
-                  Developer.
+                  Developer. Tourist. Foodie.
                   <br />
-                  Tourist. <br />
-                  Foodie.
-                  <br />
-                  Disc Jockey.
-                  <br />
-                  Blogger.
+                  Disc Jockey. Blogger.
                 </p>
-                {/* <p>Developer.</p>
-                <p>Tourist. </p>
-                <p>Foodie.</p>
-                <p>Disc Jockey.</p>
-                <p>Blogger.</p> */}
               </h1>
             </Typist>
           </div>
@@ -83,7 +73,6 @@ const styles = {
       letter-spacing: 1.2px;
       color: black;
       font-size: 1rem;
-      text-align: center;
     }
   `,
   imageWrapper: css`
@@ -99,9 +88,6 @@ const styles = {
     margin: 0;
     @media (max-width: 992px) {
       width: 100%;
-    }
-    @media (max-width: 500px) {
-      width: 90%;
     }
   `,
   // wrapper: css`
