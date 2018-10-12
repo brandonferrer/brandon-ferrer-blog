@@ -15,14 +15,7 @@ const Home = () => (
         style={{ width: '100%', height: '100%', margin: 0, padding: 0 }}
       >
         <Grid.Column>
-          <div
-            style={{
-              width: '100%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
+          <div className={styles.imageWrapper}>
             <img
               src="https://brandonferrer.blog/assets/brandon-vlogging.jpg"
               alt="Brandon at Arcade"
@@ -91,6 +84,14 @@ const styles = {
       color: black;
       font-size: 1rem;
       text-align: center;
+    }
+  `,
+  imageWrapper: css`
+    width: 100%;
+    @media (max-width: 992px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   `,
   image: css`
