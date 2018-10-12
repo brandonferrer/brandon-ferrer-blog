@@ -3,9 +3,8 @@ import { Link } from 'gatsby'
 import { css } from 'react-emotion'
 import Helmet from 'react-helmet'
 import { Icon, Label } from 'semantic-ui-react'
-import Layout from '../layout'
-import OverflowWrapper from '../wrappers/OverflowWrapper'
 import { BlogPageHeader } from '../typography'
+import { ContentWrapper, HeaderWrapper, Layout } from '../../components'
 
 const BlogPage = ({ pageContext }) => {
   const { date, title, excerpt, content, categories } = pageContext // id, slug available
@@ -21,7 +20,7 @@ const BlogPage = ({ pageContext }) => {
         />
         <title>{title} | brandonferrer.com | "BLOG"</title>
       </Helmet>
-      <div className={styles.headerWrapper}>
+      <HeaderWrapper>
         <Link to="/blog">
           <Icon name="chevron circle left" />
           Back
@@ -29,13 +28,10 @@ const BlogPage = ({ pageContext }) => {
         <BlogPageHeader text={title} />
         <p className={styles.date}>{date}</p>
         <Label size="tiny">{categories[0].name}</Label>
-      </div>
-      <OverflowWrapper blog>
-        <div
-          dangerouslySetInnerHTML={{ __html: content }}
-          className={styles.contentWrapper}
-        />
-      </OverflowWrapper>
+      </HeaderWrapper>
+      <ContentWrapper blogPage>
+        <div dangerouslySetInnerHTML={{ __html: content }} />
+      </ContentWrapper>
     </Layout>
   )
 }
@@ -48,19 +44,5 @@ const styles = {
     @media (max-width: 500px) {
       font-size: 0.75rem;
     }
-  `,
-  contentWrapper: css`
-    margin-top: 1rem;
-    padding: 1.5rem;
-    @media (max-width: 500px) {
-      margin-top: 0.25rem;
-      padding: 1rem 0.75rem 3rem 0.75rem;
-    }
-  `,
-  headerWrapper: css`
-    padding: 1rem;
-  `,
-  categoryLabel: css`
-    margin-bottom: 0.5rem !important;
   `,
 }
