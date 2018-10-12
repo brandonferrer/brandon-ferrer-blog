@@ -38,7 +38,7 @@ const Projects = () => (
         </Grid.Column>
         <Grid.Column style={{ paddingTop: '4rem' }}>
           <img
-            src="http://www.brandonferrer.blog/assets/projects/work-pong.png"
+            src="https://www.brandonferrer.blog/assets/projects/work-pong.png"
             alt="Work Pong"
             style={{
               border: '1px #000 solid',
@@ -49,7 +49,7 @@ const Projects = () => (
         </Grid.Column>
         <Grid.Column style={{ paddingTop: '4rem' }}>
           <img
-            src="http://www.brandonferrer.blog/assets/projects/brandon-ferrer-blog.png"
+            src="https://www.brandonferrer.blog/assets/projects/brandon-ferrer-blog.png"
             alt="Brandon Ferrer Blog"
             style={{
               border: '1px #000 solid',
@@ -99,7 +99,7 @@ const Projects = () => (
         </Grid.Column>
         <Grid.Column style={{ paddingTop: '4rem' }}>
           <img
-            src="http://www.brandonferrer.blog/assets/projects/icmonster.jpg"
+            src="https://www.brandonferrer.blog/assets/projects/icmonster.jpg"
             alt="Work Pong"
             style={{
               border: '1px #000 solid',
