@@ -4,6 +4,7 @@ import { Container } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css'
 import SideBarMenu from './navigation/SideBarMenu'
 import Nav from './navigation/Nav'
+import FlexWrapper from './wrappers/FlexWrapper'
 import './index.css'
 
 class App extends Component {
@@ -47,7 +48,7 @@ class App extends Component {
           toggleSideBar={this.toggleSideBar}
         >
           <Container>
-            <div style={{ padding: '4rem 0', height: '98vh' }}>{children}</div>
+            <FlexWrapper>{children}</FlexWrapper>
           </Container>
         </SideBarMenu>
       </>

@@ -8,6 +8,10 @@ html {
 body {
   margin: 0;
 }
+/* body,
+html {
+  height: 100vh;
+} */
 article,
 aside,
 details,

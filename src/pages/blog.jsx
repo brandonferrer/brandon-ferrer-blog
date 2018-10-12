@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby'
-import { css } from 'react-emotion'
 import { Item, Dropdown } from 'semantic-ui-react'
-import { PageHeader, OverflowWrapper, BlogItem } from '../components'
+import { PageHeader, BlogItem, HeaderWrapper } from '../components'
 import Layout from '../components/layout'
+import { ContentWrapper } from '../components'
 
 class Blog extends Component {
   state = {
@@ -26,6 +26,11 @@ class Blog extends Component {
           post => post.node.categories[0].name === catEnum.ENGINEERING
         )
         break
+      case 'Food':
+        passedData = blogPostArray.filter(
+          post => post.node.categories[0].name === catEnum.FOOD
+        )
+        break
       case 'Travel':
         passedData = blogPostArray.filter(
           post => post.node.categories[0].name === catEnum.TRAVEL
@@ -37,30 +42,26 @@ class Blog extends Component {
 
     return (
       <Layout>
-        <div className={styles.wrapper}>
-          <div className={styles.headerWrapper}>
-            <PageHeader text="Blog" inQuotes />
-            <Dropdown
-              placeholder="Filter Categories"
-              search
-              fluid
-              selection
-              options={categoryOptions}
-              value={category}
-              onChange={this.handleDropdownChange}
-            />
-          </div>
-          <OverflowWrapper blog>
-            <div className={styles.contentWrapper}>
-              <Item.Group divided>
-                {data &&
-                  passedData.map(({ node }) => (
-                    <BlogItem node={node} key={node.id} />
-                  ))}
-              </Item.Group>
-            </div>
-          </OverflowWrapper>
-        </div>
+        <HeaderWrapper>
+          <PageHeader text="Blog" inQuotes />
+          <Dropdown
+            placeholder="Filter Categories"
+            search
+            fluid
+            selection
+            options={categoryOptions}
+            value={category}
+            onChange={this.handleDropdownChange}
+          />
+        </HeaderWrapper>
+        <ContentWrapper blog>
+          <Item.Group divided>
+            {data &&
+              passedData.map(({ node }) => (
+                <BlogItem node={node} key={node.id} />
+              ))}
+          </Item.Group>
+        </ContentWrapper>
       </Layout>
     )
   }
@@ -92,24 +93,13 @@ export const query = graphql`
 const catEnum = {
   ALL: 'All',
   ENGINEERING: 'Engineering',
+  FOOD: 'Food',
   TRAVEL: 'Travel',
 }
 
 const categoryOptions = [
   { text: 'All', value: 'All' },
   { text: 'Engineering', value: 'Engineering' },
+  { text: 'Food', value: 'Food' },
   { text: 'Travel', value: 'Travel' },
 ]
-
-const styles = {
-  wrapper: css`
-    padding: 2rem 0;
-    height: 98vh;
-  `,
-  headerWrapper: css`
-    padding: 1rem;
-  `,
-  contentWrapper: css`
-    padding: 1rem;
-  `,
-}

@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import Moment from 'react-moment'
 import { Grid } from 'semantic-ui-react'
-import { css } from 'react-emotion'
 import Layout from '../components/layout'
 import {
-  OverflowWrapper,
+  ContentWrapper,
+  HeaderWrapper,
   PageHeader,
   SubHeader,
   PhotoCard,
@@ -63,56 +63,48 @@ class Social extends Component {
 
     return (
       <Layout>
-        <div className={styles.wrapper}>
+        <HeaderWrapper>
           <PageHeader text="Lifestyle" />
           <SubHeader text="Photos" />
-          <OverflowWrapper>
-            <Grid
-              container
-              stackable
-              verticalAlign="middle"
-              columns={3}
-              centered
-              style={{ marginTop: 0 }}
-            >
-              {instagramPostArray.map(post => {
-                const {
-                  caption,
-                  likes,
-                  date,
-                  imageUrlLow,
-                  imageUrlStandard,
-                  imageUrlThumb,
-                  igLink,
-                } = post
-                return (
-                  <Grid.Column>
-                    <PhotoCard
-                      caption={caption}
-                      likes={likes}
-                      date={date}
-                      imageUrlLow={imageUrlLow}
-                      imageUrlStandard={imageUrlStandard}
-                      imageUrlThumb={imageUrlThumb}
-                      igLink={igLink}
-                    />
-                  </Grid.Column>
-                )
-              })}
-            </Grid>
-          </OverflowWrapper>
-        </div>
+        </HeaderWrapper>
+        <ContentWrapper>
+          <Grid
+            container
+            stackable
+            verticalAlign="middle"
+            columns={3}
+            centered
+            style={{ marginTop: 0 }}
+          >
+            {instagramPostArray.map(post => {
+              const {
+                caption,
+                likes,
+                date,
+                imageUrlLow,
+                imageUrlStandard,
+                imageUrlThumb,
+                igLink,
+              } = post
+              return (
+                <Grid.Column>
+                  <PhotoCard
+                    caption={caption}
+                    likes={likes}
+                    date={date}
+                    imageUrlLow={imageUrlLow}
+                    imageUrlStandard={imageUrlStandard}
+                    imageUrlThumb={imageUrlThumb}
+                    igLink={igLink}
+                  />
+                </Grid.Column>
+              )
+            })}
+          </Grid>
+        </ContentWrapper>
       </Layout>
     )
   }
 }
 
 export default Social
-
-const styles = {
-  wrapper: css`
-    align-items: center;
-    flex-direction: column;
-    padding: 2rem 0;
-  `,
-}
