@@ -67,7 +67,7 @@ class Social extends Component {
           <PageHeader text="Lifestyle" />
           <SubHeader text="Photos" />
         </HeaderWrapper>
-        <ContentWrapper>
+        <ContentWrapper lifestyle>
           <Grid
             container
             stackable

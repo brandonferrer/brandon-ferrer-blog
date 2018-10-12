@@ -1,13 +1,15 @@
 import React from 'react'
 import { css } from 'react-emotion'
 
-const ContentWrapper = ({ children, blog, projects, index }) => {
+const ContentWrapper = ({ children, blog, projects, index, lifestyle }) => {
   let contentWrapperStyles
   if (index) {
     contentWrapperStyles = styles.contentWrapperIndex
   } else {
     contentWrapperStyles =
-      blog || projects ? styles.contentWrapperBlog : styles.contentWrapper
+      blog || projects || lifestyle
+        ? styles.contentWrapperBlog
+        : styles.contentWrapper
   }
   return <div className={contentWrapperStyles}>{children}</div>
 }
