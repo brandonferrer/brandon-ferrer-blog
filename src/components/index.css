@@ -4,6 +4,7 @@ html {
   font-family: Nunito Sans, sans-serif !important;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  overflow: hidden;
 }
 body {
   margin: 0;
