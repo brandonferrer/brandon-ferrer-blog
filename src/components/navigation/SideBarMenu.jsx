@@ -5,22 +5,21 @@ import { Sidebar, Segment, Menu } from 'semantic-ui-react'
 import { isMobileOnly } from 'react-device-detect'
 
 const SideBarMenu = ({ children, showSideBar, toggleSideBar }) => {
-  let sidebarWidth
+  let sidebarAnimation
   if (isMobileOnly) {
-    sidebarWidth = ''
+    sidebarAnimation = 'push'
   } else {
-    sidebarWidth = 'wide'
+    sidebarAnimation = 'scale down'
   }
   return (
     <Sidebar.Pushable as={Segment}>
       <Sidebar
         as={Menu}
-        animation="scale down"
+        animation={sidebarAnimation}
         visible={showSideBar}
         vertical
         inverted
         direction="right"
-        width={sidebarWidth}
         style={{
           position: 'fixed',
           bottom: 0,
@@ -80,7 +79,7 @@ const SideBarMenu = ({ children, showSideBar, toggleSideBar }) => {
           <span className={cx(styles.menuItem, styles.disabled)}>Say Hey.</span>
         </Menu.Item>
       </Sidebar>
-      <Sidebar.Pusher dimmed={showSideBar}>{children}</Sidebar.Pusher>
+      <Sidebar.Pusher>{children}</Sidebar.Pusher>
     </Sidebar.Pushable>
   )
 }
