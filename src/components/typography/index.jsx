@@ -24,7 +24,7 @@ const styles = {
     font-weight: 800;
     letter-spacing: 1.2px;
     color: black;
-    padding-top: 2rem;
+    font-size: 2.5rem;
     text-align: center;
     @media (max-width: 500px) {
       padding-top: 0.5rem;
@@ -35,7 +35,7 @@ const styles = {
     font-weight: 800;
     letter-spacing: 1.2px;
     color: black;
-    padding-top: 2rem;
+    font-size: 2.5rem;
     text-align: center;
     @media (max-width: 500px) {
       font-size: 1.25rem;
@@ -43,6 +43,7 @@ const styles = {
   `,
   subHeader: css`
     color: black;
+    font-size: 2rem;
     letter-spacing: 1.2px;
     @media (max-width: 500px) {
       display: none;
