@@ -28,14 +28,14 @@ const Home = () => (
             <Typist cursor={{ show: false }} startDelay={600}>
               <h1 className={styles.jumbo}>Developer.</h1>
               <h1 className={styles.jumbo}>Tourist.</h1>
-              <h1 className={styles.jumbo}>Foodie.</h1>
+              <h1 className={styles.jumbo}>Photographer.</h1>
               <h1 className={styles.jumbo}>Disc Jockey.</h1>
               <h1 className={styles.jumbo}>Blogger.</h1>
             </Typist>
             <Typist cursor={{ show: false }} startDelay={600}>
               <h1 className={styles.jumboMobile}>
                 <p>
-                  Developer. Tourist. Foodie.
+                  Developer. Tourist. Photographer.
                   <br />
                   Disc Jockey. Blogger.
                 </p>
