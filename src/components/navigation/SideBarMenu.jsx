@@ -12,7 +12,7 @@ const SideBarMenu = ({ children, showSideBar, toggleSideBar }) => {
     sidebarAnimation = 'scale down'
   }
   return (
-    <Sidebar.Pushable as={Segment}>
+    <Sidebar.Pushable as={Segment} style={{ overflow: 'hidden' }}>
       <Sidebar
         as={Menu}
         animation={sidebarAnimation}
