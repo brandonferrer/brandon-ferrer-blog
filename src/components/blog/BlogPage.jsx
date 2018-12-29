@@ -22,8 +22,8 @@ const BlogPage = ({ pageContext }) => {
       </Helmet>
       <HeaderWrapper>
         <Link to="/blog">
-          <Icon name="chevron circle left" />
-          Back
+          <Icon name="chevron circle left" style={{ color: '#000' }} />
+          <span style={{ textDecoration: 'none', color: 'black' }}>Back</span>
         </Link>
         <BlogPageHeader text={title} />
         <p className={styles.date}>{date}</p>

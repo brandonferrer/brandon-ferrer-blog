@@ -15,6 +15,8 @@
 @raisedShadow: 0px 2px 3px 0px @borderColor;
 
 @myBlack: #000;
+@myWhite: #FFF;
+@myRedDark: #ba000d;
 @myYellowDark: #C8B900;
 @myYellowLight: #ffff72;
 
@@ -303,7 +305,7 @@
 
 /* Selected */
 @selectedBackground: @myYellowDark;
-@selectedColor: @myBlack;
+@selectedColor: @myWhite;
 
 /* Error */
 @errorLabelBackground: #EACBCB;

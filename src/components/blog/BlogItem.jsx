@@ -10,7 +10,7 @@ const BlogItem = ({ node }) => {
   const { title, date, excerpt, slug, categories } = node
   const trimmedExcerpt = excerpt.substring(0, excerpt.indexOf('</p>'))
   return (
-    <Item style={{ padding: '1rem' }}>
+    <Item style={{ marginBottom: '1rem' }}>
       {/* <Item.Image /> */}
       <Item.Content>
         <Item.Header>{title}</Item.Header>

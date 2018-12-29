@@ -48,10 +48,11 @@ const styles = {
     width: 100%;
     height: 60%;
     overflow-y: auto;
-    padding: 2rem;
+    padding: 1.5rem;
     -webkit-overflow-scrolling: touch;
   `,
   contentWrapperBlogPage: css`
+    background-color: #fff !important;
     width: 100%;
     height: 55%;
     overflow-y: auto;

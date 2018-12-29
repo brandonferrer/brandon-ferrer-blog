@@ -34,12 +34,12 @@ class App extends Component {
             {
               name: 'description',
               content:
-                "Hey, my name is Brandon. I'm a developer, tourist, foodie, disc jockey, and blogger.",
+                "Hey, my name is Brandon. I'm a developer, tourist, foodie, disc jockey, and vlogger.",
             },
             {
               name: 'keywords',
               content:
-                'Brandon, Brandon Ferrer, brandonferrer, Web Development, Software Engineering, Food, Foodie, Dj, Travel, Tourism, Lifestyle, Blog',
+                'Brandon, Brandon Ferrer, brandonferrer, Web Development, Software Engineering, Food, Foodie, Dj, Travel, Tourism, Lifestyle, Blog, Vlog',
             },
           ]}
         />

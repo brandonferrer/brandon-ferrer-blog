@@ -893,7 +893,7 @@ select.ui.dropdown {
 .ui.dropdown.selected,
 .ui.dropdown .menu .selected.item {
   background: #C8B900;
-  color: #000;
+  color: #FFF;
 }
 
 /*--------------------

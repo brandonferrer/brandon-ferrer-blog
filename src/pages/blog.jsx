@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby'
 import { Item, Dropdown } from 'semantic-ui-react'
+import { isMobileOnly } from 'react-device-detect'
 import { PageHeader, BlogItem, HeaderWrapper } from '../components'
 import Layout from '../components/layout'
 import { ContentWrapper } from '../components'
@@ -46,6 +47,7 @@ class Blog extends Component {
           <PageHeader text="Blog" inQuotes />
           <Dropdown
             placeholder="Filter Categories"
+            fluid={isMobileOnly}
             search
             floating
             selection
