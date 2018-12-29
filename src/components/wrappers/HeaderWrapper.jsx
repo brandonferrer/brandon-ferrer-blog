@@ -9,7 +9,7 @@ export default HeaderWrapper
 
 const styles = {
   headerWrapper: css`
-    padding: 3rem 1rem 1rem 1rem;
+    padding: 3rem 0 1rem 0;
     width: 100%;
     min-height: 200px;
     @media (max-width: 500px) {

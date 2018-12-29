@@ -79,7 +79,7 @@ const SideBarMenu = ({ children, showSideBar, toggleSideBar }) => {
           <span className={cx(styles.menuItem, styles.disabled)}>Say Hey.</span>
         </Menu.Item>
       </Sidebar>
-      <Sidebar.Pusher>{children}</Sidebar.Pusher>
+      <Sidebar.Pusher className={styles.bgYellow}>{children}</Sidebar.Pusher>
     </Sidebar.Pushable>
   )
 }
@@ -96,5 +96,8 @@ const styles = {
   `,
   disabled: css`
     color: #666666;
+  `,
+  bgYellow: css`
+    background-color: #ffeb3b !important;
   `,
 }

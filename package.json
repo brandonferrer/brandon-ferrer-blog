@@ -32,13 +32,16 @@
   ],
   "license": "MIT",
   "scripts": {
+    "build-semantic": "cd semantic && gulp build-css build-assets",
+    "watch-semantic": "cd semantic && yarn run build-semantic && gulp watch",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.13.7"
+    "prettier": "^1.13.7",
+    "semantic-ui": "^2.4.2"
   },
   "repository": {
     "type": "git",
