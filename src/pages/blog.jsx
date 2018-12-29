@@ -47,8 +47,9 @@ class Blog extends Component {
           <Dropdown
             placeholder="Filter Categories"
             search
-            fluid
+            floating
             selection
+            style={{ float: 'right' }}
             options={categoryOptions}
             value={category}
             onChange={this.handleDropdownChange}

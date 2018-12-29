@@ -44,10 +44,11 @@ const styles = {
     padding: 1rem;
   `,
   contentWrapperBlog: css`
+    background-color: #fff !important;
     width: 100%;
     height: 60%;
     overflow-y: auto;
-    padding: 1rem;
+    padding: 2rem;
     -webkit-overflow-scrolling: touch;
   `,
   contentWrapperBlogPage: css`

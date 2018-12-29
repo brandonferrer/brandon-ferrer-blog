@@ -10,7 +10,7 @@ const BlogItem = ({ node }) => {
   const { title, date, excerpt, slug, categories } = node
   const trimmedExcerpt = excerpt.substring(0, excerpt.indexOf('</p>'))
   return (
-    <Item>
+    <Item style={{ padding: '1rem' }}>
       {/* <Item.Image /> */}
       <Item.Content>
         <Item.Header>{title}</Item.Header>
@@ -22,7 +22,12 @@ const BlogItem = ({ node }) => {
         </Item.Description>
         <Item.Extra>
           <Link to={`blog/${slug}`}>
-            <Button primary size="small" floated="right">
+            <Button
+              primary
+              size="small"
+              floated="right"
+              style={{ backgroundColor: '#1b1c1c', color: 'white' }}
+            >
               Read Post
               <Icon name="right chevron" />
             </Button>
