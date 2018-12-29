@@ -48,7 +48,6 @@ class Blog extends Component {
           <Dropdown
             placeholder="Filter Categories"
             fluid={isMobileOnly}
-            search
             floating
             selection
             style={{ float: 'right' }}
@@ -86,6 +85,17 @@ export const query = graphql`
           categories {
             id
             name
+          }
+          featured_media {
+            localFile {
+              childImageSharp {
+                fixed(width: 400, height: 300, quality: 100) {
+                  src
+                  width
+                  height
+                }
+              }
+            }
           }
         }
       }
