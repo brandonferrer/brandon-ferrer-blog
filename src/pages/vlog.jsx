@@ -13,7 +13,10 @@ const Vlog = () => (
     <Layout>
       <h1>You'll be redirected to my YouTube channel.</h1>
       <h3>
-        Don't forget to subscribe <span>🙃</span>
+        Don't forget to subscribe{' '}
+        <span role="img" aria-label="emoji">
+          🙃
+        </span>
       </h3>
     </Layout>
   </>
