@@ -13,7 +13,7 @@ const styles = {
     width: 100%;
     min-height: 200px;
     @media (max-width: 500px) {
-      padding: 2rem 1rem 1rem 1rem;
+      padding: 2rem 0 1rem 0;
       width: 100%;
       min-height: 100px;
     }
