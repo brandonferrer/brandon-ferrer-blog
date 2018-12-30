@@ -7,7 +7,7 @@ import { BlogPageHeader } from '../typography'
 import { ContentWrapper, HeaderWrapper, Layout } from '../../components'
 
 const BlogPage = ({ pageContext }) => {
-  const { date, title, excerpt, content, categories } = pageContext // id, slug available
+  const { date, title, excerpt, content, categories } = pageContext
   return (
     <Layout>
       <Helmet>
@@ -16,7 +16,7 @@ const BlogPage = ({ pageContext }) => {
         <meta name="author" content="Brandon Ferrer" />
         <meta
           name="keywords"
-          content={`${title}, brandon, brandon ferrer, san diego, california, blog, vlog, travel, food, technology, fashion`}
+          content={`${title}, brandon, brandon ferrer, san diego, california, blog, vlog, travel, food, technology, fashion, ${excerpt}`}
         />
         <title>{title} | brandonferrer.com | "BLOG"</title>
       </Helmet>

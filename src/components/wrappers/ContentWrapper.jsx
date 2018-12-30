@@ -32,6 +32,7 @@ const styles = {
     overflow-y: auto;
     display: flex;
     align-items: center;
+    border-radius: 8px;
     padding: 0;
     -webkit-overflow-scrolling: touch;
   `,
@@ -41,6 +42,7 @@ const styles = {
     overflow-y: hidden;
     display: flex;
     align-items: center;
+    border-radius: 8px;
     padding: 1rem;
   `,
   contentWrapperBlog: css`
@@ -48,6 +50,7 @@ const styles = {
     width: 100%;
     height: 60%;
     overflow-y: auto;
+    border-radius: 8px;
     padding: 1.5rem;
     -webkit-overflow-scrolling: touch;
   `,
@@ -56,6 +59,7 @@ const styles = {
     width: 100%;
     height: 55%;
     overflow-y: auto;
+    border-radius: 8px;
     padding: 1rem;
     -webkit-overflow-scrolling: touch;
   `,

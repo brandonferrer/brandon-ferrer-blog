@@ -2,10 +2,6 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { Button, Icon, Item, Label } from 'semantic-ui-react'
 
-//   <Item.Group divided>
-// BlogItem is wrapped in Item.Group where used
-// TODO: Add thumbnail images
-
 const BlogItem = ({ node }) => {
   const { title, date, excerpt, slug, categories, featured_media } = node
 

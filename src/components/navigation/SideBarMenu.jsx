@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import { css, cx } from 'react-emotion'
 import { Sidebar, Segment, Menu } from 'semantic-ui-react'
-import { isMobileOnly } from 'react-device-detect'
+// import { isMobileOnly } from 'react-device-detect'
 
 const SideBarMenu = ({ children, showSideBar, toggleSideBar }) => {
   let sidebarAnimation
