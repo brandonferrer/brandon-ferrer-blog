@@ -65,7 +65,7 @@ class Social extends Component {
       <Layout>
         <HeaderWrapper>
           <PageHeader text="Lifestyle" />
-          <SubHeader text="Photos" />
+          <SubHeader text="THE GRAM" />
         </HeaderWrapper>
         <ContentWrapper lifestyle>
           <Grid

@@ -12,7 +12,6 @@ const styles = {
   flexWrapperStyles: css`
     height: 98vh;
     display: flex;
-    position: relative;
     align-items: center;
     justify-content: center;
     overflow: hidden;

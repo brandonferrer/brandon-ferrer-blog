@@ -13,7 +13,7 @@ const Projects = () => (
   <Layout>
     <HeaderWrapper>
       <PageHeader text="Dev Projects" />
-      <SubHeader text="Portfolio" />
+      <SubHeader text="Work" />
     </HeaderWrapper>
     <ContentWrapper projects>
       <Grid
