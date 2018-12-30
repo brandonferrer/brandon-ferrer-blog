@@ -257,6 +257,8 @@ const styles = {
   image: css`
     max-width: 400px;
     margin: 0;
+    border-radius: 8px;
+    // box-shadow: 10px 10px 5px #1b1c1c;
     @media (max-width: 992px) {
       width: 100%;
     }
