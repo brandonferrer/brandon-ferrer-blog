@@ -15,7 +15,7 @@ const styles = {
     position: relative;
     align-items: center;
     justify-content: center;
-    overflow: none;
+    overflow: hidden;
     flex-flow: column;
   `,
 }

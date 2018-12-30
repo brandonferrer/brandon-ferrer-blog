@@ -30,6 +30,8 @@ const MapArray = [
   { lat: 34.693, lng: 135.502, info: 'Osaka' },
   { lat: 35.011, lng: 135.768, info: 'Kyoto' },
   { lat: 49.282, lng: -123.12, info: 'Vancouver' },
+  { lat: 34.052, lng: -118.24, info: 'Los Angeles' },
+  { lat: 33.873, lng: -115.901, info: 'Joshua Tree' },
 ]
 
 const MapMain = compose(

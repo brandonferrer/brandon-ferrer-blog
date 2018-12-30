@@ -13,11 +13,17 @@ const Travel = () => (
     </HeaderWrapper>
     <ContentWrapper>
       {/* TODO: Why Google Map needs div inline style to display */}
-      <div style={{ height: '100%', width: '100%' }}>
+      <div
+        style={{
+          height: '100%',
+          width: '100%',
+          position: 'relative',
+        }}
+      >
         <TravelMap
           googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&key=${googleMapApiKey}&libraries=geometry,drawing,places`}
           loadingElement={<div style={{ height: '100%' }} />}
-          containerElement={<div style={{ height: '60%' }} />}
+          containerElement={<div style={{ height: '80%' }} />}
           mapElement={<div style={{ height: '100%' }} />}
         />
       </div>

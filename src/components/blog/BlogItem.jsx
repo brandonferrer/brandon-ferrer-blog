@@ -13,10 +13,11 @@ const BlogItem = ({ node }) => {
     ? featured_media.localFile.childImageSharp.fixed.src
     : null
 
-  const trimmedExcerpt = excerpt.substring(0, excerpt.indexOf('</p>'))
+  const trimmedExcerpt =
+    excerpt.substring(0, excerpt.indexOf('</p>')).substring(0, 140) + '...'
   return (
     <Item>
-      {thumbnailUrl && <Item.Image src={thumbnailUrl} />}
+      <Item.Image src={thumbnailUrl} />
       <Item.Content>
         <Item.Header>{title}</Item.Header>
         <Item.Meta>

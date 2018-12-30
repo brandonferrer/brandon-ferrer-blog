@@ -32,7 +32,7 @@ const styles = {
     overflow-y: auto;
     display: flex;
     align-items: center;
-    padding: 1rem;
+    padding: 0;
     -webkit-overflow-scrolling: touch;
   `,
   contentWrapperIndex: css`

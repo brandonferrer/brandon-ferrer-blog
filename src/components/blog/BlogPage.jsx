@@ -21,10 +21,12 @@ const BlogPage = ({ pageContext }) => {
         <title>{title} | brandonferrer.com | "BLOG"</title>
       </Helmet>
       <HeaderWrapper>
-        <Link to="/blog">
-          <Icon name="chevron circle left" style={{ color: '#000' }} />
-          <span style={{ textDecoration: 'none', color: 'black' }}>Back</span>
-        </Link>
+        <div className={styles.backButtonWrapper}>
+          <Link to="/blog">
+            <Icon name="chevron circle left" style={{ color: '#000' }} />
+            <span style={{ color: 'black' }}>Back</span>
+          </Link>
+        </div>
         <BlogPageHeader text={title} />
         <p className={styles.date}>{date}</p>
         <Label size="tiny">{categories[0].name}</Label>
@@ -44,5 +46,8 @@ const styles = {
     @media (max-width: 500px) {
       font-size: 0.75rem;
     }
+  `,
+  backButtonWrapper: css`
+    margin-bottom: 1rem;
   `,
 }
