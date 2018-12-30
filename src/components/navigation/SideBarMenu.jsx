@@ -6,11 +6,12 @@ import { isMobileOnly } from 'react-device-detect'
 
 const SideBarMenu = ({ children, showSideBar, toggleSideBar }) => {
   let sidebarAnimation
-  if (isMobileOnly) {
-    sidebarAnimation = 'push'
-  } else {
-    sidebarAnimation = 'scale down'
-  }
+  // if (isMobileOnly) {
+  //   sidebarAnimation = 'push'
+  // } else {
+  //   sidebarAnimation = 'scale down'
+  // }
+  sidebarAnimation = 'scale down'
   return (
     <Sidebar.Pushable as={Segment} style={{ overflow: 'hidden' }}>
       <Sidebar

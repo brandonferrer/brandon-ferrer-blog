@@ -12,7 +12,7 @@ const Home = () => (
         stackable
         verticalAlign="middle"
         columns={2}
-        style={{ width: '100%', height: '100%', margin: 0, padding: 0 }}
+        style={{ width: '100%', margin: 0, padding: 0 }}
       >
         <Grid.Column>
           <div className={styles.imageWrapper}>
@@ -24,7 +24,9 @@ const Home = () => (
           </div>
         </Grid.Column>
         <Grid.Column>
-          <div style={{ width: '100%', minHeight: '40px' }}>
+          <div
+            style={{ width: '100%', minHeight: '40px', margin: 0, padding: 0 }}
+          >
             <Typist cursor={{ show: false }} startDelay={600}>
               <h1 className={styles.jumbo}>Developer.</h1>
               <h1 className={styles.jumbo}>Tourist.</h1>
@@ -34,15 +36,11 @@ const Home = () => (
             </Typist>
             <Typist cursor={{ show: false }} startDelay={600}>
               <h1 className={styles.jumboMobile}>
-                Developer.
+                Developer. Tourist.
                 <br />
-                Tourist.
+                Photographer. Disc Jockey.
                 <br />
-                Photographer.
-                <br />
-                Disc Jockey.
-                <br />
-                Vlogger.
+                Vlogger. Foodie.
               </h1>
             </Typist>
           </div>
