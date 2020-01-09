@@ -1,8 +1,9 @@
 import React from 'react'
-import { css } from 'react-emotion'
+/** @jsx jsx */
+import { css, jsx } from '@emotion/core'
 
 const HeaderWrapper = ({ children }) => (
-  <div className={styles.headerWrapper}>{children}</div>
+  <div css={styles.headerWrapper}>{children}</div>
 )
 
 export default HeaderWrapper

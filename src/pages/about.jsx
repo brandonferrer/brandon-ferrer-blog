@@ -1,5 +1,5 @@
 import React from 'react'
-// import { css } from 'react-emotion'
+// import { css } from '@emotion/core'
 import { PageHeader } from '../components'
 import Layout from '../components/layout'
 import { ContentWrapper, HeaderWrapper } from '../components'

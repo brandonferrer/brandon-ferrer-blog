@@ -1,5 +1,6 @@
 import React from 'react'
-import { css } from 'react-emotion'
+/** @jsx jsx */
+import { css, jsx } from '@emotion/core'
 
 const ContentWrapper = ({
   children,
@@ -20,7 +21,7 @@ const ContentWrapper = ({
         ? styles.contentWrapperBlog
         : styles.contentWrapper
   }
-  return <div className={contentWrapperStyles}>{children}</div>
+  return <div css={contentWrapperStyles}>{children}</div>
 }
 
 export default ContentWrapper

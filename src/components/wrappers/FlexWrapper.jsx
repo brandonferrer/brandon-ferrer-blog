@@ -1,10 +1,10 @@
 import React from 'react'
-import { css } from 'react-emotion'
+/** @jsx jsx */
+import { css, jsx } from '@emotion/core'
 
-const FlexWrapper = ({ children }) => {
-  const flexWrapperStyles = styles.flexWrapperStyles
-  return <div className={flexWrapperStyles}>{children}</div>
-}
+const FlexWrapper = ({ children }) => (
+  <div css={styles.flexWrapperStyles}>{children}</div>
+)
 
 export default FlexWrapper
 

@@ -1,18 +1,19 @@
 import React from 'react'
-import { css, cx } from 'react-emotion'
+/** @jsx jsx */
+import { css, jsx } from '@emotion/core'
 
 export const PageHeader = ({ text, inQuotes }) => {
   const headline = inQuotes ? `"${text}"` : `${text}.`
   const inQuoteStyles = inQuotes ? styles.inQuotes : undefined
-  return <h1 className={cx(styles.header, inQuoteStyles)}>{headline}</h1>
+  return <h1 css={[styles.header, inQuoteStyles]}>{headline}</h1>
 }
 
 export const BlogPageHeader = ({ text }) => (
-  <h1 className={styles.blogHeader}>{text}</h1>
+  <h1 css={styles.blogHeader}>{text}</h1>
 )
 
 export const SubHeader = ({ text }) => (
-  <h1 className={cx(styles.subHeader, styles.inQuotes)}>"{text}"</h1>
+  <h1 css={[styles.subHeader, styles.inQuotes]}>"{text}"</h1>
 )
 
 const styles = {

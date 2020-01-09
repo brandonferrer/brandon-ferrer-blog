@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { css, cx } from 'react-emotion'
+/** @jsx jsx */
+import { css, jsx } from '@emotion/core'
 import { Sidebar, Segment, Menu } from 'semantic-ui-react'
 // import { isMobileOnly } from 'react-device-detect'
 
@@ -28,7 +29,7 @@ const SideBarMenu = ({ children, showSideBar, toggleSideBar }) => {
         }}
       >
         <Menu.Item name="home" as={Link} to="/" onClick={toggleSideBar}>
-          <span className={styles.menuItem}>Home.</span>
+          <span css={styles.menuItem}>Home.</span>
         </Menu.Item>
         <Menu.Item
           disabled
@@ -37,13 +38,13 @@ const SideBarMenu = ({ children, showSideBar, toggleSideBar }) => {
           // to="/about"
           // onClick={toggleSideBar}
         >
-          <span className={cx(styles.menuItem, styles.disabled)}>About B.</span>
+          <span css={[styles.menuItem, styles.disabled]}>About B.</span>
         </Menu.Item>
         <Menu.Item name="blog" as={Link} to="/blog" onClick={toggleSideBar}>
-          <span className={styles.menuItem}>"BLOG"</span>
+          <span css={styles.menuItem}>"BLOG"</span>
         </Menu.Item>
         <Menu.Item name="travel" as={Link} to="/travel" onClick={toggleSideBar}>
-          <span className={styles.menuItem}>Travel.</span>
+          <span css={styles.menuItem}>Travel.</span>
         </Menu.Item>
         <Menu.Item
           name="lifestyle"
@@ -51,7 +52,7 @@ const SideBarMenu = ({ children, showSideBar, toggleSideBar }) => {
           to="/lifestyle"
           onClick={toggleSideBar}
         >
-          <span className={styles.menuItem}>Lifestyle.</span>
+          <span css={styles.menuItem}>Lifestyle.</span>
         </Menu.Item>
         <Menu.Item
           name="projects"
@@ -59,7 +60,7 @@ const SideBarMenu = ({ children, showSideBar, toggleSideBar }) => {
           to="/projects"
           onClick={toggleSideBar}
         >
-          <span className={styles.menuItem}>Dev Projects.</span>
+          <span css={styles.menuItem}>Dev Projects.</span>
         </Menu.Item>
         <Menu.Item
           disabled
@@ -68,7 +69,7 @@ const SideBarMenu = ({ children, showSideBar, toggleSideBar }) => {
           // // to="/dj"
           // onClick={toggleSideBar}
         >
-          <span className={cx(styles.menuItem, styles.disabled)}>DJ Life.</span>
+          <span css={[styles.menuItem, styles.disabled]}>DJ Life.</span>
         </Menu.Item>
         <Menu.Item
           disabled
@@ -77,10 +78,10 @@ const SideBarMenu = ({ children, showSideBar, toggleSideBar }) => {
           // // to="/contact"
           // onClick={toggleSideBar}
         >
-          <span className={cx(styles.menuItem, styles.disabled)}>Say Hey.</span>
+          <span css={[styles.menuItem, styles.disabled]}>Say Hey.</span>
         </Menu.Item>
       </Sidebar>
-      <Sidebar.Pusher className={styles.bgYellow}>{children}</Sidebar.Pusher>
+      <Sidebar.Pusher css={styles.bgYellow}>{children}</Sidebar.Pusher>
     </Sidebar.Pushable>
   )
 }

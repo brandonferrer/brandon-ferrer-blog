@@ -23,11 +23,10 @@ class Social extends Component {
 
   componentDidMount() {
     const token = process.env.GATSBY_INSTAGRAM_TOKEN
-    const userId = process.env.GATSBY_INSTAGRAM_USER_ID
     const photoCount = 18
 
     axios
-      .get(`https://api.instagram.com/v1/users/${userId}/media/recent`, {
+      .get(`https://api.instagram.com/v1/users/self/media/recent`, {
         params: { access_token: token, count: photoCount },
       })
       .then(response => {

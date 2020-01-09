@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { css } from 'react-emotion'
+/** @jsx jsx */
+import { css, jsx } from '@emotion/core'
 import Helmet from 'react-helmet'
 import { Icon, Label } from 'semantic-ui-react'
 import { BlogPageHeader } from '../typography'
@@ -21,14 +22,14 @@ const BlogPage = ({ pageContext }) => {
         <title>{title} | brandonferrer.com | "BLOG"</title>
       </Helmet>
       <HeaderWrapper>
-        <div className={styles.backButtonWrapper}>
+        <div css={styles.backButtonWrapper}>
           <Link to="/blog">
             <Icon name="chevron circle left" style={{ color: '#000' }} />
             <span style={{ color: 'black' }}>Back</span>
           </Link>
         </div>
         <BlogPageHeader text={title} />
-        <p className={styles.date}>{date}</p>
+        <p css={styles.date}>{date}</p>
         <Label size="tiny">{categories[0].name}</Label>
       </HeaderWrapper>
       <ContentWrapper blogPage>

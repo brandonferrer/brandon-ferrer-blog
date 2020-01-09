@@ -1,5 +1,6 @@
 import React from 'react'
-import { css } from 'react-emotion'
+/** @jsx jsx */
+import { css, jsx } from '@emotion/core'
 import { Grid } from 'semantic-ui-react'
 import Typist from 'react-typist'
 import Layout from '../components/layout'
@@ -15,11 +16,11 @@ const Home = () => (
         style={{ width: '100%', margin: 0, padding: 0 }}
       >
         <Grid.Column>
-          <div className={styles.imageWrapper}>
+          <div css={styles.imageWrapper}>
             <img
               src="https://brandonferrer.blog/assets/brandon-vlogging.jpg"
               alt="Brandon at Arcade"
-              className={styles.image}
+              css={styles.image}
             />
           </div>
         </Grid.Column>
@@ -28,14 +29,14 @@ const Home = () => (
             style={{ width: '100%', minHeight: '40px', margin: 0, padding: 0 }}
           >
             <Typist cursor={{ show: false }} startDelay={600}>
-              <h1 className={styles.jumbo}>Developer.</h1>
-              <h1 className={styles.jumbo}>Tourist.</h1>
-              <h1 className={styles.jumbo}>Photographer.</h1>
-              <h1 className={styles.jumbo}>Disc Jockey.</h1>
-              <h1 className={styles.jumbo}>Vlogger.</h1>
+              <h1 css={styles.jumbo}>Developer.</h1>
+              <h1 css={styles.jumbo}>Tourist.</h1>
+              <h1 css={styles.jumbo}>Photographer.</h1>
+              <h1 css={styles.jumbo}>Disc Jockey.</h1>
+              <h1 css={styles.jumbo}>Vlogger.</h1>
             </Typist>
             <Typist cursor={{ show: false }} startDelay={600}>
-              <h1 className={styles.jumboMobile}>
+              <h1 css={styles.jumboMobile}>
                 Developer. Tourist.
                 <br />
                 Photographer. Disc Jockey.

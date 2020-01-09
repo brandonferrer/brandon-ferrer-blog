@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { css } from 'react-emotion'
+/** @jsx jsx */
+import { css, jsx } from '@emotion/core'
 import { Marker, InfoWindow } from 'react-google-maps'
 
 class CustomMarker extends Component {
@@ -31,7 +32,7 @@ class CustomMarker extends Component {
       >
         {showInfoWindow && (
           <InfoWindow>
-            <p className={styles.markerText}>{info}</p>
+            <p css={styles.markerText}>{info}</p>
           </InfoWindow>
         )}
       </Marker>

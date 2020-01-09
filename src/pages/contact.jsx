@@ -1,11 +1,12 @@
 import React from 'react'
-import { css } from 'react-emotion'
+/** @jsx jsx */
+import { css, jsx } from '@emotion/core'
 import { PageHeader } from '../components'
 import Layout from '../components/layout'
 
 const Contact = () => (
   <Layout>
-    <div className={styles.wrapper}>
+    <div css={styles.wrapper}>
       <PageHeader text="Say Hey" />
     </div>
   </Layout>
