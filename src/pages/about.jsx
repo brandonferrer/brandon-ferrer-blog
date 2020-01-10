@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 // import { css } from '@emotion/core'
-import { PageHeader } from '../components'
-import Layout from '../components/layout'
-import { ContentWrapper, HeaderWrapper } from '../components'
+import { PageHeader } from '../components';
+import Layout from '../components/layout';
+import { ContentWrapper, HeaderWrapper } from '../components';
 
 const About = () => (
   <Layout>
@@ -13,6 +13,6 @@ const About = () => (
       <p>Hey, I'm Brandon from California.</p>
     </ContentWrapper>
   </Layout>
-)
+);
 
-export default About
+export default About;

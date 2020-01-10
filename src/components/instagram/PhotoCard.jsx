@@ -1,6 +1,6 @@
-import React from 'react'
-import _ from 'lodash'
-import { Card, Icon, Image } from 'semantic-ui-react'
+import React from 'react';
+import _ from 'lodash';
+import { Card, Icon, Image } from 'semantic-ui-react';
 
 const PhotoCard = ({
   caption,
@@ -40,6 +40,6 @@ const PhotoCard = ({
       </a>
     </Card.Content>
   </Card>
-)
+);
 
-export default PhotoCard
+export default PhotoCard;

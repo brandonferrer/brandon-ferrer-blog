@@ -1,44 +1,44 @@
-import React, { Component } from 'react'
-import { graphql } from 'gatsby'
-import { Item, Dropdown } from 'semantic-ui-react'
-import { isMobileOnly } from 'react-device-detect'
-import { PageHeader, BlogItem, HeaderWrapper } from '../components'
-import Layout from '../components/layout'
-import { ContentWrapper } from '../components'
+import React, { Component } from 'react';
+import { graphql } from 'gatsby';
+import { Item, Dropdown } from 'semantic-ui-react';
+import { isMobileOnly } from 'react-device-detect';
+import { PageHeader, BlogItem, HeaderWrapper } from '../components';
+import Layout from '../components/layout';
+import { ContentWrapper } from '../components';
 
 class Blog extends Component {
   state = {
     category: 'All',
-  }
+  };
 
   handleDropdownChange = (event, { value }) =>
-    this.setState({ category: value })
+    this.setState({ category: value });
 
   render() {
-    const { data } = this.props
-    const { category } = this.state
-    const blogPostArray = data.allWordpressPost.edges
+    const { data } = this.props;
+    const { category } = this.state;
+    const blogPostArray = data.allWordpressPost.edges;
 
-    let passedData
+    let passedData;
 
     switch (category) {
       case 'Engineering':
         passedData = blogPostArray.filter(
           post => post.node.categories[0].name === catEnum.ENGINEERING
-        )
-        break
+        );
+        break;
       case 'Food':
         passedData = blogPostArray.filter(
           post => post.node.categories[0].name === catEnum.FOOD
-        )
-        break
+        );
+        break;
       case 'Travel':
         passedData = blogPostArray.filter(
           post => post.node.categories[0].name === catEnum.TRAVEL
-        )
-        break
+        );
+        break;
       default:
-        passedData = blogPostArray
+        passedData = blogPostArray;
     }
 
     return (
@@ -65,11 +65,11 @@ class Blog extends Component {
           </Item.Group>
         </ContentWrapper>
       </Layout>
-    )
+    );
   }
 }
 
-export default Blog
+export default Blog;
 
 export const query = graphql`
   query getAllPost {
@@ -101,18 +101,18 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
 const catEnum = {
   ALL: 'All',
   ENGINEERING: 'Engineering',
   FOOD: 'Food',
   TRAVEL: 'Travel',
-}
+};
 
 const categoryOptions = [
   { text: 'All', value: 'All' },
   { text: 'Engineering', value: 'Engineering' },
   { text: 'Food', value: 'Food' },
   { text: 'Travel', value: 'Travel' },
-]
+];

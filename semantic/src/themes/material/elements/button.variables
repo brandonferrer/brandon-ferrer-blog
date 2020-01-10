@@ -6,8 +6,8 @@
        Element
 --------------------*/
 
-@googleFontName : 'Roboto';
-@pageFont       : 'Roboto', Arial, sans-serif;
+@googleFontName : 'Nunito Sans';
+@pageFont       : 'Nunito Sans', Arial, sans-serif;
 
 @medium: 13px;
 

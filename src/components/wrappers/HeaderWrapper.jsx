@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 /** @jsx jsx */
-import { css, jsx } from '@emotion/core'
+import { css, jsx } from '@emotion/core';
 
 const HeaderWrapper = ({ children }) => (
   <div css={styles.headerWrapper}>{children}</div>
-)
+);
 
-export default HeaderWrapper
+export default HeaderWrapper;
 
 const styles = {
   headerWrapper: css`
@@ -15,4 +15,4 @@ const styles = {
     min-height: 100px;
     }
   `,
-}
+};

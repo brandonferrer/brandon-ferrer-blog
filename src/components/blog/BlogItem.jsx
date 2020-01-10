@@ -1,18 +1,18 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import { Button, Icon, Item, Label } from 'semantic-ui-react'
+import React from 'react';
+import { Link } from 'gatsby';
+import { Button, Icon, Item, Label } from 'semantic-ui-react';
 
 const BlogItem = ({ node }) => {
-  const { title, date, excerpt, slug, categories, featured_media } = node
+  const { title, date, excerpt, slug, categories, featured_media } = node;
 
   const thumbnailUrl = featured_media
     ? featured_media.localFile.childImageSharp.fixed.src
-    : null
+    : null;
 
   const trimmedExcerpt =
-    excerpt.substring(0, excerpt.indexOf('</p>')).substring(0, 140) + '...'
+    excerpt.substring(0, excerpt.indexOf('</p>')).substring(0, 140) + '...';
   return (
-    <Item>
+    <Item style={{ padding: '2.5rem' }}>
       <Item.Image src={thumbnailUrl} />
       <Item.Content>
         <Item.Header>{title}</Item.Header>
@@ -37,7 +37,7 @@ const BlogItem = ({ node }) => {
         </Item.Extra>
       </Item.Content>
     </Item>
-  )
-}
+  );
+};
 
-export default BlogItem
+export default BlogItem;

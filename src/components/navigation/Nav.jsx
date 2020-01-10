@@ -1,6 +1,6 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import { Menu, Container } from 'semantic-ui-react'
+import React from 'react';
+import { Link } from 'gatsby';
+import { Menu, Container } from 'semantic-ui-react';
 
 const Nav = ({ toggleSideBar }) => (
   <Menu inverted borderless fixed="top" size="huge">
@@ -38,5 +38,5 @@ const Nav = ({ toggleSideBar }) => (
       </Menu.Menu>
     </Container>
   </Menu>
-)
-export default Nav
+);
+export default Nav;

@@ -554,8 +554,8 @@ module.exports = {
             value: 'Lato'
           },
           {
-            name: 'Open Sans (Google Fonts)',
-            value: 'Open Sans'
+            name: 'Nunito Sans (Google Fonts)',
+            value: 'Nunito Sans'
           },
           {
             name: 'Source Sans Pro (Google Fonts)',
@@ -586,8 +586,8 @@ module.exports = {
             value: 'Lato'
           },
           {
-            name: 'Open Sans (Import from Google Fonts)',
-            value: 'Open Sans'
+            name: 'Nunito Sans (Import from Google Fonts)',
+            value: 'Nunito Sans'
           },
           {
             name: 'Source Sans Pro (Import from Google Fonts)',

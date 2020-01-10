@@ -1,9 +1,9 @@
-import React from 'react'
-import { TravelMap, PageHeader, SubHeader } from '../components'
-import Layout from '../components/layout'
-import { ContentWrapper, HeaderWrapper } from '../components'
+import React from 'react';
+import { TravelMap, PageHeader, SubHeader } from '../components';
+import Layout from '../components/layout';
+import { ContentWrapper, HeaderWrapper } from '../components';
 
-const googleMapApiKey = process.env.GATSBY_GOOGLE_MAPS_API_KEY
+const googleMapApiKey = process.env.GATSBY_GOOGLE_MAPS_API_KEY;
 
 const Travel = () => (
   <Layout>
@@ -11,8 +11,7 @@ const Travel = () => (
       <PageHeader text="Travel" />
       <SubHeader text="Map" />
     </HeaderWrapper>
-    <ContentWrapper>
-      {/* TODO: Why Google Map needs div inline style to display */}
+    <ContentWrapper travel>
       <div
         style={{
           height: '100%',
@@ -29,6 +28,6 @@ const Travel = () => (
       </div>
     </ContentWrapper>
   </Layout>
-)
+);
 
-export default Travel
+export default Travel;

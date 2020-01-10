@@ -1,13 +1,13 @@
-import React from 'react'
-import { Grid } from 'semantic-ui-react'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import React from 'react';
+import { Grid } from 'semantic-ui-react';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import {
   PageHeader,
   ContentWrapper,
   HeaderWrapper,
   SubHeader,
-} from '../components'
-import Layout from '../components/layout'
+} from '../components';
+import Layout from '../components/layout';
 
 const Projects = () => (
   <Layout>
@@ -111,6 +111,6 @@ const Projects = () => (
       </Grid>
     </ContentWrapper>
   </Layout>
-)
+);
 
-export default Projects
+export default Projects;

@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 /** @jsx jsx */
-import { css, jsx } from '@emotion/core'
+import { css, jsx } from '@emotion/core';
 
 const FlexWrapper = ({ children }) => (
   <div css={styles.flexWrapperStyles}>{children}</div>
-)
+);
 
-export default FlexWrapper
+export default FlexWrapper;
 
 const styles = {
   flexWrapperStyles: css`
@@ -17,4 +17,4 @@ const styles = {
     overflow: hidden;
     flex-flow: column;
   `,
-}
+};

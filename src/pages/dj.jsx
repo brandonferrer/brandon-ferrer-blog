@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 /** @jsx jsx */
-import { css, jsx } from '@emotion/core'
-import { PageHeader } from '../components'
-import Layout from '../components/layout'
+import { css, jsx } from '@emotion/core';
+import { PageHeader } from '../components';
+import Layout from '../components/layout';
 
 const Dj = () => (
   <Layout>
@@ -10,9 +10,9 @@ const Dj = () => (
       <PageHeader text="Dj Life" />
     </div>
   </Layout>
-)
+);
 
-export default Dj
+export default Dj;
 
 const styles = {
   wrapper: css`
@@ -22,4 +22,4 @@ const styles = {
     padding: 2rem 0;
     height: 98vh;
   `,
-}
+};

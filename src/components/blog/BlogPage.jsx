@@ -1,14 +1,14 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
+import { Link } from 'gatsby';
 /** @jsx jsx */
-import { css, jsx } from '@emotion/core'
-import Helmet from 'react-helmet'
-import { Icon, Label } from 'semantic-ui-react'
-import { BlogPageHeader } from '../typography'
-import { ContentWrapper, HeaderWrapper, Layout } from '../../components'
+import { css, jsx } from '@emotion/core';
+import Helmet from 'react-helmet';
+import { Icon, Label } from 'semantic-ui-react';
+import { BlogPageHeader } from '../typography';
+import { ContentWrapper, HeaderWrapper, Layout } from '../../components';
 
 const BlogPage = ({ pageContext }) => {
-  const { date, title, excerpt, content, categories } = pageContext
+  const { date, title, excerpt, content, categories } = pageContext;
   return (
     <Layout>
       <Helmet>
@@ -36,10 +36,10 @@ const BlogPage = ({ pageContext }) => {
         <div dangerouslySetInnerHTML={{ __html: content }} />
       </ContentWrapper>
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogPage
+export default BlogPage;
 
 const styles = {
   date: css`
@@ -51,4 +51,4 @@ const styles = {
   backButtonWrapper: css`
     margin-bottom: 1rem;
   `,
-}
+};

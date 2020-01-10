@@ -1,25 +1,25 @@
-import React, { Component } from 'react'
-import Helmet from 'react-helmet'
-import { Container } from 'semantic-ui-react'
+import React, { Component } from 'react';
+import Helmet from 'react-helmet';
+import { Container } from 'semantic-ui-react';
 // import 'semantic-ui-css/semantic.min.css'
-import '../../semantic/dist/semantic.min.css'
-import SideBarMenu from './navigation/SideBarMenu'
-import Nav from './navigation/Nav'
-import FlexWrapper from './wrappers/FlexWrapper'
-import './index.css'
+import '../../semantic/dist/semantic.min.css';
+import SideBarMenu from './navigation/SideBarMenu';
+import Nav from './navigation/Nav';
+import FlexWrapper from './wrappers/FlexWrapper';
+import './index.css';
 
 class App extends Component {
   state = {
     showSideBar: false,
-  }
+  };
   toggleSideBar = () =>
     this.setState({
       showSideBar: !this.state.showSideBar,
-    })
+    });
 
   render() {
-    const { showSideBar } = this.state
-    const { children } = this.props
+    const { showSideBar } = this.state;
+    const { children } = this.props;
 
     return (
       <>
@@ -53,8 +53,8 @@ class App extends Component {
           </Container>
         </SideBarMenu>
       </>
-    )
+    );
   }
 }
 
-export default App
+export default App;

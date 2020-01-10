@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 /** @jsx jsx */
-import { css, jsx } from '@emotion/core'
-import { PageHeader } from '../components'
-import Layout from '../components/layout'
+import { css, jsx } from '@emotion/core';
+import { PageHeader } from '../components';
+import Layout from '../components/layout';
 
 const Contact = () => (
   <Layout>
@@ -10,9 +10,9 @@ const Contact = () => (
       <PageHeader text="Say Hey" />
     </div>
   </Layout>
-)
+);
 
-export default Contact
+export default Contact;
 
 const styles = {
   wrapper: css`
@@ -22,4 +22,4 @@ const styles = {
     padding: 2rem 0;
     height: 98vh;
   `,
-}
+};

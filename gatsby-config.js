@@ -1,11 +1,24 @@
-require('dotenv').config({
-  path: '.env.${process.env.NODE_ENV}',
-})
+const path = require(`path`);
+// require('dotenv').config({
+//   path: '.env.${process.env.NODE_ENV}',
+// })
 module.exports = {
   siteMetadata: {
     title: 'Brandon Ferrer Blog',
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-eslint',
+      options: {
+        test: /\.js$|\.jsx$/,
+        exclude: /(node_modules|.cache|public)/,
+        stages: ['develop'],
+        options: {
+          emitWarning: true,
+          failOnError: false,
+        },
+      },
+    },
     'gatsby-plugin-react-helmet',
     // https://public-api.wordpress.com/wp/v2/sites/gatsbyjsexamplewordpress.wordpress.com/pages/
     /*
@@ -24,13 +37,13 @@ module.exports = {
         useACF: true,
       },
     },
-    // {
-    //   resolve: 'gatsby-source-filesystem',
-    //   options: {
-    //     name: 'images',
-    //     path: `${__dirname}/src/images/`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
+      },
+    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
@@ -91,4 +104,4 @@ module.exports = {
       },
     },
   ],
-}
+};

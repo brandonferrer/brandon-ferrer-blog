@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 /** @jsx jsx */
-import { css, jsx } from '@emotion/core'
+import { css, jsx } from '@emotion/core';
 
 const ContentWrapper = ({
   children,
@@ -9,22 +9,26 @@ const ContentWrapper = ({
   index,
   lifestyle,
   blogPage,
+  resume,
+  travel,
 }) => {
-  let contentWrapperStyles
+  let contentWrapperStyles;
   if (index) {
-    contentWrapperStyles = styles.contentWrapperIndex
+    contentWrapperStyles = styles.contentWrapperIndex;
   } else if (blogPage) {
-    contentWrapperStyles = styles.contentWrapperBlogPage
+    contentWrapperStyles = styles.contentWrapperBlogPage;
+  } else if (travel) {
+    contentWrapperStyles = styles.contentWrapperTravel;
   } else {
     contentWrapperStyles =
-      blog || projects || lifestyle
+      blog || projects || lifestyle || resume
         ? styles.contentWrapperBlog
-        : styles.contentWrapper
+        : styles.contentWrapper;
   }
-  return <div css={contentWrapperStyles}>{children}</div>
-}
+  return <div css={contentWrapperStyles}>{children}</div>;
+};
 
-export default ContentWrapper
+export default ContentWrapper;
 
 const styles = {
   contentWrapper: css`
@@ -33,7 +37,6 @@ const styles = {
     overflow-y: auto;
     display: flex;
     align-items: center;
-    border-radius: 8px;
     padding: 0;
     -webkit-overflow-scrolling: touch;
   `,
@@ -43,7 +46,6 @@ const styles = {
     overflow-y: hidden;
     display: flex;
     align-items: center;
-    border-radius: 8px;
     padding: 1rem;
   `,
   contentWrapperBlog: css`
@@ -51,7 +53,6 @@ const styles = {
     width: 100%;
     height: 60%;
     overflow-y: auto;
-    border-radius: 8px;
     padding: 1.5rem;
     -webkit-overflow-scrolling: touch;
   `,
@@ -60,8 +61,15 @@ const styles = {
     width: 100%;
     height: 55%;
     overflow-y: auto;
-    border-radius: 8px;
     padding: 1rem;
     -webkit-overflow-scrolling: touch;
   `,
-}
+  contentWrapperTravel: css`
+    background-color: #f44336 !important;
+    width: 100%;
+    height: 60%;
+    overflow-y: auto;
+    padding: 0 1.5rem;
+    -webkit-overflow-scrolling: touch;
+  `,
+};

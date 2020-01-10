@@ -17,8 +17,7 @@
 @myBlack: #000;
 @myWhite: #FFF;
 @myRedDark: #ba000d;
-@myYellowDark: #C8B900;
-@myYellowLight: #ffff72;
+@myBlack2: #1a1b1d;
 
 /*-------------------
        Content
@@ -304,7 +303,7 @@
 @activeItemColor: #FEFEFE;
 
 /* Selected */
-@selectedBackground: @myYellowDark;
+@selectedBackground: @myBlack2;
 @selectedColor: @myWhite;
 
 /* Error */

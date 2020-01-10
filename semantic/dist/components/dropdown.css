@@ -892,7 +892,7 @@ select.ui.dropdown {
 /* Selected Item */
 .ui.dropdown.selected,
 .ui.dropdown .menu .selected.item {
-  background: #C8B900;
+  background: #1a1b1d;
   color: #FFF;
 }
 

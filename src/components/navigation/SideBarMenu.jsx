@@ -1,18 +1,18 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from 'react';
+import Link from 'gatsby-link';
 /** @jsx jsx */
-import { css, jsx } from '@emotion/core'
-import { Sidebar, Segment, Menu } from 'semantic-ui-react'
+import { css, jsx } from '@emotion/core';
+import { Sidebar, Segment, Menu } from 'semantic-ui-react';
 // import { isMobileOnly } from 'react-device-detect'
 
 const SideBarMenu = ({ children, showSideBar, toggleSideBar }) => {
-  let sidebarAnimation
+  let sidebarAnimation;
   // if (isMobileOnly) {
   //   sidebarAnimation = 'push'
   // } else {
   //   sidebarAnimation = 'scale down'
   // }
-  sidebarAnimation = 'scale down'
+  sidebarAnimation = 'scale down';
   return (
     <Sidebar.Pushable as={Segment} style={{ overflow: 'hidden' }}>
       <Sidebar
@@ -28,65 +28,26 @@ const SideBarMenu = ({ children, showSideBar, toggleSideBar }) => {
           top: '10rem',
         }}
       >
-        <Menu.Item name="home" as={Link} to="/" onClick={toggleSideBar}>
-          <span css={styles.menuItem}>Home.</span>
-        </Menu.Item>
-        <Menu.Item
-          disabled
-          // name="about"
-          // as={Link}
-          // to="/about"
-          // onClick={toggleSideBar}
-        >
-          <span css={[styles.menuItem, styles.disabled]}>About B.</span>
-        </Menu.Item>
-        <Menu.Item name="blog" as={Link} to="/blog" onClick={toggleSideBar}>
-          <span css={styles.menuItem}>"BLOG"</span>
-        </Menu.Item>
-        <Menu.Item name="travel" as={Link} to="/travel" onClick={toggleSideBar}>
-          <span css={styles.menuItem}>Travel.</span>
-        </Menu.Item>
-        <Menu.Item
-          name="lifestyle"
-          as={Link}
-          to="/lifestyle"
-          onClick={toggleSideBar}
-        >
-          <span css={styles.menuItem}>Lifestyle.</span>
-        </Menu.Item>
-        <Menu.Item
-          name="projects"
-          as={Link}
-          to="/projects"
-          onClick={toggleSideBar}
-        >
-          <span css={styles.menuItem}>Dev Projects.</span>
-        </Menu.Item>
-        <Menu.Item
-          disabled
-          // name="dj-life"
-          // as={Link}
-          // // to="/dj"
-          // onClick={toggleSideBar}
-        >
-          <span css={[styles.menuItem, styles.disabled]}>DJ Life.</span>
-        </Menu.Item>
-        <Menu.Item
-          disabled
-          // name="say-hey"
-          // as={Link}
-          // // to="/contact"
-          // onClick={toggleSideBar}
-        >
-          <span css={[styles.menuItem, styles.disabled]}>Say Hey.</span>
-        </Menu.Item>
+        {navConfig.map(
+          navItem =>
+            !navItem.isDisabled && (
+              <Menu.Item
+                name={navItem.name}
+                as={Link}
+                to={navItem.path}
+                onClick={toggleSideBar}
+              >
+                <span css={styles.menuItem}>{navItem.label}</span>
+              </Menu.Item>
+            )
+        )}
       </Sidebar>
-      <Sidebar.Pusher css={styles.bgYellow}>{children}</Sidebar.Pusher>
+      <Sidebar.Pusher css={styles.bgRed}>{children}</Sidebar.Pusher>
     </Sidebar.Pushable>
-  )
-}
+  );
+};
 
-export default SideBarMenu
+export default SideBarMenu;
 
 const styles = {
   menuItem: css`
@@ -102,4 +63,29 @@ const styles = {
   bgYellow: css`
     background-color: #ffeb3b !important;
   `,
-}
+  bgRed: css`
+    background-color: #f44336 !important;
+  `,
+};
+
+const navConfig = [
+  { name: 'home', label: 'Home.', path: '/', isDisabled: false },
+  { name: 'about', label: 'About B.', path: '/about', isDisabled: true },
+  { name: 'resume', label: 'Resume.', path: '/resume', isDisabled: false },
+  { name: 'blog', label: 'Blog.', path: '/blog', isDisabled: false },
+  { name: 'travel', label: 'Travel.', path: '/travel', isDisabled: false },
+  {
+    name: 'lifestyle',
+    label: 'Lifestyle. (IG)',
+    path: '/lifestyle',
+    isDisabled: false,
+  },
+  {
+    name: 'projects',
+    label: 'Dev Projects.',
+    path: '/projects',
+    isDisabled: false,
+  },
+  { name: 'dj', label: 'DJ Life.', path: '/dj', isDisabled: true },
+  { name: 'contact', label: 'Say Hey.', path: '/contact', isDisabled: true },
+];

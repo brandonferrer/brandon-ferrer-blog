@@ -1,6 +1,6 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import Layout from '../components/layout'
+import React from 'react';
+import Helmet from 'react-helmet';
+import Layout from '../components/layout';
 
 const Vlog = () => (
   <>
@@ -20,6 +20,6 @@ const Vlog = () => (
       </h3>
     </Layout>
   </>
-)
+);
 
-export default Vlog
+export default Vlog;

@@ -1,45 +1,45 @@
-import React, { Component } from 'react'
-import axios from 'axios'
-import Moment from 'react-moment'
-import { Grid } from 'semantic-ui-react'
-import Layout from '../components/layout'
+import React, { Component } from 'react';
+import axios from 'axios';
+import Moment from 'react-moment';
+import { Grid } from 'semantic-ui-react';
+import Layout from '../components/layout';
 import {
   ContentWrapper,
   HeaderWrapper,
   PageHeader,
   SubHeader,
   PhotoCard,
-} from '../components'
+} from '../components';
 
 class Social extends Component {
   state = {
     instagramPostArray: [],
-  }
+  };
 
   handleInstagramData = postArray =>
     this.setState({
       instagramPostArray: postArray,
-    })
+    });
 
   componentDidMount() {
-    const token = process.env.GATSBY_INSTAGRAM_TOKEN
-    const photoCount = 18
+    const token = process.env.GATSBY_INSTAGRAM_TOKEN;
+    const photoCount = 18;
 
     axios
       .get(`https://api.instagram.com/v1/users/self/media/recent`, {
         params: { access_token: token, count: photoCount },
       })
       .then(response => {
-        const posts = response.data.data
-        let postArray = []
+        const posts = response.data.data;
+        let postArray = [];
         // eslint-disable-next-line
         posts.map(post => {
-          const { images, caption, likes, link, created_time } = post
+          const { images, caption, likes, link, created_time } = post;
           const convertedDate = (
             <Moment unix format="MM/DD/YYYY">
               {created_time}
             </Moment>
-          )
+          );
           const postObj = {
             caption: caption.text,
             likes: likes.count,
@@ -48,23 +48,23 @@ class Social extends Component {
             imageUrlStandard: images.standard_resolution.url,
             imageUrlThumb: images.thumbnail.url,
             igLink: link,
-          }
-          postArray.push(postObj)
-          this.handleInstagramData(postArray)
-        })
+          };
+          postArray.push(postObj);
+          this.handleInstagramData(postArray);
+        });
       })
       .catch(error => {
-        console.log(error)
-      })
+        console.log(error);
+      });
   }
   render() {
-    const { instagramPostArray } = this.state
+    const { instagramPostArray } = this.state;
 
     return (
       <Layout>
         <HeaderWrapper>
           <PageHeader text="Lifestyle" />
-          <SubHeader text="THE GRAM" />
+          <SubHeader text="IG" />
         </HeaderWrapper>
         <ContentWrapper lifestyle>
           <Grid
@@ -84,7 +84,7 @@ class Social extends Component {
                 imageUrlStandard,
                 imageUrlThumb,
                 igLink,
-              } = post
+              } = post;
               return (
                 <Grid.Column>
                   <PhotoCard
@@ -97,13 +97,13 @@ class Social extends Component {
                     igLink={igLink}
                   />
                 </Grid.Column>
-              )
+              );
             })}
           </Grid>
         </ContentWrapper>
       </Layout>
-    )
+    );
   }
 }
 
-export default Social
+export default Social;
