@@ -35,7 +35,7 @@ const Dj = () => {
   }
 
   // Spotify implicit grant flow params
-  const clientId = '4bce35776b4f47b18b265ed05171baf9';
+  const clientId = process.env.GATSBY_SPOTIFY_CLIENT_ID;
   const redirectUri = 'http://localhost:8000/dj';
   const scopes = [
     'user-read-currently-playing',
@@ -46,7 +46,7 @@ const Dj = () => {
     'user-modify-playback-state',
     'streaming',
   ];
-  const spotifyAuthorizeUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=token&redirect_uri=${redirectUri}&scope=${scopes}&show_dialog=true`;
+  const spotifyAuthorizeUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=token&redirect_uri=${redirectUri}&scope=${scopes}&show_dialog=true&token`;
 
   return (
     <Layout>
