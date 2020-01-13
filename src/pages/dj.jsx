@@ -1,3 +1,4 @@
+/* global window */
 import React, { useState } from 'react';
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
