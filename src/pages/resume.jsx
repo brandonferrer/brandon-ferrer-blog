@@ -1,26 +1,24 @@
 import React from 'react';
 import { Grid, GridColumn } from 'semantic-ui-react';
-import Helmet from 'react-helmet';
 import Layout from '../components/layout';
-import { ContentWrapper, HeaderWrapper, PageHeader } from '../components';
+import {
+  ContentWrapper,
+  HeaderWrapper,
+  PageHeader,
+  LinkedInWidget,
+} from '../components';
 
 const Resume = () => (
   <Layout>
-    <Helmet>
-      <script
-        type="text/javascript"
-        src="https://platform.linkedin.com/badges/js/profile.js"
-        async
-        defer
-      />
-    </Helmet>
     <HeaderWrapper>
       <PageHeader text="Resume" />
     </HeaderWrapper>
     <ContentWrapper resume>
-      <h4>
-        I&apos;m too lazy to update my resume right now{' '}
-        <span role="img">😪</span>
+      <h4 style={{ textAlign: 'center', padding: '1rem' }}>
+        Nevermind, I&apos;m too lazy to update my resume right now &nbsp;
+        <span role="img" aria-label="Tired Emoji">
+          😪
+        </span>
       </h4>
       <Grid
         container
@@ -38,23 +36,7 @@ const Resume = () => (
             height: '350px',
           }}
         >
-          <div
-            class="LI-profile-badge"
-            data-version="v1"
-            data-size="medium"
-            data-locale="en_US"
-            data-type="horizontal"
-            data-theme="light"
-            data-vanity="brandonferrer"
-          >
-            <a
-              class="LI-simple-link"
-              href="https://www.linkedin.com/in/brandonferrer?trk=profile-badge"
-              target="_blank"
-            >
-              Brandon Ferrer
-            </a>
-          </div>
+          <LinkedInWidget />
         </GridColumn>
       </Grid>
     </ContentWrapper>

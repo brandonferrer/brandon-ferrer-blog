@@ -20,18 +20,6 @@ module.exports = {
     sourceType: 'module', // Allows for the use of imports
   },
   rules: {
-    'prettier/prettier': [
-      'warn',
-      {
-        printWidth: 80,
-        singleQuote: true,
-        trailingComma: 'es5',
-        bracketSpacing: true,
-        parser: 'flow',
-        semi: true,
-      },
-    ],
-    'graphql/template-strings': ['error'],
     'import/no-extraneous-dependencies': [
       'warn',
       {
@@ -47,6 +35,9 @@ module.exports = {
     'no-use-before-define': ['warn', { variables: false }],
     camelcase: 'off', // should disable only for destructuring.
     'react/prop-types': 'off',
+    'comma-dangle': 'off',
+    'arrow-parens': 'off',
+    'operator-linebreak': 'off',
     'react/jsx-curly-brace-presence': 'warn',
     'jsx-a11y/no-autofocus': 'warn',
     // 'jsx-a11y/href-no-hash': [0],

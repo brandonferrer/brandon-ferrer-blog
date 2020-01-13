@@ -32,6 +32,7 @@ const SideBarMenu = ({ children, showSideBar, toggleSideBar }) => {
           navItem =>
             !navItem.isDisabled && (
               <Menu.Item
+                key={navItem.name}
                 name={navItem.name}
                 as={Link}
                 to={navItem.path}
@@ -71,21 +72,21 @@ const styles = {
 const navConfig = [
   { name: 'home', label: 'Home.', path: '/', isDisabled: false },
   { name: 'about', label: 'About B.', path: '/about', isDisabled: true },
-  { name: 'resume', label: 'Resume.', path: '/resume', isDisabled: false },
-  { name: 'blog', label: 'Blog.', path: '/blog', isDisabled: false },
-  { name: 'travel', label: 'Travel.', path: '/travel', isDisabled: false },
+  { name: 'blog', label: '"BLOG"', path: '/blog', isDisabled: false },
   {
     name: 'lifestyle',
     label: 'Lifestyle. (IG)',
     path: '/lifestyle',
     isDisabled: false,
   },
+  { name: 'travel', label: 'Travel.', path: '/travel', isDisabled: false },
+  { name: 'resume', label: 'Resume.', path: '/resume', isDisabled: false },
   {
     name: 'projects',
     label: 'Dev Projects.',
     path: '/projects',
     isDisabled: false,
   },
-  { name: 'dj', label: 'DJ Life.', path: '/dj', isDisabled: true },
-  { name: 'contact', label: 'Say Hey.', path: '/contact', isDisabled: true },
+  { name: 'dj', label: 'DJ Life.', path: '/dj', isDisabled: false },
+  { name: 'contact', label: 'Say Hey.', path: '/contact', isDisabled: false },
 ];

@@ -7,6 +7,8 @@ import { PageHeader, SubHeader } from './typography';
 import BlogItem from './blog/BlogItem';
 import PhotoCard from './instagram/PhotoCard';
 import Layout from './layout';
+import LinkedInWidget from './resume/LinkedInWidget';
+import SpotifyPlayer from './spotify-player/SpotifyPlayer';
 
 export {
   Layout,
@@ -19,4 +21,6 @@ export {
   SubHeader,
   BlogItem,
   PhotoCard,
+  LinkedInWidget,
+  SpotifyPlayer,
 };

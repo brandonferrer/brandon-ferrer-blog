@@ -1,8 +1,6 @@
 import React from 'react';
-// import { css } from '@emotion/core'
-import { PageHeader } from '../components';
 import Layout from '../components/layout';
-import { ContentWrapper, HeaderWrapper } from '../components';
+import { ContentWrapper, HeaderWrapper, PageHeader } from '../components';
 
 const About = () => (
   <Layout>
@@ -10,7 +8,7 @@ const About = () => (
       <PageHeader text="About B" />
     </HeaderWrapper>
     <ContentWrapper>
-      <p>Hey, I'm Brandon from California.</p>
+      <p>Hey, I&apos;m Brandon from California.</p>
     </ContentWrapper>
   </Layout>
 );

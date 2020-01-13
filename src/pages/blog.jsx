@@ -1,73 +1,78 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { graphql } from 'gatsby';
 import { Item, Dropdown } from 'semantic-ui-react';
 import { isMobileOnly } from 'react-device-detect';
-import { PageHeader, BlogItem, HeaderWrapper } from '../components';
 import Layout from '../components/layout';
-import { ContentWrapper } from '../components';
+import {
+  PageHeader,
+  BlogItem,
+  HeaderWrapper,
+  ContentWrapper,
+} from '../components';
 
-class Blog extends Component {
-  state = {
-    category: 'All',
-  };
+const Blog = ({ data }) => {
+  const [category, setCategory] = useState('All');
+  const [blogData, setBlogData] = useState([]);
+  const blogPostArray = data.allWordpressPost.edges;
 
-  handleDropdownChange = (event, { value }) =>
-    this.setState({ category: value });
+  useEffect(() => {
+    filterBlogData(category);
+  }, [category]);
 
-  render() {
-    const { data } = this.props;
-    const { category } = this.state;
-    const blogPostArray = data.allWordpressPost.edges;
+  const handleDropdownChange = (event, { value }) => setCategory(value);
 
-    let passedData;
-
-    switch (category) {
+  const filterBlogData = filter => {
+    switch (filter) {
       case 'Engineering':
-        passedData = blogPostArray.filter(
-          post => post.node.categories[0].name === catEnum.ENGINEERING
+        setBlogData(
+          blogPostArray.filter(
+            post => post.node.categories[0].name === catEnum.ENGINEERING
+          )
         );
         break;
       case 'Food':
-        passedData = blogPostArray.filter(
-          post => post.node.categories[0].name === catEnum.FOOD
+        setBlogData(
+          blogPostArray.filter(
+            post => post.node.categories[0].name === catEnum.FOOD
+          )
         );
         break;
       case 'Travel':
-        passedData = blogPostArray.filter(
-          post => post.node.categories[0].name === catEnum.TRAVEL
+        setBlogData(
+          blogPostArray.filter(
+            post => post.node.categories[0].name === catEnum.TRAVEL
+          )
         );
         break;
       default:
-        passedData = blogPostArray;
+        setBlogData(blogPostArray);
     }
+  };
 
-    return (
-      <Layout>
-        <HeaderWrapper>
-          <PageHeader text="Blog" inQuotes />
-          <Dropdown
-            placeholder="Filter Categories"
-            fluid={isMobileOnly}
-            floating
-            selection
-            style={{ float: 'right' }}
-            options={categoryOptions}
-            value={category}
-            onChange={this.handleDropdownChange}
-          />
-        </HeaderWrapper>
-        <ContentWrapper blog>
-          <Item.Group divided>
-            {data &&
-              passedData.map(({ node }) => (
-                <BlogItem node={node} key={node.id} />
-              ))}
-          </Item.Group>
-        </ContentWrapper>
-      </Layout>
-    );
-  }
-}
+  return (
+    <Layout>
+      <HeaderWrapper>
+        <PageHeader text="Blog" inQuotes />
+        <Dropdown
+          placeholder="Filter Categories"
+          fluid={isMobileOnly}
+          floating
+          selection
+          style={{ float: 'right' }}
+          options={categoryOptions}
+          value={category}
+          onChange={handleDropdownChange}
+        />
+      </HeaderWrapper>
+      <ContentWrapper blog>
+        <Item.Group divided>
+          {data &&
+            blogData.map(({ node }) => <BlogItem node={node} key={node.id} />)}
+        </Item.Group>
+      </ContentWrapper>
+    </Layout>
+  );
+};
 
 export default Blog;
 
