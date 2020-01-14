@@ -51,9 +51,14 @@ const Dj = () => {
     );
   }
 
+  const isLocalEnv =
+    typeof window !== 'undefined' && window.location.href.includes('localhost');
+
   // Spotify implicit grant flow params
   const clientId = process.env.GATSBY_SPOTIFY_CLIENT_ID;
-  const redirectUri = 'http://localhost:8000/dj';
+  const redirectUri = isLocalEnv
+    ? 'http://localhost:8000/dj'
+    : 'https://brandonferrer.com/dj';
   const scopes = [
     'user-read-currently-playing',
     'user-read-playback-state',
@@ -80,8 +85,6 @@ const Dj = () => {
       }
     }
   `);
-
-  console.log('spotifyToken', spotifyToken);
 
   return (
     <Layout>

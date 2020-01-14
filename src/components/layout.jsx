@@ -6,7 +6,7 @@ import SideBarMenu from './navigation/SideBarMenu';
 import { FlexWrapper } from '../shared/wrappers';
 
 import '../../semantic/dist/semantic.min.css';
-import './index.css';
+import '../shared/index.css';
 
 const App = ({ children }) => {
   const [showSideBar, setShowSideBar] = useState(false);
