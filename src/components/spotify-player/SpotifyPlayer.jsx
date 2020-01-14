@@ -44,7 +44,7 @@ const SpotifyPlayer = ({ accessToken, isAuthenticated }) => {
   //   }
   // }, [webPlayerSet, webPlayerId]);
 
-  if (!webPlayerSet && window.Spotify) {
+  if (typeof window !== 'undefined' && !webPlayerSet && window.Spotify) {
     setWebPlayer(
       new window.Spotify.Player({
         name: 'BrandonFerrer.com',

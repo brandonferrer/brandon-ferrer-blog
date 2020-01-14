@@ -67,8 +67,8 @@ class Lifestyle extends Component {
     return (
       <Layout>
         <HeaderWrapper>
-          <PageHeader text="Lifestyle" />
-          <SubHeader text="instagram" />
+          <PageHeader text="Instagram" />
+          <SubHeader text="@bsteezy" />
         </HeaderWrapper>
         <ContentWrapper lifestyle>
           {isLoading ? (

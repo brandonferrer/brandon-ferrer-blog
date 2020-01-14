@@ -48,7 +48,7 @@ const Blog = ({ data }) => {
   return (
     <Layout>
       <HeaderWrapper>
-        <PageHeader text="Blog" inQuotes />
+        <PageHeader text="Blog" />
         <Dropdown
           placeholder="Filter Categories"
           fluid={isMobileOnly}

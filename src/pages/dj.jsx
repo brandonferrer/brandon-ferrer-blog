@@ -22,7 +22,12 @@ const Dj = () => {
 
   const spotifyRedirect = url => (window.location.href = url);
 
-  if (window.location.hash && !spotifyToken && !isAuthenticated) {
+  if (
+    typeof window !== 'undefined' &&
+    window.location.hash &&
+    !spotifyToken &&
+    !isAuthenticated
+  ) {
     const hashes = window.location.hash.substring(1);
     const params = {};
 
@@ -32,7 +37,8 @@ const Dj = () => {
     });
 
     if (params.access_token) {
-      window.localStorage.setItem('access_token', params.accessToken);
+      typeof window !== 'undefined' &&
+        window.localStorage.setItem('access_token', params.accessToken);
       setSpotifyToken(params.access_token);
       setIsAuthenticated(true);
     }

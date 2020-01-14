@@ -72,10 +72,10 @@ const styles = {
 const navConfig = [
   { name: 'home', label: 'Home.', path: '/', isDisabled: false },
   { name: 'about', label: 'About B.', path: '/about', isDisabled: true },
-  { name: 'blog', label: '"BLOG"', path: '/blog', isDisabled: false },
+  { name: 'blog', label: 'Blog.', path: '/blog', isDisabled: false },
   {
     name: 'lifestyle',
-    label: 'Lifestyle. (IG)',
+    label: 'Instagram.',
     path: '/lifestyle',
     isDisabled: false,
   },
@@ -85,13 +85,13 @@ const navConfig = [
     path: '/jetset',
     isDisabled: false,
   },
-  { name: 'resume', label: 'Résumé.', path: '/resume', isDisabled: false },
+  { name: 'dj', label: 'Spotify Slapzz.', path: '/dj', isDisabled: false },
   {
     name: 'projects',
     label: 'Dev Projects.',
     path: '/projects',
     isDisabled: false,
   },
-  { name: 'dj', label: 'Spotify Slapzz.', path: '/dj', isDisabled: false },
+  { name: 'resume', label: 'Résumé.', path: '/resume', isDisabled: false },
   { name: 'contact', label: 'Say Hey.', path: '/contact', isDisabled: false },
 ];
