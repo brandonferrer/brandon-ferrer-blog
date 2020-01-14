@@ -11,6 +11,7 @@ const ContentWrapper = ({
   blogPage,
   resume,
   travel,
+  dj,
 }) => {
   let contentWrapperStyles;
   if (index) {
@@ -19,6 +20,8 @@ const ContentWrapper = ({
     contentWrapperStyles = styles.contentWrapperBlogPage;
   } else if (travel) {
     contentWrapperStyles = styles.contentWrapperTravel;
+  } else if (dj) {
+    contentWrapperStyles = styles.contentWrapperDj;
   } else {
     contentWrapperStyles =
       blog || projects || lifestyle || resume
@@ -66,6 +69,14 @@ const styles = {
   `,
   contentWrapperTravel: css`
     background-color: #f44336 !important;
+    width: 100%;
+    height: 60%;
+    overflow-y: auto;
+    padding: 0 1.5rem;
+    -webkit-overflow-scrolling: touch;
+  `,
+  contentWrapperDj: css`
+    background-color: #c9c9c9 !important;
     width: 100%;
     height: 60%;
     overflow-y: auto;

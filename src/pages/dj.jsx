@@ -16,7 +16,9 @@ const Dj = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [spotifyToken, setSpotifyToken] = useState('');
 
-  window.onSpotifyWebPlaybackSDKReady = () => (window.Spotify = Spotify);
+  if (window) {
+    window.onSpotifyWebPlaybackSDKReady = () => (window.Spotify = Spotify);
+  }
 
   const spotifyRedirect = url => (window.location.href = url);
 
@@ -81,7 +83,7 @@ const Dj = () => {
         <PageHeader text="Spotify Slapzz" />
         <SubHeader text="Remote DJ" />
       </HeaderWrapper>
-      <ContentWrapper travel={!spotifyToken} resume={spotifyToken}>
+      <ContentWrapper dj={!spotifyToken} resume={spotifyToken}>
         <Grid
           container
           stackable
@@ -113,7 +115,11 @@ const Dj = () => {
                   <>
                     <Typist cursor={{ show: false }} startDelay={600}>
                       <p css={styles.text}>
-                        Do you have Spotify? Let me be your remote disc jockey!
+                        Do you have Spotify? I bet I can make you dance through
+                        the computer!{' '}
+                        <span role="img" aria-label="emoji">
+                          🙃
+                        </span>
                       </p>
                     </Typist>
                     <Button
