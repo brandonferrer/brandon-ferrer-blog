@@ -1,6 +1,7 @@
 import React from 'react';
-import Layout from '../components/layout';
-import { ContentWrapper, HeaderWrapper, PageHeader } from '../components';
+import { Layout } from '../components';
+import { PageHeader } from '../shared/typography';
+import { ContentWrapper, HeaderWrapper } from '../shared/wrappers';
 
 const About = () => (
   <Layout>

@@ -4,8 +4,9 @@ import { Link } from 'gatsby';
 import { css, jsx } from '@emotion/core';
 import Helmet from 'react-helmet';
 import { Icon, Label } from 'semantic-ui-react';
-import { BlogPageHeader } from '../typography';
-import { ContentWrapper, HeaderWrapper, Layout } from '../../components';
+import { Layout } from '../../components';
+import { BlogPageHeader } from '../../shared/typography';
+import { ContentWrapper, HeaderWrapper } from '../../shared/wrappers';
 
 const BlogPage = ({ pageContext }) => {
   const { date, title, excerpt, content, categories } = pageContext;

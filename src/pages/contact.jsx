@@ -1,14 +1,37 @@
 import React from 'react';
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
-import { PageHeader } from '../components';
-import Layout from '../components/layout';
+import { Grid, GridColumn } from 'semantic-ui-react';
+import { Layout } from '../components';
+import { PageHeader } from '../shared/typography';
+import { HeaderWrapper, ContentWrapper } from '../shared/wrappers';
 
 const Contact = () => (
   <Layout>
-    <div css={styles.wrapper}>
+    <HeaderWrapper>
       <PageHeader text="Say Hey" />
-    </div>
+    </HeaderWrapper>
+    <ContentWrapper resume>
+      <Grid
+        container
+        stackable
+        verticalAlign="middle"
+        columns={1}
+        centered
+        style={{ marginTop: 0 }}
+      >
+        <GridColumn
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: '350px',
+          }}
+        >
+          <h1>Hey you!</h1>
+        </GridColumn>
+      </Grid>
+    </ContentWrapper>
   </Layout>
 );
 

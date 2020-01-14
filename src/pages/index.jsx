@@ -5,8 +5,8 @@ import Img from 'gatsby-image';
 import { css, jsx } from '@emotion/core';
 import { Grid } from 'semantic-ui-react';
 import Typist from 'react-typist';
-import Layout from '../components/layout';
-import { ContentWrapper } from '../components';
+import { Layout } from '../components';
+import { ContentWrapper } from '../shared/wrappers';
 
 const Home = () => {
   const data = useStaticQuery(graphql`
@@ -36,11 +36,6 @@ const Home = () => {
         >
           <Grid.Column>
             <div css={styles.imageWrapper}>
-              {/* <img
-              src="https://brandonferrer.blog/assets/brandon-couch-min.jpg"
-              alt="Brandon at Arcade"
-              css={styles.image}
-            /> */}
               <Img
                 css={styles.image}
                 fluid={data.image.childImageSharp.fluid}
@@ -250,11 +245,4 @@ const styles = {
       width: 100%;
     }
   `,
-  // wrapper: css`
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: space-around;
-  //   padding: 2rem 0;
-  //   height: 98vh;
-  // `,
 };

@@ -1,38 +1,30 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Moment from 'react-moment';
-import { Grid } from 'semantic-ui-react';
+import { Grid, Loader } from 'semantic-ui-react';
 import Layout from '../components/layout';
-import {
-  ContentWrapper,
-  HeaderWrapper,
-  PageHeader,
-  SubHeader,
-  PhotoCard,
-} from '../components';
+import { PhotoCard } from '../components';
+import { ContentWrapper, HeaderWrapper } from '../shared/wrappers';
+import { PageHeader, SubHeader } from '../shared/typography';
 
-class Social extends Component {
+class Lifestyle extends Component {
   state = {
     instagramPostArray: [],
+    isLoading: true,
   };
-
-  handleInstagramData = postArray =>
-    this.setState({
-      instagramPostArray: postArray,
-    });
 
   componentDidMount() {
     const token = process.env.GATSBY_INSTAGRAM_TOKEN;
-    const photoCount = 18;
+    const photoCount = 20;
 
     axios
-      .get(`https://api.instagram.com/v1/users/self/media/recent`, {
+      .get('https://api.instagram.com/v1/users/self/media/recent', {
         params: { access_token: token, count: photoCount },
       })
       .then(response => {
         const posts = response.data.data;
-        let postArray = [];
-        // eslint-disable-next-line
+        const postArray = [];
+
         posts.map(post => {
           const { images, caption, likes, link, created_time } = post;
           const convertedDate = (
@@ -50,6 +42,11 @@ class Social extends Component {
             igLink: link,
           };
           postArray.push(postObj);
+
+          if (postArray.length === photoCount) {
+            this.setState({ isLoading: false });
+          }
+
           this.handleInstagramData(postArray);
         });
       })
@@ -57,53 +54,71 @@ class Social extends Component {
         console.log(error);
       });
   }
+
+  handleInstagramData = postArray => {
+    this.setState({
+      instagramPostArray: postArray,
+    });
+  };
+
   render() {
-    const { instagramPostArray } = this.state;
+    const { instagramPostArray, isLoading } = this.state;
 
     return (
       <Layout>
         <HeaderWrapper>
           <PageHeader text="Lifestyle" />
-          <SubHeader text="IG" />
+          <SubHeader text="instagram" />
         </HeaderWrapper>
         <ContentWrapper lifestyle>
-          <Grid
-            container
-            stackable
-            verticalAlign="middle"
-            columns={3}
-            centered
-            style={{ marginTop: 0 }}
-          >
-            {instagramPostArray.map(post => {
-              const {
-                caption,
-                likes,
-                date,
-                imageUrlLow,
-                imageUrlStandard,
-                imageUrlThumb,
-                igLink,
-              } = post;
-              return (
-                <Grid.Column>
+          {isLoading ? (
+            <Loader active inline="centered" style={{ top: '40%' }} />
+          ) : (
+            <Grid
+              container
+              stackable
+              verticalAlign="middle"
+              columns={3}
+              style={{ marginTop: 0 }}
+            >
+              {instagramPostArray.map(post => (
+                <Grid.Column key={post.igLink}>
                   <PhotoCard
-                    caption={caption}
-                    likes={likes}
-                    date={date}
-                    imageUrlLow={imageUrlLow}
-                    imageUrlStandard={imageUrlStandard}
-                    imageUrlThumb={imageUrlThumb}
-                    igLink={igLink}
+                    caption={post.caption}
+                    likes={post.likes}
+                    date={post.date}
+                    imageUrlLow={post.imageUrlLow}
+                    imageUrlStandard={post.imageUrlStandard}
+                    imageUrlThumb={post.imageUrlThumb}
+                    igLink={post.igLink}
                   />
                 </Grid.Column>
-              );
-            })}
-          </Grid>
+              ))}
+              <Grid.Column>
+                <p>
+                  My Instagram developer account is in sandbox mode and I'm
+                  limited to only 20 photos{' '}
+                  <span role="img" aria-label="emoji">
+                    😫
+                  </span>
+                  <br />
+                  <br />
+                  Follow me at{' '}
+                  <a
+                    href="https://www.instagram.com/bsteezy/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @bsteezy
+                  </a>
+                </p>
+              </Grid.Column>
+            </Grid>
+          )}
         </ContentWrapper>
       </Layout>
     );
   }
 }
 
-export default Social;
+export default Lifestyle;

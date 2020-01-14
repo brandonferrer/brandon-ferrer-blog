@@ -2,13 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { graphql } from 'gatsby';
 import { Item, Dropdown } from 'semantic-ui-react';
 import { isMobileOnly } from 'react-device-detect';
-import Layout from '../components/layout';
-import {
-  PageHeader,
-  BlogItem,
-  HeaderWrapper,
-  ContentWrapper,
-} from '../components';
+import { Layout, BlogItem } from '../components';
+import { HeaderWrapper, ContentWrapper } from '../shared/wrappers';
+import { PageHeader } from '../shared/typography';
 
 const Blog = ({ data }) => {
   const [category, setCategory] = useState('All');

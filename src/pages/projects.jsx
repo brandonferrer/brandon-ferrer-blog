@@ -1,13 +1,9 @@
 import React from 'react';
 import { Grid } from 'semantic-ui-react';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
-import {
-  PageHeader,
-  ContentWrapper,
-  HeaderWrapper,
-  SubHeader,
-} from '../components';
-import Layout from '../components/layout';
+import { Layout } from '../components';
+import { PageHeader, SubHeader } from '../shared/typography';
+import { ContentWrapper, HeaderWrapper } from '../shared/wrappers';
 
 const Projects = () => (
   <Layout>

@@ -4,4 +4,7 @@
  * See: https://www.gatsbyjs.org/docs/ssr-apis/
  */
 
- // You can delete this file if you're not using it
+import React from 'react';
+export function onRenderBody({ setHeadComponents }) {
+  setHeadComponents([<script src="https://sdk.scdn.co/spotify-player.js" />]);
+}

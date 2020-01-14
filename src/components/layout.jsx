@@ -3,7 +3,7 @@ import { Container } from 'semantic-ui-react';
 import Helmet from 'react-helmet';
 import Nav from './navigation/Nav';
 import SideBarMenu from './navigation/SideBarMenu';
-import FlexWrapper from './wrappers/FlexWrapper';
+import { FlexWrapper } from '../shared/wrappers';
 
 import '../../semantic/dist/semantic.min.css';
 import './index.css';
@@ -15,7 +15,9 @@ const App = ({ children }) => {
 
   return (
     <>
-      <Helmet title="brandonferrer.com" meta={headerMetaData} />
+      <Helmet title="brandonferrer.com" meta={headerMetaData}>
+        <script src="https://sdk.scdn.co/spotify-player.js" />
+      </Helmet>
       <Nav toggleSideBar={toggleSideBar} />
       <SideBarMenu showSideBar={showSideBar} toggleSideBar={toggleSideBar}>
         <Container>

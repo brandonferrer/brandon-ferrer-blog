@@ -79,14 +79,19 @@ const navConfig = [
     path: '/lifestyle',
     isDisabled: false,
   },
-  { name: 'travel', label: 'Travel.', path: '/travel', isDisabled: false },
-  { name: 'resume', label: 'Resume.', path: '/resume', isDisabled: false },
+  {
+    name: 'jetset',
+    label: 'Jet Set.',
+    path: '/jetset',
+    isDisabled: false,
+  },
+  { name: 'resume', label: 'Résumé.', path: '/resume', isDisabled: false },
   {
     name: 'projects',
     label: 'Dev Projects.',
     path: '/projects',
     isDisabled: false,
   },
-  { name: 'dj', label: 'DJ Life.', path: '/dj', isDisabled: false },
+  { name: 'dj', label: 'Spotify Slapzz.', path: '/dj', isDisabled: false },
   { name: 'contact', label: 'Say Hey.', path: '/contact', isDisabled: false },
 ];

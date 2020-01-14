@@ -34,6 +34,12 @@ module.exports = {
     'import/no-named-as-default': 'warn',
     'no-use-before-define': ['warn', { variables: false }],
     camelcase: 'off', // should disable only for destructuring.
+    'react/no-unescaped-entities': 'off',
+    'react/state-in-constructor': 'off',
+    'object-curly-newline': 'off',
+    'react/jsx-one-expression-per-line': 'off',
+    'no-console': 'off',
+    'array-callback-return': 'off',
     'react/prop-types': 'off',
     'comma-dangle': 'off',
     'arrow-parens': 'off',

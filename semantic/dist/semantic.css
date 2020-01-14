@@ -781,7 +781,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
   font-style: normal;
   text-align: center;
   text-decoration: none;
-  border-radius: 0.28571429rem;
+  border-radius: 0em;
   -webkit-box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
   box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
   -webkit-user-select: none;
@@ -1224,24 +1224,24 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 
 /* Right */
 
-.ui.labeled.button:not([class*="left labeled"]) > .button {
+.ui.labeled.button:not([class*='left labeled']) > .button {
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
 }
 
-.ui.labeled.button:not([class*="left labeled"]) > .label {
+.ui.labeled.button:not([class*='left labeled']) > .label {
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
 }
 
 /* Left Side */
 
-.ui[class*="left labeled"].button > .button {
+.ui[class*='left labeled'].button > .button {
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
 }
 
-.ui[class*="left labeled"].button > .label {
+.ui[class*='left labeled'].button > .label {
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
 }
@@ -1411,7 +1411,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 /* VK */
 
 .ui.vk.button {
-  background-color: #4D7198;
+  background-color: #4d7198;
   color: #FFFFFF;
   background-image: none;
   -webkit-box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
@@ -1458,15 +1458,15 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
        Floated
 --------------------*/
 
-.ui[class*="left floated"].buttons,
-.ui[class*="left floated"].button {
+.ui[class*='left floated'].buttons,
+.ui[class*='left floated'].button {
   float: left;
   margin-left: 0em;
   margin-right: 0.25em;
 }
 
-.ui[class*="right floated"].buttons,
-.ui[class*="right floated"].button {
+.ui[class*='right floated'].buttons,
+.ui[class*='right floated'].button {
   float: right;
   margin-right: 0em;
   margin-left: 0.25em;
@@ -1568,7 +1568,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
   background: transparent none !important;
   color: rgba(0, 0, 0, 0.6) !important;
   font-weight: normal;
-  border-radius: 0.28571429rem;
+  border-radius: 0em;
   text-transform: none;
   text-shadow: none !important;
   -webkit-box-shadow: 0px 0px 0px 1px rgba(34, 36, 38, 0.15) inset;
@@ -1579,7 +1579,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
   -webkit-box-shadow: none;
   box-shadow: none;
   border: 1px solid rgba(34, 36, 38, 0.15);
-  border-radius: 0.28571429rem;
+  border-radius: 0em;
 }
 
 .ui.basic.buttons .button {
@@ -1749,12 +1749,12 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 
 /* Right Labeled */
 
-.ui[class*="right labeled"].icon.button {
+.ui[class*='right labeled'].icon.button {
   padding-right: 4.07142857em !important;
   padding-left: 1.5em !important;
 }
 
-.ui[class*="right labeled"].icon.button > .icon {
+.ui[class*='right labeled'].icon.button > .icon {
   left: auto;
   right: 0em;
   border-radius: 0px;
@@ -1803,8 +1803,8 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 
 /* Fluid Labeled */
 
-.ui.fluid[class*="left labeled"].icon.button,
-.ui.fluid[class*="right labeled"].icon.button {
+.ui.fluid[class*='left labeled'].icon.button,
+.ui.fluid[class*='right labeled'].icon.button {
   padding-left: 1.5em !important;
   padding-right: 1.5em !important;
 }
@@ -1960,35 +1960,35 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 
 /* Top / Bottom */
 
-.ui[class*="top attached"].buttons {
+.ui[class*='top attached'].buttons {
   margin-bottom: -1px;
   border-radius: 0.28571429rem 0.28571429rem 0em 0em;
 }
 
-.ui[class*="top attached"].buttons .button:first-child {
+.ui[class*='top attached'].buttons .button:first-child {
   border-radius: 0.28571429rem 0em 0em 0em;
 }
 
-.ui[class*="top attached"].buttons .button:last-child {
+.ui[class*='top attached'].buttons .button:last-child {
   border-radius: 0em 0.28571429rem 0em 0em;
 }
 
-.ui[class*="bottom attached"].buttons {
+.ui[class*='bottom attached'].buttons {
   margin-top: -1px;
   border-radius: 0em 0em 0.28571429rem 0.28571429rem;
 }
 
-.ui[class*="bottom attached"].buttons .button:first-child {
+.ui[class*='bottom attached'].buttons .button:first-child {
   border-radius: 0em 0em 0em 0.28571429rem;
 }
 
-.ui[class*="bottom attached"].buttons .button:last-child {
+.ui[class*='bottom attached'].buttons .button:last-child {
   border-radius: 0em 0em 0.28571429rem 0em;
 }
 
 /* Left / Right */
 
-.ui[class*="left attached"].buttons {
+.ui[class*='left attached'].buttons {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1997,17 +1997,17 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
   border-radius: 0em 0.28571429rem 0.28571429rem 0em;
 }
 
-.ui[class*="left attached"].buttons .button:first-child {
+.ui[class*='left attached'].buttons .button:first-child {
   margin-left: -1px;
   border-radius: 0em 0.28571429rem 0em 0em;
 }
 
-.ui[class*="left attached"].buttons .button:last-child {
+.ui[class*='left attached'].buttons .button:last-child {
   margin-left: -1px;
   border-radius: 0em 0em 0.28571429rem 0em;
 }
 
-.ui[class*="right attached"].buttons {
+.ui[class*='right attached'].buttons {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -2016,12 +2016,12 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
   border-radius: 0.28571429rem 0em 0em 0.28571429rem;
 }
 
-.ui[class*="right attached"].buttons .button:first-child {
+.ui[class*='right attached'].buttons .button:first-child {
   margin-left: -1px;
   border-radius: 0.28571429rem 0em 0em 0em;
 }
 
-.ui[class*="right attached"].buttons .button:last-child {
+.ui[class*='right attached'].buttons .button:last-child {
   margin-left: -1px;
   border-radius: 0em 0em 0em 0.28571429rem;
 }
@@ -5029,7 +5029,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 /* Clearfix */
 
 .ui.buttons:after {
-  content: ".";
+  content: '.';
   display: block;
   height: 0;
   clear: both;
@@ -28112,10 +28112,12 @@ Floated Menu / Item
 
 .ui.card:first-child {
   margin-top: 0em;
+  border-radius: 0em;
 }
 
 .ui.card:last-child {
   margin-bottom: 0em;
+  border-radius: 0em;
 }
 
 /*--------------
@@ -28163,7 +28165,7 @@ Floated Menu / Item
 
 .ui.cards > .card > :first-child,
 .ui.card > :first-child {
-  border-radius: 0.28571429rem 0.28571429rem 0em 0em !important;
+  border-radius: 0em !important;
   border-top: none !important;
 }
 
@@ -28264,13 +28266,13 @@ Floated Menu / Item
  Floated Content
 -----------------*/
 
-.ui.cards > .card [class*="left floated"],
-.ui.card [class*="left floated"] {
+.ui.cards > .card [class*='left floated'],
+.ui.card [class*='left floated'] {
   float: left;
 }
 
-.ui.cards > .card [class*="right floated"],
-.ui.card [class*="right floated"] {
+.ui.cards > .card [class*='right floated'],
+.ui.card [class*='right floated'] {
   float: right;
 }
 
@@ -28278,18 +28280,18 @@ Floated Menu / Item
      Aligned
 ---------------*/
 
-.ui.cards > .card [class*="left aligned"],
-.ui.card [class*="left aligned"] {
+.ui.cards > .card [class*='left aligned'],
+.ui.card [class*='left aligned'] {
   text-align: left;
 }
 
-.ui.cards > .card [class*="center aligned"],
-.ui.card [class*="center aligned"] {
+.ui.cards > .card [class*='center aligned'],
+.ui.card [class*='center aligned'] {
   text-align: center;
 }
 
-.ui.cards > .card [class*="right aligned"],
-.ui.card [class*="right aligned"] {
+.ui.cards > .card [class*='right aligned'],
+.ui.card [class*='right aligned'] {
   text-align: right;
 }
 
@@ -28357,8 +28359,8 @@ Floated Menu / Item
   margin-right: 0em;
 }
 
-.ui.cards > .card .meta [class*="right floated"],
-.ui.card .meta [class*="right floated"] {
+.ui.cards > .card .meta [class*='right floated'],
+.ui.card .meta [class*='right floated'] {
   margin-right: 0em;
   margin-left: 0.3em;
 }
@@ -32254,15 +32256,15 @@ body.dimmable > .dimmer {
   Floated Content
 ---------------*/
 
-.ui.dropdown > .text > [class*="right floated"],
-.ui.dropdown .menu .item > [class*="right floated"] {
+.ui.dropdown > .text > [class*='right floated'],
+.ui.dropdown .menu .item > [class*='right floated'] {
   float: right !important;
   margin-right: 0em !important;
   margin-left: 1em !important;
 }
 
-.ui.dropdown > .text > [class*="left floated"],
-.ui.dropdown .menu .item > [class*="left floated"] {
+.ui.dropdown > .text > [class*='left floated'],
+.ui.dropdown .menu .item > [class*='left floated'] {
   float: left !important;
   margin-left: 0em !important;
   margin-right: 1em !important;
@@ -32495,7 +32497,7 @@ body.dimmable > .dimmer {
   -webkit-box-shadow: none;
   box-shadow: none;
   border: 1px solid rgba(34, 36, 38, 0.15);
-  border-radius: 0.28571429rem;
+  border-radius: 0em;
   -webkit-transition: width 0.1s ease, -webkit-box-shadow 0.1s ease;
   transition: width 0.1s ease, -webkit-box-shadow 0.1s ease;
   transition: box-shadow 0.1s ease, width 0.1s ease;
