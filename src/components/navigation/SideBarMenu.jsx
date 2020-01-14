@@ -74,9 +74,9 @@ const navConfig = [
   { name: 'about', label: 'About B.', path: '/about', isDisabled: true },
   { name: 'blog', label: 'Blog.', path: '/blog', isDisabled: false },
   {
-    name: 'lifestyle',
+    name: 'instagram',
     label: 'Instagram.',
-    path: '/lifestyle',
+    path: '/instagram',
     isDisabled: false,
   },
   {

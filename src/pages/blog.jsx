@@ -61,7 +61,7 @@ const Blog = ({ data }) => {
         />
       </HeaderWrapper>
       <ContentWrapper blog>
-        <Item.Group divided>
+        <Item.Group divided style={{ paddingTop: '1.5rem' }}>
           {data &&
             blogData.map(({ node }) => <BlogItem node={node} key={node.id} />)}
         </Item.Group>

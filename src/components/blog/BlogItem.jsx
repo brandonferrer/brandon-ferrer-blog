@@ -12,7 +12,7 @@ const BlogItem = ({ node }) => {
   const trimmedExcerpt =
     excerpt.substring(0, excerpt.indexOf('</p>')).substring(0, 140) + '...';
   return (
-    <Item style={{ padding: '2.5rem' }}>
+    <Item style={{ padding: '2rem' }}>
       <Item.Image src={thumbnailUrl} />
       <Item.Content>
         <Item.Header>{title}</Item.Header>
