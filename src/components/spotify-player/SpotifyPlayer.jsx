@@ -12,7 +12,7 @@ const SpotifyPlayer = ({ accessToken, isAuthenticated }) => {
   const [webPlayerId, setWebPlayerId] = useState('');
   const [webPlayerState, setWebPlayerState] = useState({});
 
-  if (window) {
+  if (typeof window !== 'undefined') {
     window.onSpotifyWebPlaybackSDKReady = () => (window.Spotify = Spotify);
   }
 

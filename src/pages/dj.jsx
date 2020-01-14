@@ -16,7 +16,7 @@ const Dj = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [spotifyToken, setSpotifyToken] = useState('');
 
-  if (window) {
+  if (typeof window !== 'undefined') {
     window.onSpotifyWebPlaybackSDKReady = () => (window.Spotify = Spotify);
   }
 
