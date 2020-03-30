@@ -6,7 +6,7 @@ const YouTube = () => (
   <>
     <Helmet>
       <meta
-        http-equiv="refresh"
+        httpEquiv="refresh"
         content="4;url=https://www.youtube.com/user/bbbee23/"
       />
     </Helmet>

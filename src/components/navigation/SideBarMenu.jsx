@@ -85,7 +85,7 @@ const navConfig = [
     path: '/jetset',
     isDisabled: false,
   },
-  { name: 'dj', label: 'Spotify Slapzz.', path: '/dj', isDisabled: false },
+  { name: 'dj', label: 'Spotify Slapzz.', path: '/dj', isDisabled: true },
   {
     name: 'projects',
     label: 'Dev Projects.',

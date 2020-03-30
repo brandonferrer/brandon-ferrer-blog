@@ -5,6 +5,8 @@ import { Layout } from '../components';
 import { PageHeader, SubHeader } from '../shared/typography';
 import { ContentWrapper, HeaderWrapper } from '../shared/wrappers';
 
+// TODO: Refactor this bullshit
+
 const Projects = () => (
   <Layout>
     <HeaderWrapper>
@@ -19,6 +21,50 @@ const Projects = () => (
         verticalAlign="middle"
         textAlign="center"
       >
+        <Grid.Column style={{ paddingTop: '4rem' }}>
+          <img
+            src="http://www.brandonferrer.blog/assets/projects/send-a-flyer-1.png"
+            alt="Brandon Ferrer Blog"
+            style={{
+              border: '1px #999 solid',
+              width: '500px',
+              margin: '0 auto',
+            }}
+          />
+        </Grid.Column>
+        <Grid.Column style={{ paddingTop: '4rem' }}>
+          <h3>Peachjar - Campaign Submission</h3>
+          <p style={{ fontSize: '14px', fontStyle: 'italic' }}>
+            React, TypeScript, Material UI, Apollo, Express, PostgreSQL
+          </p>
+          <p>
+            Worked with awesome product designers, so yes the UI is pretty. This
+            was a special project for because I worked at Peachjar when they
+            were on a legacy PHP application 5 years ago. Owning this workflow,
+            and contributing to the migration to a microservice/micro frontend
+            architecture was super rewarding!
+          </p>
+        </Grid.Column>
+        <Grid.Column style={{ paddingTop: '4rem' }}>
+          <img
+            src="http://www.brandonferrer.blog/assets/projects/send-a-flyer-2.png"
+            alt="Brandon Ferrer Blog"
+            style={{
+              border: '1px #999 solid',
+              width: '500px',
+              margin: '0 auto',
+            }}
+          />
+        </Grid.Column>
+        <Grid.Column>
+          <p>
+            The school map finder was the best part! Solving problems around
+            search, and returning large data sets was challenging and fun. Then
+            I got to do a lot of the devops work for their data scientist, and
+            deployed his Python service that generated school recommendations
+            with Docker and Kubernetes.
+          </p>
+        </Grid.Column>
         <Grid.Column>
           <h3>Work Pong</h3>
           <p style={{ fontSize: '14px', fontStyle: 'italic' }}>
@@ -37,7 +83,7 @@ const Projects = () => (
             src="http://www.brandonferrer.blog/assets/projects/work-pong.png"
             alt="Work Pong"
             style={{
-              border: '1px #000 solid',
+              border: '1px #999 solid',
               height: '400px',
               margin: '0 auto',
             }}
@@ -48,7 +94,7 @@ const Projects = () => (
             src="http://www.brandonferrer.blog/assets/projects/brandon-ferrer-blog.png"
             alt="Brandon Ferrer Blog"
             style={{
-              border: '1px #000 solid',
+              border: '1px #999 solid',
               width: '500px',
               margin: '0 auto',
             }}
@@ -98,7 +144,7 @@ const Projects = () => (
             src="http://www.brandonferrer.blog/assets/projects/icmonster.jpg"
             alt="Work Pong"
             style={{
-              border: '1px #000 solid',
+              border: '1px #999 solid',
               height: '400px',
               margin: '0 auto',
             }}
