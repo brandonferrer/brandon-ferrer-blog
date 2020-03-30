@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { Menu, Container } from 'semantic-ui-react';
+import { Menu, Container, Icon } from 'semantic-ui-react';
 
 const Nav = ({ toggleSideBar }) => (
   <Menu inverted borderless fixed="top" size="huge">
@@ -15,10 +15,7 @@ const Nav = ({ toggleSideBar }) => (
             letterSpacing: '1.2px',
           }}
         >
-          BRANDON FERRER&nbsp;
-          <sup>
-            <span style={{ fontSize: '0.75rem' }}>TM</span>
-          </sup>
+          BRANDON FERRER
         </h1>
       </Menu.Item>
       <Menu.Menu position="right">

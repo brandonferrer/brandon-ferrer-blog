@@ -7,7 +7,7 @@ import { PageHeader } from '../shared/typography';
 const Resume = () => (
   <Layout>
     <HeaderWrapper>
-      <PageHeader text="Résumé" />
+      <PageHeader text="Resume" />
     </HeaderWrapper>
     <ContentWrapper resume>
       <p style={{ textAlign: 'center', padding: '1rem' }}>

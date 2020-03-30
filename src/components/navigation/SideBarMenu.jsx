@@ -80,9 +80,9 @@ const navConfig = [
     isDisabled: false,
   },
   {
-    name: 'jetset',
-    label: 'Jet Set.',
-    path: '/jetset',
+    name: 'worldtour',
+    label: 'World Tour.',
+    path: '/worldtour',
     isDisabled: false,
   },
   { name: 'dj', label: 'Spotify Slapzz.', path: '/dj', isDisabled: true },
@@ -92,6 +92,6 @@ const navConfig = [
     path: '/projects',
     isDisabled: false,
   },
-  { name: 'resume', label: 'Résumé.', path: '/resume', isDisabled: false },
+  { name: 'resume', label: 'Resume.', path: '/resume', isDisabled: false },
   { name: 'contact', label: 'Say Hey.', path: '/contact', isDisabled: false },
 ];

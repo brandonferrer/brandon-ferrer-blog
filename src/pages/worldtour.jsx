@@ -3,15 +3,14 @@ import React from 'react';
 import { css, jsx } from '@emotion/core';
 import { Layout, TravelMap } from '../components';
 import { ContentWrapper, HeaderWrapper } from '../shared/wrappers';
-import { PageHeader, SubHeader } from '../shared/typography';
+import { PageHeader } from '../shared/typography';
 
 const googleMapApiKey = process.env.GATSBY_GOOGLE_MAPS_API_KEY;
 
-const JetSet = () => (
+const WorldTour = () => (
   <Layout>
     <HeaderWrapper>
-      <PageHeader text="Jet Set" />
-      <SubHeader text="Trips" />
+      <PageHeader text="World Tour" />
     </HeaderWrapper>
     <ContentWrapper travel>
       <div css={styles.travelMapWrapper}>
@@ -26,7 +25,7 @@ const JetSet = () => (
   </Layout>
 );
 
-export default JetSet;
+export default WorldTour;
 
 const styles = {
   travelMapWrapper: css`

@@ -8,7 +8,7 @@ import { isMobile } from 'react-device-detect';
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
 import { Grid, GridColumn, Button } from 'semantic-ui-react';
-import { PageHeader, SubHeader } from '../shared/typography';
+import { PageHeader } from '../shared/typography';
 import { HeaderWrapper, ContentWrapper } from '../shared/wrappers';
 import { Layout, SpotifyPlayer } from '../components';
 
@@ -90,7 +90,6 @@ const Dj = () => {
     <Layout>
       <HeaderWrapper>
         <PageHeader text="Spotify Slapzz" />
-        <SubHeader text="Remote DJ" />
       </HeaderWrapper>
       <ContentWrapper dj={!spotifyToken} resume={spotifyToken}>
         <Grid

@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid } from 'semantic-ui-react';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import { Layout } from '../components';
-import { PageHeader, SubHeader } from '../shared/typography';
+import { PageHeader } from '../shared/typography';
 import { ContentWrapper, HeaderWrapper } from '../shared/wrappers';
 
 // TODO: Refactor this bullshit
@@ -11,7 +11,6 @@ const Projects = () => (
   <Layout>
     <HeaderWrapper>
       <PageHeader text="Dev Projects" />
-      <SubHeader text="Work" />
     </HeaderWrapper>
     <ContentWrapper projects>
       <Grid
