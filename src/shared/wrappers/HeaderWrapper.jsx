@@ -12,7 +12,7 @@ const styles = {
   headerWrapper: css`
     padding: 0 0 1rem 0;
     width: 100%;
-    min-height: 100px;
+    min-height: 80px;
     }
   `,
 };

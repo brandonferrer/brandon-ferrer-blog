@@ -12,12 +12,12 @@ const WorldTour = () => (
     <HeaderWrapper>
       <PageHeader text="World Tour" />
     </HeaderWrapper>
-    <ContentWrapper travel>
+    <ContentWrapper>
       <div css={styles.travelMapWrapper}>
         <TravelMap
           googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&key=${googleMapApiKey}&libraries=geometry,drawing,places`}
           loadingElement={<div style={{ height: '100%' }} />}
-          containerElement={<div style={{ height: '80%' }} />}
+          containerElement={<div style={{ height: '100%' }} />}
           mapElement={<div style={{ height: '100%' }} />}
         />
       </div>

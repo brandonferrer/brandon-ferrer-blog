@@ -57,13 +57,13 @@ const Home = () => {
                 <h1 css={styles.jumbo}>Photographer.</h1>
                 <h1 css={styles.jumbo}>Disc Jockey.</h1>
               </Typist>
-              <Typist cursor={{ show: false }} startDelay={600}>
+              {/* <Typist cursor={{ show: false }} startDelay={600}>
                 <h1 css={styles.jumboMobile}>
                   Developer. Vlogger.
                   <br />
                   Photographer. Disc Jockey.
                 </h1>
-              </Typist>
+              </Typist> */}
             </div>
           </Grid.Column>
         </Grid>

@@ -10,7 +10,6 @@ const ContentWrapper = ({
   lifestyle,
   blogPage,
   resume,
-  travel,
   dj,
 }) => {
   let contentWrapperStyles;
@@ -18,8 +17,6 @@ const ContentWrapper = ({
     contentWrapperStyles = styles.contentWrapperIndex;
   } else if (blogPage) {
     contentWrapperStyles = styles.contentWrapperBlogPage;
-  } else if (travel) {
-    contentWrapperStyles = styles.contentWrapperTravel;
   } else if (dj) {
     contentWrapperStyles = styles.contentWrapperDj;
   } else {
