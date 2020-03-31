@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { Menu, Container, Icon } from 'semantic-ui-react';
+import { Menu, Container } from 'semantic-ui-react';
 
 const Nav = ({ toggleSideBar }) => (
   <Menu inverted borderless fixed="top" size="huge">

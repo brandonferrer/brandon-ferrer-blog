@@ -40,24 +40,21 @@ const MapArray = [
 const MapMain = compose(
   withScriptjs,
   withGoogleMap
-)(props => {
-  console.log('PROPS', props);
-  return (
-    <GoogleMap
-      defaultZoom={2}
-      options={{
-        gestureHandling: 'cooperative',
-        mapTypeId: 'roadmap',
-        styles: mapStyleSilver,
-        streetViewControl: false,
-      }}
-      defaultCenter={{ lat: 41.85, lng: -87.65 }}
-    >
-      {MapArray.map(props => (
-        <CustomMarker key={props.lat} {...props} />
-      ))}
-    </GoogleMap>
-  );
-});
+)(props => (
+  <GoogleMap
+    defaultZoom={2}
+    options={{
+      gestureHandling: 'cooperative',
+      mapTypeId: 'roadmap',
+      styles: mapStyleSilver,
+      streetViewControl: false,
+    }}
+    defaultCenter={{ lat: 41.85, lng: -87.65 }}
+  >
+    {MapArray.map(props => (
+      <CustomMarker key={props.lat} {...props} />
+    ))}
+  </GoogleMap>
+));
 
 export default MapMain;
