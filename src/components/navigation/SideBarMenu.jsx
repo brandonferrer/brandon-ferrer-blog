@@ -67,6 +67,9 @@ const styles = {
   bgRed: css`
     background-color: #f44336 !important;
   `,
+  bgRedGradient: css`
+    background: linear-gradient(120deg, #f44336, #1a1b1d) !important;
+  `,
 };
 
 const navConfig = [

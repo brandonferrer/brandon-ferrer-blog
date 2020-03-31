@@ -110,13 +110,13 @@ const BrandonFerrer = ({ image1, image2 }) => {
         <h3>BrandonFerrer.com</h3>
         <p style={{ fontSize: '14px', fontStyle: 'italic' }}>
           Gatsby, React, GraphQL, WordPress, Instagram API, Google Maps API,
-          Netlify, JAMstack, Semantic UI
+          Netlify, Semantic UI
         </p>
         <p>
           I wanted to build a React SPA that was crawlable for SEO. Gatsby was a
           dope solution. My intention for this website was to be a blog, along
           with showing my upcoming travel plans and Instagram feed. I chose to
-          use WordPress as a CMS and API.
+          use WordPress as a CMS.
         </p>
       </Grid.Column>
       <Grid.Column style={{ paddingTop: '4rem' }}>
@@ -132,8 +132,10 @@ const BrandonFerrer = ({ image1, image2 }) => {
       </Grid.Column>
       <Grid.Column style={{ paddingTop: '4rem' }}>
         <p>
-          I've gone through a lot of color and minor style changes, but it looks
-          great on mobile!
+          I've gone through a lot of color and minor style changes, probably
+          because it's so easy to deploy new changes with Netlify. It looks
+          pretty nice on mobile! I don't even use the Instagram app anymore, I
+          just come here. Just kidding.
         </p>
       </Grid.Column>
     </>
