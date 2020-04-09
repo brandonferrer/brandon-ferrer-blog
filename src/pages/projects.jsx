@@ -5,6 +5,7 @@ import { Layout } from '../components';
 import { PageHeader } from '../shared/typography';
 import { ContentWrapper, HeaderWrapper } from '../shared/wrappers';
 import {
+  Covid19California,
   Peachjar,
   WorkPong,
   BrandonFerrer,
@@ -16,6 +17,7 @@ const Projects = () => {
   const { nodes } = data.allImageSharp;
 
   const filenames = {
+    covid19: 'covid-19-california.png',
     peachjar1: 'send-a-flyer-1.png',
     peachjar2: 'send-a-flyer-2.png',
     workPong: 'work-pong.png',
@@ -25,6 +27,9 @@ const Projects = () => {
   };
 
   // TODO: WTF. Find more elegant way to query Gatsby images
+  const covid19Image = nodes.filter(
+    node => node.fixed.originalName === filenames.covid19
+  );
   const peachjarImage1 = nodes.filter(
     node => node.fixed.originalName === filenames.peachjar1
   );
@@ -57,6 +62,7 @@ const Projects = () => {
           verticalAlign="middle"
           textAlign="center"
         >
+          <Covid19California image={covid19Image} />
           <Peachjar image1={peachjarImage1} image2={peachjarImage2} />
           <WorkPong image={workPongImage} />
           <BrandonFerrer

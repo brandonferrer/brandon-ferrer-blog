@@ -4,6 +4,42 @@ import { Grid } from 'semantic-ui-react';
 
 // TODO: Streamline adding new projects
 
+const Covid19California = ({ image }) => {
+  const src = get(image, '[0].fixed.src');
+  return (
+    <>
+      <Grid.Column>
+        <h3>COVID-19 California</h3>
+        <p style={{ fontSize: '14px', fontStyle: 'italic' }}>React, Node</p>
+        <p>
+          The COVID-19 pandemic in 2020 has to be one of the most crazy and
+          scary things I've experienced in my lifetime. I was a huge fan of The
+          LA Times Coronavirus Tracker and was inspired to make this.
+        </p>
+        <p>
+          Since there are no APIs to get state specific Coronavirus data yet, I
+          built a web scraper in Node to take it from latimes.com. Next steps,
+          build public API! Stay safe and{' '}
+          <a href="https://covid19california.today" target="_blank">
+            check it out!
+          </a>
+        </p>
+      </Grid.Column>
+      <Grid.Column style={{ paddingTop: '4rem' }}>
+        <img
+          src={src}
+          alt="Covid 19 California"
+          style={{
+            border: '1px #999 solid',
+            height: '400px',
+            margin: '0 auto',
+          }}
+        />
+      </Grid.Column>
+    </>
+  );
+};
+
 const Peachjar = ({ image1, image2 }) => {
   const src1 = get(image1, '[0].fixed.src');
   const src2 = get(image2, '[0].fixed.src');
@@ -173,4 +209,4 @@ const Icmonster = ({ image }) => {
   );
 };
 
-export { Peachjar, WorkPong, BrandonFerrer, Icmonster };
+export { Covid19California, Peachjar, WorkPong, BrandonFerrer, Icmonster };
