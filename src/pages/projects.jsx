@@ -20,6 +20,7 @@ const Projects = () => {
     covid19: 'covid-19-california.png',
     peachjar1: 'send-a-flyer-1.png',
     peachjar2: 'send-a-flyer-2.png',
+    peachjar3: 'send-a-flyer-3.png',
     workPong: 'work-pong.png',
     brandonFerrer1: 'brandon-ferrer-1.png',
     brandonFerrer2: 'brandon-ferrer-2.png',
@@ -35,6 +36,9 @@ const Projects = () => {
   );
   const peachjarImage2 = nodes.filter(
     node => node.fixed.originalName === filenames.peachjar2
+  );
+  const peachjarImage3 = nodes.filter(
+    node => node.fixed.originalName === filenames.peachjar3
   );
   const workPongImage = nodes.filter(
     node => node.fixed.originalName === filenames.workPong
@@ -63,7 +67,11 @@ const Projects = () => {
           textAlign="center"
         >
           <Covid19California image={covid19Image} />
-          <Peachjar image1={peachjarImage1} image2={peachjarImage2} />
+          <Peachjar
+            image1={peachjarImage1}
+            image2={peachjarImage2}
+            image3={peachjarImage3}
+          />
           <WorkPong image={workPongImage} />
           <BrandonFerrer
             image1={brandonFerrerImage1}

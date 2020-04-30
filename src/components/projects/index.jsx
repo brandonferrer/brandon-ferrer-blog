@@ -18,10 +18,9 @@ const Covid19California = ({ image }) => {
         </p>
         <p>
           Since there are no APIs to get state specific Coronavirus data yet, I
-          built a web scraper in Node to take it from latimes.com. Next steps,
-          build public API! Stay safe and{' '}
+          built a web scraper in Node to take it from latimes.com. Stay safe and{' '}
           <a href="https://covid19california.today" target="_blank">
-            check it out!
+            check it out.
           </a>
         </p>
       </Grid.Column>
@@ -40,9 +39,10 @@ const Covid19California = ({ image }) => {
   );
 };
 
-const Peachjar = ({ image1, image2 }) => {
+const Peachjar = ({ image1, image2, image3 }) => {
   const src1 = get(image1, '[0].fixed.src');
   const src2 = get(image2, '[0].fixed.src');
+  const src3 = get(image3, '[0].fixed.src');
 
   return (
     <>
@@ -68,6 +68,24 @@ const Peachjar = ({ image1, image2 }) => {
           on a legacy PHP application 5 years ago. Owning this workflow, and
           contributing to the migration to a microservice/micro frontend
           architecture was super rewarding!
+        </p>
+      </Grid.Column>
+      <Grid.Column style={{ paddingTop: '4rem' }}>
+        <img
+          src={src3}
+          alt="Peachjar Send a Flyer"
+          style={{
+            border: '1px #999 solid',
+            width: '500px',
+            margin: '0 auto',
+          }}
+        />
+      </Grid.Column>
+      <Grid.Column>
+        <p>
+          This page went through many iterations after getting user feedback. We
+          used to have a TON of form fields here, but realized users want
+          uploading flyers to be quick and easy.
         </p>
       </Grid.Column>
       <Grid.Column style={{ paddingTop: '4rem' }}>
