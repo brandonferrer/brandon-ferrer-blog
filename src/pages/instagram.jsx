@@ -13,7 +13,7 @@ class Lifestyle extends Component {
   };
 
   async componentDidMount() {
-    const token = process.env.GATSBY_INSTAGRAM_ACCESSS_TOKEN;
+    const token = process.env.GATSBY_INSTAGRAM_ACCESS_TOKEN;
     const graphUrl = 'https://graph.instagram.com';
 
     try {
