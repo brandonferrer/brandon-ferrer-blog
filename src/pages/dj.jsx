@@ -122,13 +122,7 @@ const Dj = () => {
                 ) : (
                   <>
                     <Typist cursor={{ show: false }} startDelay={600}>
-                      <p css={styles.text}>
-                        Do you have Spotify? I bet I can make you dance through
-                        the computer!{' '}
-                        <span role="img" aria-label="emoji">
-                          🙃
-                        </span>
-                      </p>
+                      <p css={styles.text}>Let me play a song for you.</p>
                     </Typist>
                     <Button
                       secondary

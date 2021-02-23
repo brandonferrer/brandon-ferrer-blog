@@ -78,7 +78,7 @@ const navConfig = [
   { name: 'blog', label: 'Blog.', path: '/blog', isDisabled: false },
   {
     name: 'instagram',
-    label: 'Instagram.',
+    label: 'Lifestyle.',
     path: '/instagram',
     isDisabled: false,
   },
@@ -96,5 +96,5 @@ const navConfig = [
     isDisabled: false,
   },
   { name: 'resume', label: 'Resume.', path: '/resume', isDisabled: false },
-  { name: 'contact', label: 'Say Hey.', path: '/contact', isDisabled: false },
+  { name: 'contact', label: 'Say Hey.', path: '/contact', isDisabled: true },
 ];

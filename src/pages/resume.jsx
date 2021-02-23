@@ -10,12 +10,6 @@ const Resume = () => (
       <PageHeader text="Resume" />
     </HeaderWrapper>
     <ContentWrapper resume>
-      <p style={{ textAlign: 'center', padding: '1rem' }}>
-        I'm too lazy to update my resume right now &nbsp;
-        <span role="img" aria-label="Tired Emoji">
-          😪
-        </span>
-      </p>
       <Grid
         container
         stackable

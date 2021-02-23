@@ -19,9 +19,11 @@ const ContentWrapper = ({
     contentWrapperStyles = styles.contentWrapperBlogPage;
   } else if (dj) {
     contentWrapperStyles = styles.contentWrapperDj;
+  } else if (resume) {
+    contentWrapperStyles = styles.contentWrapperResume;
   } else {
     contentWrapperStyles =
-      blog || projects || lifestyle || resume
+      blog || projects || lifestyle
         ? styles.contentWrapperBlog
         : styles.contentWrapper;
   }
@@ -37,6 +39,17 @@ const styles = {
     overflow-y: auto;
     display: flex;
     align-items: center;
+    padding: 0;
+    -webkit-overflow-scrolling: touch;
+  `,
+  contentWrapperResume: css`
+    background-color: #fff !important;
+    width: 100%;
+    height: 60%;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 0;
     -webkit-overflow-scrolling: touch;
   `,

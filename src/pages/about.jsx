@@ -8,8 +8,11 @@ const About = () => (
     <HeaderWrapper>
       <PageHeader text="About B" />
     </HeaderWrapper>
-    <ContentWrapper>
-      <p>Hey, I&apos;m Brandon from California.</p>
+    <ContentWrapper resume>
+      <p style={{ textAlign: 'center', padding: '5rem', fontSize: '24px' }}>
+        Hey, I'm Brandon. I'm an ex-DJ, part-time software engineer, and
+        full-time cyclist and golfer. I'm into tech, travel, and streetwear.
+      </p>
     </ContentWrapper>
   </Layout>
 );
