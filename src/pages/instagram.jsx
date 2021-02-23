@@ -87,25 +87,6 @@ class Lifestyle extends Component {
                   />
                 </Grid.Column>
               ))}
-              <Grid.Column>
-                <p>
-                  My Instagram developer account is in sandbox mode and I'm
-                  limited to only 20 photos{' '}
-                  <span role="img" aria-label="emoji">
-                    😫
-                  </span>
-                  <br />
-                  <br />
-                  Follow me at{' '}
-                  <a
-                    href="https://www.instagram.com/bsteezy/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    @bsteezy
-                  </a>
-                </p>
-              </Grid.Column>
             </Grid>
           )}
         </ContentWrapper>
