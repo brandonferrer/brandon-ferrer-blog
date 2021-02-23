@@ -3,7 +3,7 @@ import Moment from 'react-moment';
 import { truncate } from 'lodash';
 import { Card, Icon, Image } from 'semantic-ui-react';
 
-const PhotoCard = ({ caption, likes, postDate, imgUrl, igLink }) => (
+const PhotoCard = ({ caption, date, imgUrl, igLink, likes }) => (
   <Card style={{ borderRadius: 0 }}>
     <Image
       src={imgUrl}
@@ -19,7 +19,7 @@ const PhotoCard = ({ caption, likes, postDate, imgUrl, igLink }) => (
     />
     <Card.Content style={{ minHeight: '110px' }}>
       <Card.Meta>
-        <Moment format="MM/DD/YYYY">{postDate}</Moment>
+        <Moment format="MM/DD/YYYY">{date}</Moment>
       </Card.Meta>
       <Card.Description>
         <p style={{ fontSize: '12px' }}>

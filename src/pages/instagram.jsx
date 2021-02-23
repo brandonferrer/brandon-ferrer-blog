@@ -13,9 +13,7 @@ class Lifestyle extends Component {
   };
 
   async componentDidMount() {
-    // const token = process.env.GATSBY_INSTAGRAM_ACCESS_TOKEN;
-    const token =
-      'IGQVJXd0pkV2l4dEZAVaTgzLVQ4ZAVotM01kV3Jub2dEcmhpMXlCN19TZAVpBM0NvYXpTRTVGMzExQ0ZAiQXBGUndQa29yN29ydnRWU09sTEoyOC1fd3k0ZA3pQbXlBWUJqOTNjYkNVMi1R';
+    const token = process.env.GATSBY_INSTAGRAM_ACCESS_TOKEN;
     const graphUrl = 'https://graph.instagram.com';
     const limit = '63';
 
@@ -45,7 +43,7 @@ class Lifestyle extends Component {
     const { data } = response;
 
     const post = {
-      postDate: new Date(data.timestamp),
+      date: new Date(data.timestamp),
       imgUrl: data.media_url,
       caption: data.caption,
       igLink: data.permalink,
@@ -53,7 +51,7 @@ class Lifestyle extends Component {
 
     this.setState({
       instagramPostArray: [...instagramPostArray, post].sort(
-        (a, b) => b.postDate - a.postDate
+        (a, b) => b.date - a.date
       ),
     });
 
@@ -65,8 +63,6 @@ class Lifestyle extends Component {
 
   render() {
     const { instagramPostArray, isLoading } = this.state;
-
-    console.log(instagramPostArray);
 
     return (
       <Layout>
@@ -89,12 +85,9 @@ class Lifestyle extends Component {
                   <PhotoCard
                     caption={post.caption}
                     imgUrl={post.imgUrl}
-                    date={post.postDate}
+                    date={post.date}
                     igLink={post.igLink}
                     // likes={post.likes}
-                    // imageUrlLow={post.imageUrlLow}
-                    // imageUrlStandard={post.imageUrlStandard}
-                    // imageUrlThumb={post.imageUrlThumb}
                   />
                 </Grid.Column>
               ))}
