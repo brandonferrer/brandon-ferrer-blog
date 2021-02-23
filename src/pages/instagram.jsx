@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Moment from 'react-moment';
 import { Grid, Loader } from 'semantic-ui-react';
 import Layout from '../components/layout';
 import { PhotoCard } from '../components';
 import { ContentWrapper, HeaderWrapper } from '../shared/wrappers';
-import { PageHeader, SubHeader } from '../shared/typography';
+import { PageHeader } from '../shared/typography';
 
 class Lifestyle extends Component {
   state = {
@@ -13,53 +12,47 @@ class Lifestyle extends Component {
     isLoading: true,
   };
 
-  componentDidMount() {
-    const token = process.env.GATSBY_INSTAGRAM_TOKEN;
-    const photoCount = 20;
+  async componentDidMount() {
+    const token = process.env.GATSBY_INSTAGRAM_ACCESSS_TOKEN;
+    const graphUrl = 'https://graph.instagram.com';
 
-    axios
-      .get('https://api.instagram.com/v1/users/self/media/recent', {
-        params: { access_token: token, count: photoCount },
-      })
-      .then(response => {
-        const posts = response.data.data;
-        const postArray = [];
+    try {
+      // Get media ids
+      const queryUserMediaEdge = await axios.get(
+        `${graphUrl}/me/media?fields=id&access_token=${token}`
+      );
+      const { data } = queryUserMediaEdge.data;
 
-        posts.map(post => {
-          const { images, caption, likes, link, created_time } = post;
-          const convertedDate = (
-            <Moment unix format="MM/DD/YYYY">
-              {created_time}
-            </Moment>
+      // Use media id to get node data
+      await Promise.all(
+        data.map(async item => {
+          const queryMediaNode = await axios.get(
+            `${graphUrl}/${item.id}?fields=id,media_type,caption,media_url,permalink,timestamp&access_token=${token}`
           );
-          const postObj = {
-            caption: caption.text,
-            likes: likes.count,
-            date: convertedDate,
-            imageUrlLow: images.low_resolution.url,
-            imageUrlStandard: images.standard_resolution.url,
-            imageUrlThumb: images.thumbnail.url,
-            igLink: link,
-          };
-          postArray.push(postObj);
-
-          if (postArray.length === photoCount) {
-            this.setState({ isLoading: false });
-          }
-
-          this.handleInstagramData(postArray);
-        });
-      })
-      .catch(error => {
-        console.log(error);
-      });
+          this.handleInstagramData(queryMediaNode);
+        })
+      ).then(() => this.setState({ isLoading: false }));
+    } catch (error) {
+      console.log('Error getting Instagram media', error);
+    }
   }
 
-  handleInstagramData = postArray => {
+  handleInstagramData(response) {
+    const { data } = response;
+
+    const post = {
+      postDate: new Date(data.timestamp),
+      imgUrl: data.media_url,
+      caption: data.caption,
+      igLink: data.permalink,
+    };
+
     this.setState({
-      instagramPostArray: postArray,
+      instagramPostArray: [...this.state.instagramPostArray, post].sort(
+        (a, b) => b.postDate - a.postDate
+      ),
     });
-  };
+  }
 
   render() {
     const { instagramPostArray, isLoading } = this.state;
@@ -84,12 +77,13 @@ class Lifestyle extends Component {
                 <Grid.Column key={post.igLink}>
                   <PhotoCard
                     caption={post.caption}
-                    likes={post.likes}
-                    date={post.date}
-                    imageUrlLow={post.imageUrlLow}
-                    imageUrlStandard={post.imageUrlStandard}
-                    imageUrlThumb={post.imageUrlThumb}
+                    imgUrl={post.imgUrl}
+                    date={post.postDate}
                     igLink={post.igLink}
+                    // likes={post.likes}
+                    // imageUrlLow={post.imageUrlLow}
+                    // imageUrlStandard={post.imageUrlStandard}
+                    // imageUrlThumb={post.imageUrlThumb}
                   />
                 </Grid.Column>
               ))}
