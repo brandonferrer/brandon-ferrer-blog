@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Loader } from 'semantic-ui-react';
-import { axiosClient } from '../shared/api';
+import { igClient } from '../shared/api';
 import Layout from '../components/layout';
 import { PhotoCard } from '../components';
 import { ContentWrapper, HeaderWrapper } from '../shared/wrappers';
@@ -14,21 +14,20 @@ class Lifestyle extends Component {
 
   async componentDidMount() {
     const token = process.env.GATSBY_INSTAGRAM_ACCESS_TOKEN;
-    const graphUrl = 'https://graph.instagram.com';
     const limit = '63';
 
     try {
       // Get media ids
-      const queryUserMediaEdge = await axiosClient.get(
-        `${graphUrl}/me/media?fields=id&access_token=${token}&limit=${limit}`
+      const queryUserMediaEdge = await igClient.get(
+        `/me/media?fields=id&access_token=${token}&limit=${limit}`
       );
       const { data } = queryUserMediaEdge.data;
 
       // Use media id to get node data
       await Promise.all(
         data.map(async item => {
-          const queryMediaNode = await axiosClient.get(
-            `${graphUrl}/${item.id}?fields=id,media_type,caption,media_url,permalink,timestamp&access_token=${token}`
+          const queryMediaNode = await igClient.get(
+            `/${item.id}?fields=id,media_type,caption,media_url,permalink,timestamp&access_token=${token}`
           );
           this.handleInstagramData(queryMediaNode);
         })

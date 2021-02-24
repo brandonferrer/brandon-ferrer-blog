@@ -18,9 +18,11 @@ const localforageStore = localforage.createInstance({
 });
 
 // Axios instance
-export const axiosClient = setup({
-  cache: {
-    maxAge: 60 * 60 * 1000, // Set cache time to 1 hour
-    store: localforageStore, // Pass localforage store to axios-cache-adapter
-  },
+export const igClient = setup({
+    baseURL: 'https://graph.instagram.com',
+    cache: {
+        maxAge: 60 * 60 * 1000, // Set cache time to 1 hour
+        exclude: { query: false },
+        store: localforageStore, // Pass localforage store to axios-cache-adapter
+    },
 });
