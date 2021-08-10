@@ -13,7 +13,8 @@ class Lifestyle extends Component {
   };
 
   async componentDidMount() {
-    const token = process.env.GATSBY_INSTAGRAM_ACCESS_TOKEN;
+    const token =
+      'IGQVJYY0U1NTBSeU5FSklBSTEyeFRJdTE4MGtiUEM2dko1amVFN3ZANS2tySlJSaUcxRk5SZADZAITGNKUjZABS0ppWTRpbDNVcWlod0lLNV9INFlZAcllfdG9EUHZAYNWpWcWRKLWlRcDN3';
     const limit = '63';
 
     try {

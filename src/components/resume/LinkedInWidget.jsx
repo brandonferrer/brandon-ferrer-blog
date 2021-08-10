@@ -12,19 +12,17 @@ const LinkedInWidget = () => (
       />
     </Helmet>
     <div
-      className="LI-profile-badge"
-      data-version="v1"
-      data-size="medium"
+      className="badge-base LI-profile-badge"
       data-locale="en_US"
-      data-type="vertical"
+      data-size="large"
       data-theme="light"
+      data-type="HORIZONTAL"
       data-vanity="brandonferrer"
+      data-version="v1"
     >
       <a
-        className="LI-simple-link"
+        className="badge-base__link LI-simple-link"
         href="https://www.linkedin.com/in/brandonferrer?trk=profile-badge"
-        target="_blank"
-        rel="noopener noreferrer"
       >
         Brandon Ferrer
       </a>

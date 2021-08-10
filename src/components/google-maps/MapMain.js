@@ -18,7 +18,6 @@ const MapArray = [
   { lat: 20.789, lng: -156.331, info: 'Maui' },
   { lat: 47.608, lng: -122.335, info: 'Seattle' },
   { lat: 10.762, lng: 106.66, info: 'Ho Chi Minh' },
-  { lat: 18.796, lng: 98.979, info: 'Chiang Mai' },
   { lat: 13.736, lng: 100.523, info: 'Bangkok' },
   { lat: 21.315, lng: -157.858, info: 'Oahu' },
   { lat: 40.758, lng: -111.876, info: 'Salt Lake City' },
@@ -35,6 +34,8 @@ const MapArray = [
   { lat: 51.507, lng: 0.127, info: 'London' },
   { lat: 53.483, lng: -2.242, info: 'Manchester' },
   { lat: 48.856, lng: 2.352, info: 'Paris' },
+  { lat: 36.393, lng: 25.4615, info: 'Santorini' },
+  { lat: 37.446, lng: 25.328, info: 'Mykonos' },
 ];
 
 const MapMain = compose(
