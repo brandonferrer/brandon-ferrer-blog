@@ -7,49 +7,49 @@ import { HeaderWrapper, ContentWrapper } from '../shared/wrappers';
 import { PageHeader } from '../shared/typography';
 
 const Blog = ({ data }) => {
-  // const [category, setCategory] = useState('All');
-  // const [blogData, setBlogData] = useState([]);
-  // const blogPostArray = data.allWordpressPost.edges;
+  const [category, setCategory] = useState('All');
+  const [blogData, setBlogData] = useState([]);
+  const blogPostArray = data.allWordpressPost.edges;
 
-  // useEffect(() => {
-  //   filterBlogData(category);
-  // }, [category]);
+  useEffect(() => {
+    filterBlogData(category);
+  }, [category]);
 
-  // const handleDropdownChange = (event, { value }) => setCategory(value);
+  const handleDropdownChange = (event, { value }) => setCategory(value);
 
-  // const filterBlogData = filter => {
-  //   switch (filter) {
-  //     case 'Engineering':
-  //       setBlogData(
-  //         blogPostArray.filter(
-  //           post => post.node.categories[0].name === catEnum.ENGINEERING
-  //         )
-  //       );
-  //       break;
-  //     case 'Food':
-  //       setBlogData(
-  //         blogPostArray.filter(
-  //           post => post.node.categories[0].name === catEnum.FOOD
-  //         )
-  //       );
-  //       break;
-  //     case 'Travel':
-  //       setBlogData(
-  //         blogPostArray.filter(
-  //           post => post.node.categories[0].name === catEnum.TRAVEL
-  //         )
-  //       );
-  //       break;
-  //     default:
-  //       setBlogData(blogPostArray);
-  //   }
-  // };
+  const filterBlogData = filter => {
+    switch (filter) {
+      case 'Engineering':
+        setBlogData(
+          blogPostArray.filter(
+            post => post.node.categories[0].name === catEnum.ENGINEERING
+          )
+        );
+        break;
+      case 'Food':
+        setBlogData(
+          blogPostArray.filter(
+            post => post.node.categories[0].name === catEnum.FOOD
+          )
+        );
+        break;
+      case 'Travel':
+        setBlogData(
+          blogPostArray.filter(
+            post => post.node.categories[0].name === catEnum.TRAVEL
+          )
+        );
+        break;
+      default:
+        setBlogData(blogPostArray);
+    }
+  };
 
   return (
     <Layout>
       <HeaderWrapper>
         <PageHeader text="Blog" />
-        {/* <Dropdown
+        <Dropdown
           placeholder="Filter Categories"
           fluid={isMobileOnly}
           floating
@@ -58,17 +58,13 @@ const Blog = ({ data }) => {
           options={categoryOptions}
           value={category}
           onChange={handleDropdownChange}
-        /> */}
+        />
       </HeaderWrapper>
       <ContentWrapper blog>
-        <p style={{ textAlign: 'center', padding: '5rem', fontSize: '24px' }}>
-          Sorry, my blog is broken :( I forgot to renew my blog domain lol. Will
-          fix soon.
-        </p>
-        {/* <Item.Group divided style={{ paddingTop: '1.5rem' }}>
+        <Item.Group divided style={{ paddingTop: '1.5rem' }}>
           {data &&
             blogData.map(({ node }) => <BlogItem node={node} key={node.id} />)}
-        </Item.Group> */}
+        </Item.Group>
       </ContentWrapper>
     </Layout>
   );
@@ -76,48 +72,48 @@ const Blog = ({ data }) => {
 
 export default Blog;
 
-// export const query = graphql`
-//   query getAllPost {
-//     allWordpressPost(sort: { fields: [date], order: DESC }) {
-//       edges {
-//         node {
-//           id
-//           date(formatString: "MMMM DD, YYYY")
-//           slug
-//           title
-//           excerpt
-//           content
-//           categories {
-//             id
-//             name
-//           }
-//           featured_media {
-//             localFile {
-//               childImageSharp {
-//                 fixed(width: 400, height: 300, quality: 100) {
-//                   src
-//                   width
-//                   height
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
+export const query = graphql`
+  query getAllPost {
+    allWordpressPost(sort: { fields: [date], order: DESC }) {
+      edges {
+        node {
+          id
+          date(formatString: "MMMM DD, YYYY")
+          slug
+          title
+          excerpt
+          content
+          categories {
+            id
+            name
+          }
+          featured_media {
+            localFile {
+              childImageSharp {
+                fixed(width: 400, height: 300, quality: 100) {
+                  src
+                  width
+                  height
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 
-// const catEnum = {
-//   ALL: 'All',
-//   ENGINEERING: 'Engineering',
-//   FOOD: 'Food',
-//   TRAVEL: 'Travel',
-// };
+const catEnum = {
+  ALL: 'All',
+  ENGINEERING: 'Engineering',
+  FOOD: 'Food',
+  TRAVEL: 'Travel',
+};
 
-// const categoryOptions = [
-//   { text: 'All', value: 'All' },
-//   { text: 'Engineering', value: 'Engineering' },
-//   { text: 'Food', value: 'Food' },
-//   { text: 'Travel', value: 'Travel' },
-// ];
+const categoryOptions = [
+  { text: 'All', value: 'All' },
+  { text: 'Engineering', value: 'Engineering' },
+  { text: 'Food', value: 'Food' },
+  { text: 'Travel', value: 'Travel' },
+];

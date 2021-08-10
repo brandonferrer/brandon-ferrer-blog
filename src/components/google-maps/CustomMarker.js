@@ -29,7 +29,7 @@ class CustomMarker extends Component {
         position={{ lat, lng }}
         onMouseOver={this.handleMouseOver}
         onMouseOut={this.handleMouseExit}
-        // icon={'https://brandonferrer.blog/assets/airplane.png'}
+        icon={'https://brandonferrer.blog/assets/airplane.png'}
       >
         {showInfoWindow && (
           <InfoWindow>

@@ -18,71 +18,69 @@ const slash = require('slash')
 // Will create pages for WordPress pages (route : /{slug})
 // Will create pages for WordPress posts (route : /post/{slug})
 
-// TODO: Uncomment when resolving wordpress issue
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
+  return new Promise((resolve, reject) => {
+    // The “graphql” function allows us to run arbitrary
+    // queries against the local WordPress graphql schema. Think of
+    // it like the site has a built-in database constructed
+    // from the fetched data that you can run queries against.
 
-// exports.createPages = ({ graphql, actions }) => {
-//   const { createPage } = actions
-//   return new Promise((resolve, reject) => {
-//     // The “graphql” function allows us to run arbitrary
-//     // queries against the local WordPress graphql schema. Think of
-//     // it like the site has a built-in database constructed
-//     // from the fetched data that you can run queries against.
-
-//     graphql(
-//       `
-//         {
-//           allWordpressPost {
-//             edges {
-//               node {
-//                 id
-//                 date(formatString: "MMMM DD, YYYY")
-//                 slug
-//                 title
-//                 excerpt
-//                 content
-//                 categories {
-//                   id
-//                   name
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       `
-//     ).then(result => {
-//       if (result.errors) {
-//         console.log(result.errors)
-//         reject(result.errors)
-//       }
-//       const postTemplate = path.resolve('./src/components/blog/BlogPage.jsx')
-//       // We want to create a detailed page for each
-//       // post node. We'll just use the WordPress Slug for the slug.
-//       // The Post ID is prefixed with 'POST_'
-//       _.each(result.data.allWordpressPost.edges, edge => {
-//         const {
-//           id,
-//           date,
-//           slug,
-//           title,
-//           excerpt,
-//           content,
-//           categories,
-//         } = edge.node
-//         createPage({
-//           path: `blog/${edge.node.slug}/`,
-//           component: slash(postTemplate),
-//           context: {
-//             id,
-//             date,
-//             slug,
-//             title,
-//             excerpt,
-//             content,
-//             categories,
-//           },
-//         })
-//       })
-//       resolve()
-//     })
-//   })
-// }
+    graphql(
+      `
+        {
+          allWordpressPost {
+            edges {
+              node {
+                id
+                date(formatString: "MMMM DD, YYYY")
+                slug
+                title
+                excerpt
+                content
+                categories {
+                  id
+                  name
+                }
+              }
+            }
+          }
+        }
+      `
+    ).then(result => {
+      if (result.errors) {
+        console.log(result.errors)
+        reject(result.errors)
+      }
+      const postTemplate = path.resolve('./src/components/blog/BlogPage.jsx')
+      // We want to create a detailed page for each
+      // post node. We'll just use the WordPress Slug for the slug.
+      // The Post ID is prefixed with 'POST_'
+      _.each(result.data.allWordpressPost.edges, edge => {
+        const {
+          id,
+          date,
+          slug,
+          title,
+          excerpt,
+          content,
+          categories,
+        } = edge.node
+        createPage({
+          path: `blog/${edge.node.slug}/`,
+          component: slash(postTemplate),
+          context: {
+            id,
+            date,
+            slug,
+            title,
+            excerpt,
+            content,
+            categories,
+          },
+        })
+      })
+      resolve()
+    })
+  })
+}

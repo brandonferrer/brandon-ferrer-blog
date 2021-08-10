@@ -25,18 +25,18 @@ module.exports = {
      * Gatsby's data processing layer begins with “source”
      * plugins. Here the site sources its data from Wordpress.
      */
-    // {
-    //   resolve: 'gatsby-source-wordpress',
-    //   options: {
-    //     // your wordpress source
-    //     baseUrl: 'brandonferrer.blog',
-    //     protocol: 'https',
-    //     // is it hosted on wordpress.com, or self-hosted?
-    //     hostingWPCOM: false,
-    //     // does your site use the Advanced Custom Fields Plugin?
-    //     useACF: true,
-    //   },
-    // },
+    {
+      resolve: 'gatsby-source-wordpress',
+      options: {
+        // your wordpress source
+        baseUrl: 'brandonferrer.blog',
+        protocol: 'https',
+        // is it hosted on wordpress.com, or self-hosted?
+        hostingWPCOM: false,
+        // does your site use the Advanced Custom Fields Plugin?
+        useACF: true,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

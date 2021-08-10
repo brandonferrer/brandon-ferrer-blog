@@ -3,7 +3,7 @@ import BlogItem from './blog/BlogItem';
 import PhotoCard from './instagram/PhotoCard';
 import Layout from './layout';
 import LinkedInWidget from './resume/LinkedInWidget';
-import SpotifyPlayer from './spotify-player/SpotifyPlayer';
+// import SpotifyPlayer from './spotify-player/SpotifyPlayer';
 
 export {
   Layout,
@@ -11,5 +11,5 @@ export {
   BlogItem,
   PhotoCard,
   LinkedInWidget,
-  SpotifyPlayer,
+  // SpotifyPlayer,
 };
