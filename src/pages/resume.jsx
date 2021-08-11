@@ -1,11 +1,8 @@
 import React from 'react';
 import { Grid, GridColumn } from 'semantic-ui-react';
-import { Document, pdfjs } from 'react-pdf';
 import { Layout, LinkedInWidget } from '../components';
 import { ContentWrapper, HeaderWrapper } from '../shared/wrappers';
 import { PageHeader } from '../shared/typography';
-
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const Resume = () => (
   <Layout>
@@ -29,7 +26,8 @@ const Resume = () => (
             height: '350px',
           }}
         >
-          <Document file="https://brandonferrer.blog/assets/profile.pdf" />
+          {/* <Document file="https://brandonferrer.blog/assets/profile.pdf" /> */}
+          <h1>Resume</h1>
         </GridColumn>
       </Grid>
     </ContentWrapper>
