@@ -40,7 +40,7 @@ const Home = () => {
               <Typist cursor={{ show: false }} startDelay={600}>
                 <h1 css={styles.jumbo}>Developer.</h1>
                 <h1 css={styles.jumbo}>Vlogger.</h1>
-                <h1 css={styles.jumbo}>Cyclist.</h1>
+                <h1 css={styles.jumbo}>Photographer.</h1>
                 <h1 css={styles.jumbo}>Golfer.</h1>
                 <h1 css={styles.jumbo}>Disc Jockey.</h1>
               </Typist>

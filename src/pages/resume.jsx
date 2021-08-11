@@ -26,8 +26,7 @@ const Resume = () => (
             height: '350px',
           }}
         >
-          {/* <Document file="https://brandonferrer.blog/assets/profile.pdf" /> */}
-          <h1>Resume</h1>
+          <LinkedInWidget />
         </GridColumn>
       </Grid>
     </ContentWrapper>
